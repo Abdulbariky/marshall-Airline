@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your helicopter or private jet charter online with Rotorjet Aviation. Real-time availability, instant confirmation, and secure payment processing.">
+    <meta name="keywords" content="book helicopter, book private jet, online aviation booking, charter booking, Kenya helicopter booking">
+    <title>Online Booking - marshallairline Aviation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <i class="fas fa-helicopter"></i>
+            <span>marshallairline Aviation</span>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Charter Services</h4>
+                            <a href="pages/helicopter-charter.html" class="dropdown-link">
+                                <i class="fas fa-helicopter"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Helicopter Charter</span>
+                                    <span class="link-desc">Scenic flights & transfers</span>
+                                </div>
+                            </a>
+                            <a href="pages/jet-charter.html" class="dropdown-link">
+                                <i class="fas fa-plane"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Private Jet Charter</span>
+                                    <span class="link-desc">Executive & business travel</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Support Services</h4>
+                            <a href="pages/maintenance.html" class="dropdown-link">
+                                <i class="fas fa-wrench"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Aircraft Maintenance</span>
+                                    <span class="link-desc">Professional MRO services</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Booking Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Booking <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Make a Booking</h4>
+                            <a href="pages/booking.html" class="dropdown-link featured">
+                                <i class="fas fa-calendar-plus"></i>
+                                <div class="link-content">
+                                    <span class="link-title">New Booking</span>
+                                    <span class="link-desc">Book your flight online</span>
+                                </div>
+                                <span class="link-badge">Popular</span>
+                            </a>
+                            <a href="pages/quote.html" class="dropdown-link">
+                                <i class="fas fa-calculator"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Request Quote</span>
+                                    <span class="link-desc">Get custom pricing</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Manage Bookings</h4>
+                            <a href="pages/my-bookings.html" class="dropdown-link">
+                                <i class="fas fa-list"></i>
+                                <div class="link-content">
+                                    <span class="link-title">My Bookings</span>
+                                    <span class="link-desc">View & manage reservations</span>
+                                </div>
+                            </a>
+                            <a href="pages/booking-lookup.html" class="dropdown-link">
+                                <i class="fas fa-search"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Booking Lookup</span>
+                                    <span class="link-desc">Find existing booking</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="quick-book-widget">
+                                <h4 class="dropdown-header">Quick Book</h4>
+                                <form class="mini-booking-form" id="nav-quick-book">
+                                    <div class="mini-form-row">
+                                        <select name="service" required>
+                                            <option value="">Service</option>
+                                            <option value="helicopter">Helicopter</option>
+                                            <option value="jet">Private Jet</option>
+                                        </select>
+                                        <select name="passengers" required>
+                                            <option value="">Pax</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="4">4</option>
+                                            <option value="6">6+</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="mini-book-btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                        Quick Book
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Enhanced CTA Section -->
+        <div class="nav-cta">
+            <div class="nav-secondary-actions">
+                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="nav-phone">
+                    <a href="tel:+254700000000" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="phone-number">+254 700 000 000</span>
+                    </a>
+                </div>
+            </div>
+            <a href="pages/booking.html" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i>
+                Book Flight
+            </a>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-overlay"></div>
+        
+        <div class="container">
+            <div class="page-header-content">
+                <h1 data-animate="fadeUp">Online Booking</h1>
+                <p data-animate="fadeUp" style="animation-delay: 0.2s;">
+                    Book your helicopter or private jet charter with real-time availability and instant confirmation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-item">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item">Online Booking</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Booking Progress -->
+    <section class="booking-progress">
+        <div class="container">
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Flight Details</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Aircraft Selection</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Passenger Info</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Payment</div>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-container">
+                
+                <!-- Step 1: Flight Details -->
+                <div class="booking-step active" id="step-1">
+                    <div class="step-header">
+                        <h2>Flight Details</h2>
+                        <p>Tell us about your travel requirements</p>
+                    </div>
+                    
+                    <form class="booking-form" id="flight-details-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="service-type">Service Type *</label>
+                                <select id="service-type" name="service-type" required>
+                                    <option value="">Select Service</option>
+                                    <option value="helicopter-charter">Helicopter Charter</option>
+                                    <option value="private-jet">Private Jet Charter</option>
+                                    <option value="scenic-flight">Scenic Flight</option>
+                                    <option value="emergency-medical">Emergency Medical</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="flight-type">Flight Type *</label>
+                                <select id="flight-type" name="flight-type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="one-way">One Way</option>
+                                    <option value="round-trip">Round Trip</option>
+                                    <option value="multi-city">Multi-City</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="departure-location">Departure Location *</label>
+                                <select id="departure-location" name="departure-location" required>
+                                    <option value="">Select Departure</option>
+                                    <option value="nairobi-wilson">Nairobi (Wilson Airport)</option>
+                                    <option value="nairobi-jkia">Nairobi (JKIA)</option>
+                                    <option value="mombasa">Mombasa</option>
+                                    <option value="kisumu">Kisumu</option>
+                                    <option value="malindi">Malindi</option>
+                                    <option value="lamu">Lamu</option>
+                                    <option value="masai-mara">Masai Mara</option>
+                                    <option value="samburu">Samburu</option>
+                                    <option value="custom">Custom Location</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="destination-location">Destination *</label>
+                                <select id="destination-location" name="destination-location" required>
+                                    <option value="">Select Destination</option>
+                                    <option value="nairobi-wilson">Nairobi (Wilson Airport)</option>
+                                    <option value="nairobi-jkia">Nairobi (JKIA)</option>
+                                    <option value="mombasa">Mombasa</option>
+                                    <option value="kisumu">Kisumu</option>
+                                    <option value="malindi">Malindi</option>
+                                    <option value="lamu">Lamu</option>
+                                    <option value="masai-mara">Masai Mara</option>
+                                    <option value="samburu">Samburu</option>
+                                    <option value="zanzibar">Zanzibar</option>
+                                    <option value="serengeti">Serengeti</option>
+                                    <option value="kigali">Kigali</option>
+                                    <option value="kampala">Kampala</option>
+                                    <option value="custom">Custom Location</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="departure-date">Departure Date *</label>
+                                <input type="date" id="departure-date" name="departure-date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="departure-time">Departure Time *</label>
+                                <select id="departure-time" name="departure-time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="06:00">06:00 AM</option>
+                                    <option value="07:00">07:00 AM</option>
+                                    <option value="08:00">08:00 AM</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                    <option value="18:00">06:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid" id="return-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="return-date">Return Date</label>
+                                <input type="date" id="return-date" name="return-date">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="return-time">Return Time</label>
+                                <select id="return-time" name="return-time">
+                                    <option value="">Select Time</option>
+                                    <option value="06:00">06:00 AM</option>
+                                    <option value="07:00">07:00 AM</option>
+                                    <option value="08:00">08:00 AM</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                    <option value="18:00">06:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="passengers">Number of Passengers *</label>
+                                <select id="passengers" name="passengers" required>
+                                    <option value="">Select Passengers</option>
+                                    <option value="1">1 Passenger</option>
+                                    <option value="2">2 Passengers</option>
+                                    <option value="3">3 Passengers</option>
+                                    <option value="4">4 Passengers</option>
+                                    <option value="5">5 Passengers</option>
+                                    <option value="6">6 Passengers</option>
+                                    <option value="7">7 Passengers</option>
+                                    <option value="8">8 Passengers</option>
+                                    <option value="9">9+ Passengers</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="luggage">Luggage Requirements</label>
+                                <select id="luggage" name="luggage">
+                                    <option value="light">Light (Hand luggage only)</option>
+                                    <option value="medium">Medium (1-2 bags per person)</option>
+                                    <option value="heavy">Heavy (3+ bags per person)</option>
+                                    <option value="cargo">Cargo/Special items</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" name="special-requests" rows="3" placeholder="Any special requirements, dietary restrictions, or additional services..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary" id="check-availability">
+                                <i class="fas fa-search"></i>
+                                Check Availability
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2: Aircraft Selection -->
+                <div class="booking-step" id="step-2">
+                    <div class="step-header">
+                        <h2>Available Aircraft</h2>
+                        <p>Choose your preferred aircraft for the journey</p>
+                    </div>
+                    
+                    <div class="aircraft-options" id="aircraft-options">
+                        <!-- Aircraft options will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="back-to-step1">
+                            <i class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+                        <button type="button" class="btn btn-primary" id="continue-to-step3" disabled>
+                            Continue
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Passenger Information -->
+                <div class="booking-step" id="step-3">
+                    <div class="step-header">
+                        <h2>Passenger Information</h2>
+                        <p>Provide details for all passengers</p>
+                    </div>
+                    
+                    <form class="booking-form" id="passenger-form">
+                        <div class="form-section">
+                            <h3>Primary Contact</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="contact-title">Title *</label>
+                                    <select id="contact-title" name="contact-title" required>
+                                        <option value="">Select Title</option>
+                                        <option value="mr">Mr.</option>
+                                        <option value="mrs">Mrs.</option>
+                                        <option value="ms">Ms.</option>
+                                        <option value="dr">Dr.</option>
+                                        <option value="prof">Prof.</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-first-name">First Name *</label>
+                                    <input type="text" id="contact-first-name" name="contact-first-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-last-name">Last Name *</label>
+                                    <input type="text" id="contact-last-name" name="contact-last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="contact-email">Email Address *</label>
+                                    <input type="email" id="contact-email" name="contact-email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-phone">Phone Number *</label>
+                                    <input type="tel" id="contact-phone" name="contact-phone" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Additional Passengers</h3>
+                            <div id="additional-passengers">
+                                <!-- Additional passenger fields will be generated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Emergency Contact</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="emergency-name">Full Name *</label>
+                                    <input type="text" id="emergency-name" name="emergency-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="emergency-phone">Phone Number *</label>
+                                    <input type="tel" id="emergency-phone" name="emergency-phone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="emergency-relationship">Relationship *</label>
+                                    <select id="emergency-relationship" name="emergency-relationship" required>
+                                        <option value="">Select Relationship</option>
+                                        <option value="spouse">Spouse</option>
+                                        <option value="parent">Parent</option>
+                                        <option value="child">Child</option>
+                                        <option value="sibling">Sibling</option>
+                                        <option value="friend">Friend</option>
+                                        <option value="colleague">Colleague</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="back-to-step2">
+                                <i class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="btn btn-primary" id="continue-to-payment">
+                                Continue to Payment
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 4: Payment -->
+                <div class="booking-step" id="step-4">
+                    <div class="step-header">
+                        <h2>Payment Information</h2>
+                        <p>Review your booking and complete payment</p>
+                    </div>
+                    
+                    <div class="payment-container">
+                        <div class="booking-summary">
+                            <h3>Booking Summary</h3>
+                            <div class="summary-details" id="booking-summary">
+                                <!-- Booking summary will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="payment-form">
+                            <h3>Payment Method</h3>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" id="card-payment" name="payment-method" value="card" checked>
+                                    <label for="card-payment">
+                                        <i class="far fa-credit-card"></i>
+                                        Credit/Debit Card
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="bank-transfer" name="payment-method" value="bank">
+                                    <label for="bank-transfer">
+                                        <i class="fas fa-university"></i>
+                                        Bank Transfer
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="mobile-money" name="payment-method" value="mobile">
+                                    <label for="mobile-money">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        M-Pesa / Mobile Money
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="card-details" id="card-details">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number *</label>
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="expiry-date">Expiry Date *</label>
+                                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cardholder-name">Cardholder Name *</label>
+                                    <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Name as on card">
+                                </div>
+                            </div>
+                            
+                            <div class="terms-conditions">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms-agreement" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="back-to-step3">
+                            <i class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+                        <button type="button" class="btn btn-success btn-large" id="complete-booking">
+                            <i class="fas fa-lock"></i>
+                            Complete Booking & Pay
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Confirmation -->
+                <div class="booking-step" id="step-5">
+                    <div class="confirmation-content">
+                        <div class="confirmation-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2>Booking Confirmed!</h2>
+                        <p>Your flight has been successfully booked. Confirmation details have been sent to your email.</p>
+                        
+                        <div class="confirmation-details" id="confirmation-details">
+                            <!-- Confirmation details will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="confirmation-actions">
+                            <a href="booking-confirmation.html" class="btn btn-primary">
+                                <i class="fas fa-file-pdf"></i>
+                                Download Confirmation
+                            </a>
+                            <a href="../index.html" class="btn btn-outline">
+                                <i class="fas fa-home"></i>
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Need Help Section -->
+    <section class="need-help">
+        <div class="container">
+            <div class="help-content">
+                <h3>Need Help with Your Booking?</h3>
+                <p>Our booking specialists are available 24/7 to assist you with your reservation.</p>
+                <div class="help-actions">
+                    <a href="tel:+254700000000" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        Call: +254 700 000 000
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-comment"></i>
+                        Live Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-helicopter"></i>
+                        <span>marshallairline Aviation</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="helicopter-charter.html">Helicopter Charter</a></li>
+                        <li><a href="jet-charter.html">Private Jet Charter</a></li>
+                        <li><a href="maintenance.html">Aircraft Maintenance</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Wilson Airport, Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 700 000 000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@marshallairline-aviation.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 marshallairline Aviation. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Safety Standards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing your booking...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

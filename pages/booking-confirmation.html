@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your flight booking confirmation with Rotorjet Aviation. Download your ticket and view booking details.">
+    <meta name="keywords" content="booking confirmation, flight ticket, aviation booking, helicopter charter confirmation">
+    <title>Booking Confirmation - marshallairline Aviation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <i class="fas fa-helicopter"></i>
+            <span>marshallairline Aviation</span>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Charter Services</h4>
+                            <a href="pages/helicopter-charter.html" class="dropdown-link">
+                                <i class="fas fa-helicopter"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Helicopter Charter</span>
+                                    <span class="link-desc">Scenic flights & transfers</span>
+                                </div>
+                            </a>
+                            <a href="pages/jet-charter.html" class="dropdown-link">
+                                <i class="fas fa-plane"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Private Jet Charter</span>
+                                    <span class="link-desc">Executive & business travel</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Support Services</h4>
+                            <a href="pages/maintenance.html" class="dropdown-link">
+                                <i class="fas fa-wrench"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Aircraft Maintenance</span>
+                                    <span class="link-desc">Professional MRO services</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Booking Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Booking <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Make a Booking</h4>
+                            <a href="pages/booking.html" class="dropdown-link featured">
+                                <i class="fas fa-calendar-plus"></i>
+                                <div class="link-content">
+                                    <span class="link-title">New Booking</span>
+                                    <span class="link-desc">Book your flight online</span>
+                                </div>
+                                <span class="link-badge">Popular</span>
+                            </a>
+                            <a href="pages/quote.html" class="dropdown-link">
+                                <i class="fas fa-calculator"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Request Quote</span>
+                                    <span class="link-desc">Get custom pricing</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Manage Bookings</h4>
+                            <a href="pages/my-bookings.html" class="dropdown-link">
+                                <i class="fas fa-list"></i>
+                                <div class="link-content">
+                                    <span class="link-title">My Bookings</span>
+                                    <span class="link-desc">View & manage reservations</span>
+                                </div>
+                            </a>
+                            <a href="pages/booking-lookup.html" class="dropdown-link">
+                                <i class="fas fa-search"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Booking Lookup</span>
+                                    <span class="link-desc">Find existing booking</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="quick-book-widget">
+                                <h4 class="dropdown-header">Quick Book</h4>
+                                <form class="mini-booking-form" id="nav-quick-book">
+                                    <div class="mini-form-row">
+                                        <select name="service" required>
+                                            <option value="">Service</option>
+                                            <option value="helicopter">Helicopter</option>
+                                            <option value="jet">Private Jet</option>
+                                        </select>
+                                        <select name="passengers" required>
+                                            <option value="">Pax</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="4">4</option>
+                                            <option value="6">6+</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="mini-book-btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                        Quick Book
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Enhanced CTA Section -->
+        <div class="nav-cta">
+            <div class="nav-secondary-actions">
+                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="nav-phone">
+                    <a href="tel:+254700000000" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="phone-number">+254 700 000 000</span>
+                    </a>
+                </div>
+            </div>
+            <a href="pages/booking.html" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i>
+                Book Flight
+            </a>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- Confirmation Header -->
+    <section class="confirmation-header">
+        <div class="container">
+            <div class="confirmation-header-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Booking Confirmed!</h1>
+                <p>Thank you for choosing marshallairline Aviation. Your flight has been successfully booked.</p>
+                <div class="booking-reference">
+                    <span class="reference-label">Booking Reference:</span>
+                    <span class="reference-number" id="booking-reference">RJA-2025-001234</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Details -->
+    <section class="confirmation-details">
+        <div class="container">
+            <div class="confirmation-container">
+                
+                <!-- Flight Information -->
+                <div class="confirmation-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-plane"></i> Flight Information</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="flight-route">
+                            <div class="route-point">
+                                <div class="point-code">NBO</div>
+                                <div class="point-name">Nairobi (Wilson)</div>
+                                <div class="point-time">10:00 AM</div>
+                                <div class="point-date">June 20, 2025</div>
+                            </div>
+                            <div class="route-line">
+                                <i class="fas fa-plane"></i>
+                                <span class="flight-duration">2h 30m</span>
+                            </div>
+                            <div class="route-point">
+                                <div class="point-code">MSA</div>
+                                <div class="point-name">Masai Mara</div>
+                                <div class="point-time">12:30 PM</div>
+                                <div class="point-date">June 20, 2025</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flight-details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Aircraft:</span>
+                                <span class="detail-value">AS350 Helicopter</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Flight Type:</span>
+                                <span class="detail-value">Round Trip</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Passengers:</span>
+                                <span class="detail-value">4 Passengers</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Service:</span>
+                                <span class="detail-value">Helicopter Charter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Return Flight (if applicable) -->
+                <div class="confirmation-card" id="return-flight-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-plane fa-flip-horizontal"></i> Return Flight</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="flight-route">
+                            <div class="route-point">
+                                <div class="point-code">MSA</div>
+                                <div class="point-name">Masai Mara</div>
+                                <div class="point-time">04:00 PM</div>
+                                <div class="point-date">June 20, 2025</div>
+                            </div>
+                            <div class="route-line">
+                                <i class="fas fa-plane fa-flip-horizontal"></i>
+                                <span class="flight-duration">2h 30m</span>
+                            </div>
+                            <div class="route-point">
+                                <div class="point-code">NBO</div>
+                                <div class="point-name">Nairobi (Wilson)</div>
+                                <div class="point-time">06:30 PM</div>
+                                <div class="point-date">June 20, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Passenger Information -->
+                <div class="confirmation-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-users"></i> Passenger Information</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="passenger-list">
+                            <div class="passenger-item primary-passenger">
+                                <div class="passenger-info">
+                                    <span class="passenger-name">Mr. John Doe</span>
+                                    <span class="passenger-type">Primary Contact</span>
+                                </div>
+                                <div class="passenger-contact">
+                                    <span class="contact-email">john.doe@email.com</span>
+                                    <span class="contact-phone">+254 712 345 678</span>
+                                </div>
+                            </div>
+                            
+                            <div class="passenger-item">
+                                <div class="passenger-info">
+                                    <span class="passenger-name">Mrs. Jane Doe</span>
+                                    <span class="passenger-type">Passenger</span>
+                                </div>
+                            </div>
+                            
+                            <div class="passenger-item">
+                                <div class="passenger-info">
+                                    <span class="passenger-name">Master Mike Doe</span>
+                                    <span class="passenger-type">Passenger</span>
+                                </div>
+                            </div>
+                            
+                            <div class="passenger-item">
+                                <div class="passenger-info">
+                                    <span class="passenger-name">Miss Sarah Doe</span>
+                                    <span class="passenger-type">Passenger</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="emergency-contact">
+                            <h4>Emergency Contact</h4>
+                            <div class="emergency-details">
+                                <span class="emergency-name">Robert Smith (Brother)</span>
+                                <span class="emergency-phone">+254 722 987 654</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Information -->
+                <div class="confirmation-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-credit-card"></i> Payment Summary</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="payment-breakdown">
+                            <div class="payment-item">
+                                <span class="payment-label">Base Charter Fee:</span>
+                                <span class="payment-amount">$3,200.00</span>
+                            </div>
+                            <div class="payment-item">
+                                <span class="payment-label">Airport Fees:</span>
+                                <span class="payment-amount">$150.00</span>
+                            </div>
+                            <div class="payment-item">
+                                <span class="payment-label">Fuel Surcharge:</span>
+                                <span class="payment-amount">$200.00</span>
+                            </div>
+                            <div class="payment-item">
+                                <span class="payment-label">Service Fee:</span>
+                                <span class="payment-amount">$100.00</span>
+                            </div>
+                            <div class="payment-item subtotal">
+                                <span class="payment-label">Subtotal:</span>
+                                <span class="payment-amount">$3,650.00</span>
+                            </div>
+                            <div class="payment-item">
+                                <span class="payment-label">VAT (16%):</span>
+                                <span class="payment-amount">$584.00</span>
+                            </div>
+                            <div class="payment-item total">
+                                <span class="payment-label">Total Paid:</span>
+                                <span class="payment-amount">$4,234.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <span class="method-label">Payment Method:</span>
+                            <span class="method-value">Visa Card ending in 1234</span>
+                        </div>
+                        
+                        <div class="payment-status">
+                            <span class="status-label">Payment Status:</span>
+                            <span class="status-value confirmed">Confirmed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Information -->
+                <div class="confirmation-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-info-circle"></i> Important Information</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-section">
+                            <h4>Check-in Requirements</h4>
+                            <ul class="info-list">
+                                <li>Arrive at the departure point 30 minutes before your scheduled flight</li>
+                                <li>Bring valid government-issued photo identification</li>
+                                <li>Weight limit of 15kg per passenger for luggage</li>
+                                <li>No sharp objects or hazardous materials allowed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Weather Policy</h4>
+                            <ul class="info-list">
+                                <li>Flights are subject to weather conditions and visibility</li>
+                                <li>In case of adverse weather, alternative dates will be offered</li>
+                                <li>No cancellation fees for weather-related changes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>Cancellation Policy</h4>
+                            <ul class="info-list">
+                                <li>Free cancellation up to 48 hours before departure</li>
+                                <li>50% refund for cancellations 24-48 hours before</li>
+                                <li>No refund for cancellations within 24 hours</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="confirmation-actions">
+        <div class="container">
+            <div class="actions-container">
+                <div class="action-group">
+                    <button class="btn btn-primary" id="download-ticket">
+                        <i class="fas fa-download"></i>
+                        Download E-Ticket
+                    </button>
+                    <button class="btn btn-outline" id="email-confirmation">
+                        <i class="fas fa-envelope"></i>
+                        Email Confirmation
+                    </button>
+                </div>
+                
+                <div class="action-group">
+                    <button class="btn btn-outline" id="add-to-calendar">
+                        <i class="fas fa-calendar-plus"></i>
+                        Add to Calendar
+                    </button>
+                    <button class="btn btn-outline" id="share-booking">
+                        <i class="fas fa-share"></i>
+                        Share Booking
+                    </button>
+                </div>
+                
+                <div class="action-group">
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-headset"></i>
+                        Contact Support
+                    </a>
+                    <a href="booking.html" class="btn btn-success">
+                        <i class="fas fa-plus"></i>
+                        Book Another Flight
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="confirmation-contact">
+        <div class="container">
+            <div class="contact-card">
+                <h3>Need Assistance?</h3>
+                <p>Our customer service team is available 24/7 to help with any questions about your booking.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div class="method-info">
+                            <span class="method-label">Call Us</span>
+                            <span class="method-value">+254 700 000 000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div class="method-info">
+                            <span class="method-label">Email</span>
+                            <span class="method-value">support@marshallairline-aviation.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-comment"></i>
+                        <div class="method-info">
+                            <span class="method-label">Live Chat</span>
+                            <span class="method-value">Available on our website</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-helicopter"></i>
+                        <span>marshallairline Aviation</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="helicopter-charter.html">Helicopter Charter</a></li>
+                        <li><a href="jet-charter.html">Private Jet Charter</a></li>
+                        <li><a href="maintenance.html">Aircraft Maintenance</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Wilson Airport, Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 700 000 000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@marshallairline-aviation.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 marshallairline Aviation. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Safety Standards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/confirmation.js"></script>
+</body>
+</html>

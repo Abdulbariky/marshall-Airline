@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional aircraft maintenance services in Kenya. Certified technicians, comprehensive inspections, and quality repairs for helicopters and private jets.">
+    <meta name="keywords" content="aircraft maintenance, helicopter maintenance, private jet maintenance, aviation MRO, Kenya aircraft service">
+    <title>Aircraft Maintenance - marshallairline Aviation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <i class="fas fa-helicopter"></i>
+            <span>marshallairline Aviation</span>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Charter Services</h4>
+                            <a href="pages/helicopter-charter.html" class="dropdown-link">
+                                <i class="fas fa-helicopter"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Helicopter Charter</span>
+                                    <span class="link-desc">Scenic flights & transfers</span>
+                                </div>
+                            </a>
+                            <a href="pages/jet-charter.html" class="dropdown-link">
+                                <i class="fas fa-plane"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Private Jet Charter</span>
+                                    <span class="link-desc">Executive & business travel</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Support Services</h4>
+                            <a href="pages/maintenance.html" class="dropdown-link">
+                                <i class="fas fa-wrench"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Aircraft Maintenance</span>
+                                    <span class="link-desc">Professional MRO services</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Booking Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Booking <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Make a Booking</h4>
+                            <a href="pages/booking.html" class="dropdown-link featured">
+                                <i class="fas fa-calendar-plus"></i>
+                                <div class="link-content">
+                                    <span class="link-title">New Booking</span>
+                                    <span class="link-desc">Book your flight online</span>
+                                </div>
+                                <span class="link-badge">Popular</span>
+                            </a>
+                            <a href="pages/quote.html" class="dropdown-link">
+                                <i class="fas fa-calculator"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Request Quote</span>
+                                    <span class="link-desc">Get custom pricing</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Manage Bookings</h4>
+                            <a href="pages/my-bookings.html" class="dropdown-link">
+                                <i class="fas fa-list"></i>
+                                <div class="link-content">
+                                    <span class="link-title">My Bookings</span>
+                                    <span class="link-desc">View & manage reservations</span>
+                                </div>
+                            </a>
+                            <a href="pages/booking-lookup.html" class="dropdown-link">
+                                <i class="fas fa-search"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Booking Lookup</span>
+                                    <span class="link-desc">Find existing booking</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="quick-book-widget">
+                                <h4 class="dropdown-header">Quick Book</h4>
+                                <form class="mini-booking-form" id="nav-quick-book">
+                                    <div class="mini-form-row">
+                                        <select name="service" required>
+                                            <option value="">Service</option>
+                                            <option value="helicopter">Helicopter</option>
+                                            <option value="jet">Private Jet</option>
+                                        </select>
+                                        <select name="passengers" required>
+                                            <option value="">Pax</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="4">4</option>
+                                            <option value="6">6+</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="mini-book-btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                        Quick Book
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Enhanced CTA Section -->
+        <div class="nav-cta">
+            <div class="nav-secondary-actions">
+                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="nav-phone">
+                    <a href="tel:+254700000000" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="phone-number">+254 700 000 000</span>
+                    </a>
+                </div>
+            </div>
+            <a href="pages/booking.html" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i>
+                Book Flight
+            </a>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-overlay"></div>
+        
+        <div class="container">
+            <div class="page-header-content">
+                <h1 data-animate="fadeUp">Aircraft Maintenance Services</h1>
+                <p data-animate="fadeUp" style="animation-delay: 0.2s;">
+                    Professional maintenance, repair, and overhaul services for helicopters and private jets in Kenya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-item">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="#" class="breadcrumb-item">Services</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item">Aircraft Maintenance</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Service Introduction -->
+    <section class="service-intro">
+        <div class="container">
+            <div class="service-intro-content">
+                <div class="service-text" data-animate="fadeRight">
+                    <h2>Professional Aircraft Maintenance</h2>
+                    <p class="service-lead">
+                        Our certified maintenance team provides comprehensive aircraft maintenance, repair, and overhaul (MRO) services, ensuring your aircraft operates at peak performance and safety standards.
+                    </p>
+                    <p>
+                        With state-of-the-art facilities at Wilson Airport and a team of experienced technicians, we handle everything from routine inspections to major overhauls. Our maintenance services comply with Kenya Civil Aviation Authority (KCAA) regulations and international aviation standards.
+                    </p>
+                    
+                    <div class="service-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>KCAA Certified</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Advanced Equipment</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users-cog"></i>
+                            <span>Expert Technicians</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-image" data-animate="fadeLeft">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=400&fit=crop" alt="Aircraft maintenance hangar" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Services -->
+    <section class="maintenance-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Maintenance Services</h2>
+                <p class="section-subtitle">
+                    Comprehensive aircraft maintenance solutions for optimal performance and safety
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Routine Inspections</h3>
+                    <p>
+                        Regular pre-flight, post-flight, and scheduled inspections to ensure aircraft airworthiness and identify potential issues before they become problems.
+                    </p>
+                    <ul class="service-features">
+                        <li>Pre-flight inspections</li>
+                        <li>Daily/weekly checks</li>
+                        <li>Progressive inspections</li>
+                        <li>Annual inspections</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Preventive Maintenance</h3>
+                    <p>
+                        Scheduled maintenance based on flight hours, calendar time, or cycles to prevent failures and extend aircraft service life.
+                    </p>
+                    <ul class="service-features">
+                        <li>Engine maintenance</li>
+                        <li>Component replacement</li>
+                        <li>Lubrication services</li>
+                        <li>Systems testing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Corrective Maintenance</h3>
+                    <p>
+                        Expert repair services for unscheduled maintenance issues, component failures, and damage repairs with minimal aircraft downtime.
+                    </p>
+                    <ul class="service-features">
+                        <li>Emergency repairs</li>
+                        <li>Component rebuilding</li>
+                        <li>Structural repairs</li>
+                        <li>Troubleshooting</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Major Overhauls</h3>
+                    <p>
+                        Complete aircraft overhauls including engine rebuilds, major component replacement, and comprehensive refurbishment services.
+                    </p>
+                    <ul class="service-features">
+                        <li>Engine overhauls</li>
+                        <li>Transmission service</li>
+                        <li>Avionics upgrades</li>
+                        <li>Interior refurbishment</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Airworthiness Management</h3>
+                    <p>
+                        Complete airworthiness management including compliance tracking, documentation, and certification maintenance.
+                    </p>
+                    <ul class="service-features">
+                        <li>Certificate management</li>
+                        <li>Compliance tracking</li>
+                        <li>Documentation control</li>
+                        <li>Regulatory support</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-animate="fadeUp" data-animate-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Parts & Logistics</h3>
+                    <p>
+                        Comprehensive parts management and logistics services with access to a global network of suppliers and certified components.
+                    </p>
+                    <ul class="service-features">
+                        <li>Parts procurement</li>
+                        <li>Inventory management</li>
+                        <li>Exchange programs</li>
+                        <li>Warranty support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Features -->
+    <section class="facility-features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Maintenance Facility</h2>
+                <p class="section-subtitle">
+                    State-of-the-art maintenance facility equipped with the latest technology
+                </p>
+            </div>
+            
+            <div class="facility-grid">
+                <div class="facility-item" data-animate="slideLeft" data-animate-delay="100">
+                    <div class="facility-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="facility-content">
+                        <h3>Modern Hangars</h3>
+                        <p>
+                            Climate-controlled hangars with sufficient space for helicopter and fixed-wing aircraft maintenance operations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="facility-item" data-animate="slideLeft" data-animate-delay="200">
+                    <div class="facility-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="facility-content">
+                        <h3>Advanced Equipment</h3>
+                        <p>
+                            Latest diagnostic tools, ground support equipment, and specialized tooling for comprehensive maintenance services.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="facility-item" data-animate="slideLeft" data-animate-delay="300">
+                    <div class="facility-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="facility-content">
+                        <h3>Test Equipment</h3>
+                        <p>
+                            Comprehensive testing capabilities including engine test cells, avionics testing, and component analysis equipment.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="facility-item" data-animate="slideLeft" data-animate-delay="400">
+                    <div class="facility-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="facility-content">
+                        <h3>Parts Storage</h3>
+                        <p>
+                            Organized parts storage facility with climate control and inventory management systems for quick parts access.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Approvals</h2>
+                <p class="section-subtitle">
+                    Our maintenance operations meet the highest industry standards
+                </p>
+            </div>
+            
+            <div class="certification-grid">
+                <div class="certification-item" data-animate="zoomIn" data-animate-delay="100">
+                    <div class="certification-logo">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>KCAA Approved</h4>
+                    <p>Kenya Civil Aviation Authority maintenance organization approval</p>
+                </div>
+                
+                <div class="certification-item" data-animate="zoomIn" data-animate-delay="200">
+                    <div class="certification-logo">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>EASA Approved</h4>
+                    <p>European Aviation Safety Agency maintenance approval</p>
+                </div>
+                
+                <div class="certification-item" data-animate="zoomIn" data-animate-delay="300">
+                    <div class="certification-logo">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Quality management system certification</p>
+                </div>
+                
+                <div class="certification-item" data-animate="zoomIn" data-animate-delay="400">
+                    <div class="certification-logo">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Safety First</h4>
+                    <p>Comprehensive safety management system implementation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Process -->
+    <section class="maintenance-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Maintenance Process</h2>
+                <p class="section-subtitle">
+                    Systematic approach ensuring quality and efficiency
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step" data-animate="fadeRight" data-animate-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Assessment</h3>
+                        <p>Comprehensive inspection and assessment of aircraft condition with detailed documentation.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fadeLeft" data-animate-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Work Planning</h3>
+                        <p>Detailed work scope development, parts ordering, and maintenance schedule planning.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fadeRight" data-animate-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Maintenance Execution</h3>
+                        <p>Professional maintenance work performed by certified technicians using approved procedures.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fadeLeft" data-animate-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quality Control</h3>
+                        <p>Thorough inspection and testing to ensure all work meets safety and quality standards.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-animate="fadeRight" data-animate-delay="500">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Return to Service</h3>
+                        <p>Final documentation, certification, and return of aircraft to operational status.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services -->
+    <section class="emergency-services">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-text" data-animate="fadeUp">
+                    <h2>24/7 Emergency Maintenance Support</h2>
+                    <p>
+                        Aircraft emergencies don't wait for business hours. Our emergency maintenance team is available 24/7 to handle urgent repairs and get your aircraft back in service quickly and safely.
+                    </p>
+                    <div class="emergency-features">
+                        <div class="emergency-feature">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>24/7 Hotline</span>
+                        </div>
+                        <div class="emergency-feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Mobile Service</span>
+                        </div>
+                        <div class="emergency-feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Rapid Response</span>
+                        </div>
+                    </div>
+                    <div class="emergency-contact">
+                        <a href="tel:+254700000000" class="btn btn-danger btn-large">
+                            <i class="fas fa-phone"></i>
+                            Emergency Hotline: +254 700 000 000
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="emergency-image" data-animate="fadeUp">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=500&h=350&fit=crop" alt="Emergency maintenance service" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="cta-background" style="background-image: url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1920&h=600&fit=crop');"></div>
+        <div class="cta-overlay"></div>
+        
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Need Professional Aircraft Maintenance?</h2>
+                <p class="cta-subtitle">
+                    Trust your aircraft to our certified maintenance professionals for reliable and safe operation.
+                </p>
+                <div class="cta-actions">
+                    <a href="quote.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-wrench"></i>
+                        Request Maintenance Quote
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        Contact Maintenance Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-helicopter"></i>
+                        <span>marshallairline Aviation</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="helicopter-charter.html">Helicopter Charter</a></li>
+                        <li><a href="jet-charter.html">Private Jet Charter</a></li>
+                        <li><a href="maintenance.html">Aircraft Maintenance</a></li>
+                        <li><a href="quote.html">Request Quote</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Wilson Airport, Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 700 000 000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@marshallairline-aviation.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 marshallairline Aviation. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Safety Standards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+</html>

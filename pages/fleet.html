@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Rotorjet Aviation's modern fleet of helicopters and private jets. State-of-the-art aircraft maintained to the highest safety standards.">
+    <meta name="keywords" content="helicopter fleet, private jet fleet, aircraft Kenya, aviation fleet, helicopter types, jet aircraft">
+    <title>Our Fleet - marshallairline Aviation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <i class="fas fa-helicopter"></i>
+            <span>marshallairline Aviation</span>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Charter Services</h4>
+                            <a href="pages/helicopter-charter.html" class="dropdown-link">
+                                <i class="fas fa-helicopter"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Helicopter Charter</span>
+                                    <span class="link-desc">Scenic flights & transfers</span>
+                                </div>
+                            </a>
+                            <a href="pages/jet-charter.html" class="dropdown-link">
+                                <i class="fas fa-plane"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Private Jet Charter</span>
+                                    <span class="link-desc">Executive & business travel</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Support Services</h4>
+                            <a href="pages/maintenance.html" class="dropdown-link">
+                                <i class="fas fa-wrench"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Aircraft Maintenance</span>
+                                    <span class="link-desc">Professional MRO services</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Booking Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Booking <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Make a Booking</h4>
+                            <a href="pages/booking.html" class="dropdown-link featured">
+                                <i class="fas fa-calendar-plus"></i>
+                                <div class="link-content">
+                                    <span class="link-title">New Booking</span>
+                                    <span class="link-desc">Book your flight online</span>
+                                </div>
+                                <span class="link-badge">Popular</span>
+                            </a>
+                            <a href="pages/quote.html" class="dropdown-link">
+                                <i class="fas fa-calculator"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Request Quote</span>
+                                    <span class="link-desc">Get custom pricing</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4 class="dropdown-header">Manage Bookings</h4>
+                            <a href="pages/my-bookings.html" class="dropdown-link">
+                                <i class="fas fa-list"></i>
+                                <div class="link-content">
+                                    <span class="link-title">My Bookings</span>
+                                    <span class="link-desc">View & manage reservations</span>
+                                </div>
+                            </a>
+                            <a href="pages/booking-lookup.html" class="dropdown-link">
+                                <i class="fas fa-search"></i>
+                                <div class="link-content">
+                                    <span class="link-title">Booking Lookup</span>
+                                    <span class="link-desc">Find existing booking</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="quick-book-widget">
+                                <h4 class="dropdown-header">Quick Book</h4>
+                                <form class="mini-booking-form" id="nav-quick-book">
+                                    <div class="mini-form-row">
+                                        <select name="service" required>
+                                            <option value="">Service</option>
+                                            <option value="helicopter">Helicopter</option>
+                                            <option value="jet">Private Jet</option>
+                                        </select>
+                                        <select name="passengers" required>
+                                            <option value="">Pax</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="4">4</option>
+                                            <option value="6">6+</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="mini-book-btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                        Quick Book
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Enhanced CTA Section -->
+        <div class="nav-cta">
+            <div class="nav-secondary-actions">
+                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
+                    <i class="fas fa-search"></i>
+                </a>
+                <div class="nav-phone">
+                    <a href="tel:+254700000000" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="phone-number">+254 700 000 000</span>
+                    </a>
+                </div>
+            </div>
+            <a href="pages/booking.html" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i>
+                Book Flight
+            </a>
+        </div>
+        
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-overlay"></div>
+        
+        <div class="container">
+            <div class="page-header-content">
+                <h1 data-animate="fadeUp">Our Modern Fleet</h1>
+                <p data-animate="fadeUp" style="animation-delay: 0.2s;">
+                    State-of-the-art aircraft maintained to the highest international safety and performance standards.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-item">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-item">Our Fleet</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Fleet Overview -->
+    <section class="fleet-overview">
+        <div class="container">
+            <div class="fleet-overview-content">
+                <div class="fleet-text" data-animate="fadeRight">
+                    <h2>Premium Aircraft Collection</h2>
+                    <p>
+                        Our carefully curated fleet represents the pinnacle of aviation technology and safety. Each aircraft in our collection is meticulously maintained, regularly inspected, and operated by highly trained, certified pilots with extensive experience in Kenya and East Africa.
+                    </p>
+                    <p>
+                        From versatile helicopters perfect for scenic flights and business transport to luxurious private jets for long-distance travel, our fleet is designed to meet diverse aviation needs while maintaining the highest standards of safety, comfort, and reliability.
+                    </p>
+                    
+                    <div class="fleet-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-counter="15">15+</div>
+                            <div class="stat-label">Total Aircraft</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-counter="8">8</div>
+                            <div class="stat-label">Helicopters</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-counter="7">7</div>
+                            <div class="stat-label">Private Jets</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-counter="99">99.9%</div>
+                            <div class="stat-label">Availability Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fleet-image" data-animate="fadeLeft">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop" alt="Fleet overview" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Categories -->
+    <section class="fleet-categories">
+        <div class="container">
+            <div class="fleet-tabs">
+                <button class="fleet-tab active" data-tab="helicopters">
+                    <i class="fas fa-helicopter"></i>
+                    Helicopters
+                </button>
+                <button class="fleet-tab" data-tab="jets">
+                    <i class="fas fa-plane"></i>
+                    Private Jets
+                </button>
+            </div>
+            
+            <!-- Helicopters -->
+            <div class="fleet-content active" id="helicopters">
+                <div class="section-header">
+                    <h2 class="section-title">Helicopter Fleet</h2>
+                    <p class="section-subtitle">
+                        Versatile rotorcraft for all your transportation and operational needs
+                    </p>
+                </div>
+                
+                <div class="aircraft-grid">
+                    <!-- Helicopter 1 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="100">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=500&h=300&fit=crop" alt="Bell 407" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">Bell 407</h3>
+                                <span class="aircraft-type">Multi-Purpose Helicopter</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>6 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3.5 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>246 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-suitcase"></i>
+                                    <span>120 kg baggage</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">Air Conditioning</div>
+                                <div class="feature-tag">Noise Reduction</div>
+                                <div class="feature-tag">Leather Interior</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Perfect for executive transport, scenic flights, and special occasions. Features advanced avionics and superior comfort.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $500/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Helicopter 2 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="200">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1544827567-22a37fd0ea3a?w=500&h=300&fit=crop" alt="AS350 B3e Ecureuil" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">AS350 B3e Ecureuil</h3>
+                                <span class="aircraft-type">High-Performance Helicopter</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>5 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>287 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>7,010m ceiling</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">High Altitude</div>
+                                <div class="feature-tag">Mountain Certified</div>
+                                <div class="feature-tag">GPS Navigation</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Ideal for high-altitude operations, mountain flights, and challenging terrain access. Exceptional performance and reliability.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $550/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Helicopter 3 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="300">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop" alt="Robinson R44" loading="lazy">
+                            <div class="aircraft-badge available">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">Robinson R44</h3>
+                                <span class="aircraft-type">Light Helicopter</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>3 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2.5 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>185 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-suitcase"></i>
+                                    <span>90 kg baggage</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">Cost Effective</div>
+                                <div class="feature-tag">Training Flights</div>
+                                <div class="feature-tag">Scenic Tours</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Perfect for scenic flights, photography, and small group transport. Economical choice without compromising safety.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $300/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Helicopter 4 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="400">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=500&h=300&fit=crop" alt="AW139" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">AgustaWestland AW139</h3>
+                                <span class="aircraft-type">Medium Twin Helicopter</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>12 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>5 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>310 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Medical Ready</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">VIP Interior</div>
+                                <div class="feature-tag">Twin Engine</div>
+                                <div class="feature-tag">Emergency Medical</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Our flagship helicopter for VIP transport, emergency medical services, and large group charter flights.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $800/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Private Jets -->
+            <div class="fleet-content" id="jets">
+                <div class="section-header">
+                    <h2 class="section-title">Private Jet Fleet</h2>
+                    <p class="section-subtitle">
+                        Luxury aircraft for business travel and long-distance flights
+                    </p>
+                </div>
+                
+                <div class="aircraft-grid">
+                    <!-- Jet 1 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="100">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop" alt="Citation CJ3+" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">Cessna Citation CJ3+</h3>
+                                <span class="aircraft-type">Light Business Jet</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>7 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3.5 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>815 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>13,715m ceiling</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">Business Class</div>
+                                <div class="feature-tag">Wi-Fi</div>
+                                <div class="feature-tag">Entertainment</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Perfect for regional business travel. Modern avionics, comfortable cabin, and excellent performance.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $2,500/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Jet 2 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="200">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=300&fit=crop" alt="King Air 350" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">Beechcraft King Air 350</h3>
+                                <span class="aircraft-type">Turboprop Aircraft</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>9 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>5 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>574 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-suitcase"></i>
+                                    <span>300 kg baggage</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">Short Runway</div>
+                                <div class="feature-tag">Cargo Capable</div>
+                                <div class="feature-tag">Reliable</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                Versatile aircraft ideal for accessing remote airstrips and cargo operations while maintaining passenger comfort.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $1,800/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Jet 3 -->
+                    <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="300">
+                        <div class="aircraft-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop" alt="Embraer Phenom 300" loading="lazy">
+                            <div class="aircraft-badge">Available</div>
+                        </div>
+                        <div class="aircraft-info">
+                            <div class="aircraft-header">
+                                <h3 class="aircraft-name">Embraer Phenom 300E</h3>
+                                <span class="aircraft-type">Light Business Jet</span>
+                            </div>
+                            
+                            <div class="aircraft-specs">
+                                <div class="spec-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>8 Passengers</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 hours range</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>839 km/h cruise</span>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>13,715m ceiling</span>
+                                </div>
+                            </div>
+                            
+                            <div class="aircraft-features">
+                                <div class="feature-tag">Luxury Interior</div>
+                                <div class="feature-tag">Advanced Avionics</div>
+                                <div class="feature-tag">Quiet Cabin</div>
+                            </div>
+                            
+                            <p class="aircraft-description">
+                                The most popular light jet featuring spacious cabin, advanced technology, and excellent fuel efficiency.
+                            </p>
+                            
+                            <div class="aircraft-actions">
+                                <span class="aircraft-price">From $3,200/hour</span>
+                                <a href="quote.html" class="btn btn-primary btn-small">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Standards -->
+    <section class="maintenance-standards">
+        <div class="container">
+            <div class="maintenance-content">
+                <div class="maintenance-text" data-animate="fadeRight">
+                    <h2>Rigorous Maintenance Standards</h2>
+                    <p>
+                        Every aircraft in our fleet undergoes comprehensive maintenance programs that exceed manufacturer requirements and international aviation standards. Our certified maintenance team ensures each aircraft is in peak condition for every flight.
+                    </p>
+                    
+                    <div class="maintenance-features">
+                        <div class="maintenance-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Scheduled Inspections</h4>
+                                <p>Regular 50, 100, and annual hour inspections</p>
+                            </div>
+                        </div>
+                        <div class="maintenance-item">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Certified Technicians</h4>
+                                <p>KCAA licensed maintenance professionals</p>
+                            </div>
+                        </div>
+                        <div class="maintenance-item">
+                            <i class="fas fa-clipboard-list"></i>
+                            <div>
+                                <h4>Digital Records</h4>
+                                <p>Complete maintenance history tracking</p>
+                            </div>
+                        </div>
+                        <div class="maintenance-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>OEM Parts Only</h4>
+                                <p>Original equipment manufacturer components</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="maintenance-image" data-animate="fadeLeft">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop" alt="Aircraft maintenance" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Availability -->
+    <section class="fleet-availability">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Real-Time Fleet Status</h2>
+                <p class="section-subtitle">
+                    Check current availability and book your preferred aircraft
+                </p>
+            </div>
+            
+            <div class="availability-grid">
+                <div class="availability-card" data-animate="slideUp" data-animate-delay="100">
+                    <div class="availability-header">
+                        <h3>Today's Availability</h3>
+                        <span class="availability-date" id="today-date"></span>
+                    </div>
+                    <div class="availability-list">
+                        <div class="availability-item available">
+                            <span class="aircraft-name">Bell 407</span>
+                            <span class="availability-status">Available</span>
+                        </div>
+                        <div class="availability-item available">
+                            <span class="aircraft-name">AS350 B3e</span>
+                            <span class="availability-status">Available</span>
+                        </div>
+                        <div class="availability-item busy">
+                            <span class="aircraft-name">AW139</span>
+                            <span class="availability-status">On Charter</span>
+                        </div>
+                        <div class="availability-item available">
+                            <span class="aircraft-name">Citation CJ3+</span>
+                            <span class="availability-status">Available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="availability-card" data-animate="slideUp" data-animate-delay="200">
+                    <div class="availability-header">
+                        <h3>Quick Booking</h3>
+                        <span>Check availability for your dates</span>
+                    </div>
+                    <form class="quick-booking-form">
+                        <div class="form-group">
+                            <label for="quick-date" class="form-label">Departure Date</label>
+                            <input type="date" id="quick-date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="quick-aircraft" class="form-label">Preferred Aircraft</label>
+                            <select id="quick-aircraft" class="form-select">
+                                <option value="">Any available aircraft</option>
+                                <option value="helicopter">Helicopter</option>
+                                <option value="jet">Private Jet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Check Availability
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="cta-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="cta-overlay"></div>
+        
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Experience Our Fleet?</h2>
+                <p class="cta-subtitle">
+                    Choose from our modern aircraft and enjoy the ultimate in aviation excellence.
+                </p>
+                <div class="cta-actions">
+                    <a href="quote.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Request Quote
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        Speak to Expert
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-helicopter"></i>
+                        <span>marshallairline Aviation</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="helicopter-charter.html">Helicopter Charter</a></li>
+                        <li><a href="jet-charter.html">Private Jet Charter</a></li>
+                        <li><a href="maintenance.html">Aircraft Maintenance</a></li>
+                        <li><a href="quote.html">Request Quote</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Wilson Airport, Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+254 700 000 000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@marshallairline-aviation.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 marshallairline Aviation. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Safety Standards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/forms.js"></script>
+    
+    <script>
+        // Fleet tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.fleet-tab');
+            const contents = document.querySelectorAll('.fleet-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+            
+            // Set today's date in availability section
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('today-date').textContent = today.toLocaleDateString('en-US', options);
+        });
+    </script>
+</body>
+</html>

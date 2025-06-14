@@ -1,0 +1,788 @@
+/* ===============================================
+   Rotorjet Aviation - Page Specific Styles
+   =============================================== */
+
+/* Page Header Styles */
+.page-header {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.page-header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  z-index: -1;
+}
+
+.page-header-content h1 {
+  color: var(--white);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Page Styles */
+.about-intro {
+  padding: var(--spacing-4xl) 0;
+  background: var(--light);
+}
+
+.about-intro-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-intro-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+}
+
+.about-highlight {
+  background: var(--gradient-red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-weight-semibold);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-4xl);
+}
+
+.team-member {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.team-member-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-member-info {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.team-member-name {
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark);
+}
+
+.team-member-role {
+  color: var(--primary-red);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.team-member-bio {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.team-member-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.team-social-link {
+  width: 35px;
+  height: 35px;
+  background: var(--gray-100);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  transition: var(--transition-normal);
+}
+
+.team-social-link:hover {
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+/* Fleet Page Styles */
+.fleet-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-4xl);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid var(--gray-300);
+  background: var(--white);
+  color: var(--gray-700);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--primary-red);
+  background: var(--primary-red);
+  color: var(--white);
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.aircraft-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.aircraft-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.aircraft-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+}
+
+.aircraft-badge {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--primary-red);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.aircraft-info {
+  padding: var(--spacing-xl);
+}
+
+.aircraft-name {
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark);
+}
+
+.aircraft-type {
+  color: var(--primary-blue);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-lg);
+}
+
+.aircraft-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.spec-item i {
+  color: var(--primary-red);
+  width: 16px;
+}
+
+.aircraft-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.btn-secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+}
+
+.btn-secondary:hover {
+  background: var(--gray-200);
+  color: var(--dark);
+}
+
+/* Gallery Page Styles */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-4xl);
+  flex-wrap: wrap;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-info {
+  text-align: center;
+  color: var(--white);
+  padding: var(--spacing-lg);
+}
+
+.gallery-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.gallery-category {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Contact Page Styles */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.contact-info-card {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.contact-icon i {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.contact-form-section {
+  background: var(--light);
+  padding: var(--spacing-4xl) 0;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4xl);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-form {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.map-container {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  height: 400px;
+  background: var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-500);
+}
+
+/* Charter Page Styles */
+.charter-hero {
+  background: var(--gradient-mixed);
+  color: var(--white);
+  padding: var(--spacing-4xl) 0;
+  margin-top: 80px;
+}
+
+.charter-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-4xl) 0;
+}
+
+.charter-feature {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.charter-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.charter-feature-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-red);
+}
+
+.charter-booking {
+  background: var(--light);
+  padding: var(--spacing-4xl) 0;
+}
+
+.charter-booking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .charter-booking-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.booking-form {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.booking-image {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  height: 400px;
+}
+
+.booking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route-suggestions {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+.route-suggestions h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--dark);
+}
+
+.route-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.route-item {
+  background: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  border: 1px solid var(--gray-200);
+  font-size: 0.875rem;
+}
+
+.route-item:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+}
+
+/* Maintenance Page Styles */
+.maintenance-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-4xl) 0;
+}
+
+.maintenance-service {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.maintenance-service:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.maintenance-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-blue);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.maintenance-icon i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.maintenance-checklist {
+  list-style: none;
+  margin: var(--spacing-lg) 0;
+}
+
+.maintenance-checklist li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-600);
+}
+
+.maintenance-checklist i {
+  color: #10B981;
+  font-size: 0.875rem;
+}
+
+.certifications {
+  background: var(--light);
+  padding: var(--spacing-4xl) 0;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  text-align: center;
+}
+
+.certification-item {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.certification-logo {
+  width: 80px;
+  height: 80px;
+  background: var(--gray-100);
+  border-radius: var(--radius-lg);
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--gray-400);
+}
+
+/* Quote Page Styles */
+.quote-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+
+.quote-form-header {
+  background: var(--gradient-red);
+  color: var(--white);
+  padding: var(--spacing-2xl);
+  text-align: center;
+}
+
+.quote-form-body {
+  padding: var(--spacing-2xl);
+}
+
+.quote-steps {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.quote-step {
+  display: none;
+}
+
+.quote-step.active {
+  display: block;
+}
+
+.step-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--gray-200);
+}
+
+.quote-summary {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: 1.125rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .page-header {
+    height: 50vh;
+    margin-top: 60px;
+  }
+  
+  .fleet-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aircraft-card,
+  .gallery-item {
+    min-width: 280px;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-grid,
+  .charter-booking-grid,
+  .about-intro-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .fleet-filters,
+  .gallery-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .route-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .charter-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .maintenance-services {
+    grid-template-columns: 1fr;
+  }
+  
+  .certification-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .scroll-top,
+  .btn,
+  .footer {
+    display: none !important;
+  }
+  
+  .page-header {
+    height: auto;
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .page-header-background,
+  .page-header-overlay {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #1F2937;
+    --light: #111827;
+    --dark: #F9FAFB;
+    --gray-100: #374151;
+    --gray-200: #4B5563;
+    --gray-300: #6B7280;
+    --gray-400: #9CA3AF;
+    --gray-500: #D1D5DB;
+    --gray-600: #E5E7EB;
+    --gray-700: #F3F4F6;
+  }
+  
+  .card,
+  .service-card,
+  .aircraft-card,
+  .team-member,
+  .contact-info-card,
+  .contact-form,
+  .booking-form,
+  .maintenance-service {
+    background: var(--gray-800);
+    border-color: var(--gray-700);
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select {
+    background: var(--gray-800);
+    border-color: var(--gray-600);
+    color: var(--white);
+  }
+}
