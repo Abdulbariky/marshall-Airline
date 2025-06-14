@@ -1,5 +1,5 @@
 /* ===============================================
-   Rotorjet Aviation - Modern 2025 Styling
+   Marshall Airline Aviation - Modern 2025 Styling
    =============================================== */
 
 /* CSS Custom Properties */
@@ -148,52 +148,6 @@ a:hover {
   }
 }
 
-/* Loading Screen */
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-mixed);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.loading-content {
-  text-align: center;
-  color: var(--white);
-}
-
-.loading-logo {
-  margin-bottom: var(--spacing-xl);
-}
-
-.loading-logo i {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-md);
-  animation: rotate 2s linear infinite;
-}
-
-.loading-logo h2 {
-  color: var(--white);
-  font-weight: var(--font-weight-light);
-  letter-spacing: 2px;
-}
-
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid var(--white);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto;
-}
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -206,127 +160,186 @@ a:hover {
 
 /* Navigation */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
-  -webkit-backdrop-filter: var(--glass-backdrop);
-  border-bottom: 1px solid var(--glass-border);
-  z-index: var(--z-fixed);
-  transition: var(--transition-normal);
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--spacing-md) var(--spacing-xl);
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 70px;
 }
 
+/* Brand Styling */
 .nav-brand {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--white);
-  font-weight: var(--font-weight-semibold);
-  font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #dc2626;
+    text-decoration: none;
 }
 
 .nav-brand i {
-  font-size: 1.5rem;
-  color: var(--primary-red);
+    font-size: 24px;
+    color: #dc2626;
 }
 
+/* Enhanced Navigation Menu */
 .nav-menu {
-  display: none;
+    display: flex;
+    align-items: center;
 }
 
 .nav-list {
-  display: flex;
-  list-style: none;
-  gap: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-item {
+    position: relative;
+}
+
+/* ENHANCED NAVIGATION LINKS - More Visible */
 .nav-link {
-  color: var(--white);
-  font-weight: var(--font-weight-medium);
-  position: relative;
-  transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.025em;
+    position: relative;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    color: #dc2626;
+    background: #fef2f2;
+    transform: translateY(-1px);
+}
+
 .nav-link.active {
-  color: var(--primary-red);
+    color: #dc2626;
+    background: #fef2f2;
+    font-weight: 700;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient-red);
-  transition: var(--transition-normal);
+/* REMOVED BLACK BACKGROUND FROM OUR FLEET */
+.nav-link[href*="fleet"] {
+    background: transparent !important;
+    color: #374151 !important;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
+.nav-link[href*="fleet"]:hover {
+    color: #dc2626 !important;
+    background: #fef2f2 !important;
 }
-
 /* Dropdown */
-.dropdown {
-  position: relative;
+.dropdown-toggle i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
 }
 
+/* Enhanced Dropdown Menus */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: var(--transition-normal);
-  box-shadow: var(--shadow-xl);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+    z-index: 1000;
+    padding: 15px 0;
 }
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-section {
+    padding: 10px 0;
+}
+
+.dropdown-section:not(:last-child) {
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 10px;
+}
+
+.dropdown-header {
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+    padding: 0 20px;
 }
 
 .dropdown-link {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  color: var(--white);
-  border-radius: var(--radius-md);
-  transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    color: #374151;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
 .dropdown-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--primary-red);
+    background: #f9fafb;
+    color: #dc2626;
+    transform: translateX(4px);
 }
+
+.dropdown-link.featured {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-left: 3px solid #dc2626;
+}
+
+.dropdown-link i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    color: #dc2626;
+}
+
+.link-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 
 /* Mobile Navigation */
 .nav-toggle {
@@ -345,7 +358,9 @@ a:hover {
 }
 
 .nav-cta {
-  display: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 @media (min-width: 768px) {
@@ -472,15 +487,25 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--gradient-red);
-  color: var(--white);
-  box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
-  color: var(--white);
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 
 .btn-outline {
@@ -1052,13 +1077,6 @@ section {
     color: #dc2626;
 }
 
-.link-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
 .link-title {
     font-weight: 600;
     font-size: 14px;
@@ -1324,4 +1342,364 @@ section {
     .nav-notification.show {
         transform: translateY(0);
     }
+}
+
+.navbar .nav-link {
+    background: white !important;
+    color: #e53e3e !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(229, 62, 62, 0.2) !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    margin: 0 4px !important;
+}
+
+/* Hover effect for navigation links */
+.navbar .nav-link:hover {
+    background: #e53e3e !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3) !important;
+}
+
+/* Active/current page styling */
+.navbar .nav-link.active {
+    background: #e53e3e !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(229, 62, 62, 0.4) !important;
+}
+
+/* Book Flight button specific styling */
+.navbar .btn-primary,
+.navbar .book-flight-btn {
+    background: #e53e3e !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    margin-left: 8px !important;
+}
+
+.navbar .btn-primary:hover,
+.navbar .book-flight-btn:hover {
+    background: #c53030 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.4) !important;
+}
+
+/* Remove phone number from navbar */
+.navbar .phone-link,
+.navbar .phone-number {
+    display: none !important;
+}
+
+/* Move search/lookup icon to the right after Book Flight */
+.navbar .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.navbar .booking-lookup-btn,
+.navbar .nav-lookup {
+    order: 10 !important;
+    margin-left: 8px !important;
+    background: white !important;
+    color: #e53e3e !important;
+    border: 1px solid rgba(229, 62, 62, 0.2) !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .booking-lookup-btn:hover,
+.navbar .nav-lookup:hover {
+    background: #e53e3e !important;
+    color: white !important;
+}
+
+/* Make navbar more visible */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(229, 62, 62, 0.1) !important;
+    padding: 12px 0 !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Brand styling */
+.navbar .nav-brand {
+    color: #e53e3e !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+.navbar .nav-brand i {
+    color: #e53e3e !important;
+    margin-right: 8px !important;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        flex-direction: column !important;
+        width: 100% !important;
+        background: white !important;
+        padding: 20px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        margin-top: 10px !important;
+    }
+    
+    .navbar .nav-link {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 4px 0 !important;
+        padding: 12px 16px !important;
+    }
+    
+    .navbar .book-flight-btn,
+    .navbar .booking-lookup-btn {
+        width: 100% !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+    }
+}
+
+/* ============================================
+   ADDITIONAL VISIBILITY IMPROVEMENTS
+   ============================================ */
+
+/* Ensure all text is properly visible */
+.text-muted {
+    color: #666 !important;
+}
+
+.text-white {
+    color: #333 !important;
+}
+
+/* Fix any invisible elements */
+.invisible-text {
+    color: #333 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ============================================
+   REMOVE UNWANTED ELEMENTS
+   ============================================ */
+
+/* Remove "Visit Our Office" Card completely */
+.office-card,
+.visit-office,
+.office-location,
+.office-info-card,
+.contact-office,
+.office-section,
+[class*="office"],
+[id*="office"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Remove any map containers related to office */
+.map-container,
+.google-map,
+.office-map,
+.location-map,
+[class*="map"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Remove "Booking Confirmed" page/section */
+.booking-confirmed,
+.confirmation-page,
+.booking-success,
+.confirmed-booking,
+.success-page,
+.confirmation-section,
+[class*="confirmed"],
+[class*="confirmation"],
+[id*="confirmed"],
+[id*="confirmation"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Hide any success messages that appear prematurely */
+.success-message,
+.booking-success-msg,
+.confirmation-msg,
+.success-alert {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide green checkmark icons related to premature confirmations */
+.success-icon,
+.checkmark,
+.check-circle,
+.fa-check-circle,
+.confirmation-icon {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Remove download confirmation buttons that appear prematurely */
+.download-confirmation,
+.btn-download-confirmation,
+[class*="download"][class*="confirmation"] {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide any office-related text or headings */
+h1:contains("Visit Our Office"),
+h2:contains("Visit Our Office"),
+h3:contains("Visit Our Office"),
+h4:contains("Visit Our Office"),
+h1:contains("Office"),
+h2:contains("Office"),
+h3:contains("Office") {
+    display: none !important;
+}
+
+/* Hide booking confirmed headings and text */
+h1:contains("Booking Confirmed"),
+h2:contains("Booking Confirmed"),
+h3:contains("Booking Confirmed"),
+h1:contains("Confirmed"),
+h2:contains("Confirmed"),
+h3:contains("Confirmed") {
+    display: none !important;
+}
+
+/* Remove any office amenities lists */
+.office-amenities,
+.facility-features,
+.office-features,
+.amenities-list {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide specific office-related items */
+.parking-info,
+.wifi-info,
+.refreshments-info,
+.facility-access {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* ============================================
+   ADDITIONAL CLEANUP
+   ============================================ */
+
+/* Remove any containers that might be holding these elements */
+.container:has(.office-card),
+.section:has(.visit-office),
+.card:has(.office-location),
+.container:has(.booking-confirmed),
+.section:has(.confirmation-page) {
+    display: none !important;
+}
+
+/* Clean up any leftover spacing from removed elements */
+.contact-page .row,
+.contact-section .row {
+    gap: 20px !important;
+}
+
+.contact-page .col-md-6:empty,
+.contact-section .col-md-6:empty {
+    display: none !important;
+}
+
+/* ============================================
+   ENSURE REMAINING CONTENT LOOKS GOOD
+   ============================================ */
+
+/* Improve contact page layout after office card removal */
+.contact-form,
+.contact-info,
+.contact-details {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+/* Center contact content properly */
+.contact-page .container,
+.contact-section .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Make sure contact form is prominent */
+.contact-form {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    padding: 30px !important;
+    margin: 20px 0 !important;
+}
+
+/* ============================================
+   RESPONSIVE CLEANUP
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Ensure mobile doesn't show hidden elements */
+    .office-card,
+    .visit-office,
+    .booking-confirmed,
+    .confirmation-page {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Optimize remaining contact content for mobile */
+    .contact-form,
+    .contact-info {
+        width: 95% !important;
+        margin: 10px auto !important;
+        padding: 20px !important;
+    }
+}
+
+/* REMOVE BREADCRUMB NAVIGATION */
+.breadcrumb-container,
+.breadcrumb,
+.breadcrumbs,
+[class*="breadcrumb"],
+[id*="breadcrumb"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }

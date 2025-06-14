@@ -1,195 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manage your flight bookings with Rotorjet Aviation. View booking history, track status, modify reservations, and download confirmations.">
-    <meta name="keywords" content="booking management, flight history, booking status, modify booking, Rotorjet Aviation">
+    <meta name="description"
+        content="Manage your flight bookings with Rotorjet Aviation. View booking history, track status, modify reservations, and download confirmations.">
+    <meta name="keywords"
+        content="booking management, flight history, booking status, modify booking, Rotorjet Aviation">
     <title>My Bookings - marshallairlines Aviation</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
     <div class="nav-container">
+        <!-- Brand/Logo -->
         <div class="nav-brand">
-            <i class="fas fa-helicopter"></i>
-            <span>marshallairlines Aviation</span>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                
-                <!-- Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Charter Services</h4>
-                            <a href="pages/helicopter-charter.html" class="dropdown-link">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Helicopter Charter</span>
-                                    <span class="link-desc">Scenic flights & transfers</span>
-                                </div>
-                            </a>
-                            <a href="pages/jet-charter.html" class="dropdown-link">
-                                <i class="fas fa-plane"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Private Jet Charter</span>
-                                    <span class="link-desc">Executive & business travel</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Support Services</h4>
-                            <a href="pages/maintenance.html" class="dropdown-link">
-                                <i class="fas fa-wrench"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Aircraft Maintenance</span>
-                                    <span class="link-desc">Professional MRO services</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Booking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Booking <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Make a Booking</h4>
-                            <a href="pages/booking.html" class="dropdown-link featured">
-                                <i class="fas fa-calendar-plus"></i>
-                                <div class="link-content">
-                                    <span class="link-title">New Booking</span>
-                                    <span class="link-desc">Book your flight online</span>
-                                </div>
-                                <span class="link-badge">Popular</span>
-                            </a>
-                            <a href="pages/quote.html" class="dropdown-link">
-                                <i class="fas fa-calculator"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Request Quote</span>
-                                    <span class="link-desc">Get custom pricing</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Manage Bookings</h4>
-                            <a href="pages/my-bookings.html" class="dropdown-link">
-                                <i class="fas fa-list"></i>
-                                <div class="link-content">
-                                    <span class="link-title">My Bookings</span>
-                                    <span class="link-desc">View & manage reservations</span>
-                                </div>
-                            </a>
-                            <a href="pages/booking-lookup.html" class="dropdown-link">
-                                <i class="fas fa-search"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Booking Lookup</span>
-                                    <span class="link-desc">Find existing booking</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <div class="quick-book-widget">
-                                <h4 class="dropdown-header">Quick Book</h4>
-                                <form class="mini-booking-form" id="nav-quick-book">
-                                    <div class="mini-form-row">
-                                        <select name="service" required>
-                                            <option value="">Service</option>
-                                            <option value="helicopter">Helicopter</option>
-                                            <option value="jet">Private Jet</option>
-                                        </select>
-                                        <select name="passengers" required>
-                                            <option value="">Pax</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6+</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="mini-book-btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                        Quick Book
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Enhanced CTA Section -->
-        <div class="nav-cta">
-            <div class="nav-secondary-actions">
-                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="nav-phone">
-                    <a href="tel:+254700000000" class="phone-link">
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number">+254 700 000 000</span>
-                    </a>
-                </div>
-            </div>
-            <a href="pages/booking.html" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book Flight
+            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-helicopter"></i>
+                <span>Marshall Airline Aviation</span>
             </a>
         </div>
-        
+
+        <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="nav-menu">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+
+            <!-- About Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
+                        <i class="fas fa-helicopter"></i>
+                        Helicopter Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
+                        <i class="fas fa-plane"></i>
+                        Private Jet Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
+                        <i class="fas fa-wrench"></i>
+                        Aircraft Maintenance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fleet Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                    <i class="fas fa-plane-departure"></i>
+                    Our Fleet
+                </a>
+            </div>
+
+            <!-- Gallery Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-check"></i>
+                    Booking
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
+                        <i class="fas fa-plus-circle"></i>
+                        Book Flight
+                    </a>
+                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
+                        <i class="fas fa-search"></i>
+                        Find Booking
+                    </a>
+                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
+                        <i class="fas fa-list"></i>
+                        My Bookings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Flight
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-background"
+            style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');">
+        </div>
         <div class="page-header-overlay"></div>
-        
+
         <div class="container">
             <div class="page-header-content">
                 <h1 data-animate="fadeUp">My Bookings</h1>
@@ -219,24 +183,26 @@
                     <h2>Access Your Bookings</h2>
                     <p>Please enter your details to view your flight bookings</p>
                 </div>
-                
+
                 <form class="login-form" id="booking-login-form">
                     <div class="form-group">
                         <label for="booking-email">Email Address</label>
-                        <input type="email" id="booking-email" name="booking-email" required placeholder="Enter your email address">
+                        <input type="email" id="booking-email" name="booking-email" required
+                            placeholder="Enter your email address">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="booking-reference">Booking Reference (Optional)</label>
-                        <input type="text" id="booking-reference" name="booking-reference" placeholder="e.g., RJA-2025-001234">
+                        <input type="text" id="booking-reference" name="booking-reference"
+                            placeholder="e.g., RJA-2025-001234">
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary btn-large">
                         <i class="fas fa-sign-in-alt"></i>
                         View My Bookings
                     </button>
                 </form>
-                
+
                 <div class="login-help">
                     <p>Don't have the details? <a href="booking-lookup.html">Search by booking reference</a></p>
                     <p>Need help? <a href="contact.html">Contact our support team</a></p>
@@ -248,14 +214,14 @@
     <!-- Bookings Dashboard -->
     <section class="bookings-dashboard" id="bookings-dashboard" style="display: none;">
         <div class="container">
-            
+
             <!-- Dashboard Header -->
             <div class="dashboard-header">
                 <div class="user-info">
                     <h2>Welcome back, <span id="user-name">John Doe</span></h2>
                     <p>Manage your bookings and flight history</p>
                 </div>
-                
+
                 <div class="dashboard-actions">
                     <a href="booking.html" class="btn btn-primary">
                         <i class="fas fa-plus"></i>
@@ -279,7 +245,7 @@
                         <p>Total Bookings</p>
                     </div>
                 </div>
-                
+
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-plane"></i>
@@ -289,7 +255,7 @@
                         <p>Upcoming Flights</p>
                     </div>
                 </div>
-                
+
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-clock"></i>
@@ -299,7 +265,7 @@
                         <p>Total Flight Hours</p>
                     </div>
                 </div>
-                
+
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-star"></i>
@@ -323,7 +289,7 @@
                         <option value="pending">Pending</option>
                     </select>
                 </div>
-                
+
                 <div class="filter-group">
                     <label for="date-filter">Filter by Date:</label>
                     <select id="date-filter">
@@ -334,7 +300,7 @@
                         <option value="last-year">Last Year</option>
                     </select>
                 </div>
-                
+
                 <div class="search-group">
                     <input type="text" id="booking-search" placeholder="Search bookings...">
                     <button class="search-btn">
@@ -345,7 +311,7 @@
 
             <!-- Bookings List -->
             <div class="bookings-list" id="bookings-list">
-                
+
                 <!-- Upcoming Booking -->
                 <div class="booking-card upcoming" data-status="upcoming" data-date="2025-06-20">
                     <div class="booking-header">
@@ -358,7 +324,7 @@
                             <span class="days-until">In 6 days</span>
                         </div>
                     </div>
-                    
+
                     <div class="booking-content">
                         <div class="flight-route">
                             <div class="route-info">
@@ -372,7 +338,7 @@
                                 <span class="flight-time">10:00 AM</span>
                             </div>
                         </div>
-                        
+
                         <div class="booking-actions">
                             <button class="action-btn" onclick="viewBooking('RJA-2025-001234')">
                                 <i class="fas fa-eye"></i>
@@ -406,7 +372,7 @@
                             <span class="days-until">In 31 days</span>
                         </div>
                     </div>
-                    
+
                     <div class="booking-content">
                         <div class="flight-route">
                             <div class="route-info">
@@ -420,7 +386,7 @@
                                 <span class="flight-time">Round Trip</span>
                             </div>
                         </div>
-                        
+
                         <div class="booking-actions">
                             <button class="action-btn" onclick="viewBooking('RJA-2025-001245')">
                                 <i class="fas fa-eye"></i>
@@ -454,7 +420,7 @@
                             <span class="days-until">35 days ago</span>
                         </div>
                     </div>
-                    
+
                     <div class="booking-content">
                         <div class="flight-route">
                             <div class="route-info">
@@ -468,7 +434,7 @@
                                 <span class="flight-time">Completed</span>
                             </div>
                         </div>
-                        
+
                         <div class="booking-actions">
                             <button class="action-btn" onclick="viewBooking('RJA-2025-001198')">
                                 <i class="fas fa-eye"></i>
@@ -502,7 +468,7 @@
                             <span class="days-until">In 52 days</span>
                         </div>
                     </div>
-                    
+
                     <div class="booking-content">
                         <div class="flight-route">
                             <div class="route-info">
@@ -516,7 +482,7 @@
                                 <span class="flight-time">Pending</span>
                             </div>
                         </div>
-                        
+
                         <div class="booking-actions">
                             <button class="action-btn" onclick="viewBooking('RJA-2025-001267')">
                                 <i class="fas fa-eye"></i>
@@ -546,7 +512,7 @@
                             <span class="days-until">53 days ago</span>
                         </div>
                     </div>
-                    
+
                     <div class="booking-content">
                         <div class="flight-route">
                             <div class="route-info">
@@ -560,7 +526,7 @@
                                 <span class="flight-time">Cancelled</span>
                             </div>
                         </div>
-                        
+
                         <div class="booking-actions">
                             <button class="action-btn" onclick="viewBooking('RJA-2025-001156')">
                                 <i class="fas fa-eye"></i>
@@ -606,7 +572,8 @@
                         <span>marshallairlines Aviation</span>
                     </div>
                     <p class="footer-description">
-                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet
+                        charter services since 2010.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -615,7 +582,7 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
@@ -625,7 +592,7 @@
                         <li><a href="booking.html">Online Booking</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Booking</h4>
                     <ul class="footer-links">
@@ -635,7 +602,7 @@
                         <li><a href="contact.html">Support</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
@@ -654,7 +621,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
@@ -679,5 +646,7 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/booking-management.js"></script>
+    <script src="../js/fixes.js"></script>
 </body>
+
 </html>

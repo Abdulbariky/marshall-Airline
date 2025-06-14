@@ -1,215 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Rotorjet Aviation's history, mission, and commitment to excellence in aviation services. Meet our experienced team.">
-    <meta name="keywords" content="about rotorjet, aviation company, helicopter services, aviation history, experienced pilots">
+    <meta name="description"
+        content="Learn about Rotorjet Aviation's history, mission, and commitment to excellence in aviation services. Meet our experienced team.">
+    <meta name="keywords"
+        content="about rotorjet, aviation company, helicopter services, aviation history, experienced pilots">
     <title>About Us - marshallairline Aviation</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
+    <link rel="stylesheet" href="../css/navbar-footer-fixes.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
     <div class="nav-container">
+        <!-- Brand/Logo -->
         <div class="nav-brand">
-            <i class="fas fa-helicopter"></i>
-            <span>marshallairline Aviation</span>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                
-                <!-- Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Charter Services</h4>
-                            <a href="pages/helicopter-charter.html" class="dropdown-link">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Helicopter Charter</span>
-                                    <span class="link-desc">Scenic flights & transfers</span>
-                                </div>
-                            </a>
-                            <a href="pages/jet-charter.html" class="dropdown-link">
-                                <i class="fas fa-plane"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Private Jet Charter</span>
-                                    <span class="link-desc">Executive & business travel</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Support Services</h4>
-                            <a href="pages/maintenance.html" class="dropdown-link">
-                                <i class="fas fa-wrench"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Aircraft Maintenance</span>
-                                    <span class="link-desc">Professional MRO services</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Booking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Booking <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Make a Booking</h4>
-                            <a href="pages/booking.html" class="dropdown-link featured">
-                                <i class="fas fa-calendar-plus"></i>
-                                <div class="link-content">
-                                    <span class="link-title">New Booking</span>
-                                    <span class="link-desc">Book your flight online</span>
-                                </div>
-                                <span class="link-badge">Popular</span>
-                            </a>
-                            <a href="pages/quote.html" class="dropdown-link">
-                                <i class="fas fa-calculator"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Request Quote</span>
-                                    <span class="link-desc">Get custom pricing</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Manage Bookings</h4>
-                            <a href="pages/my-bookings.html" class="dropdown-link">
-                                <i class="fas fa-list"></i>
-                                <div class="link-content">
-                                    <span class="link-title">My Bookings</span>
-                                    <span class="link-desc">View & manage reservations</span>
-                                </div>
-                            </a>
-                            <a href="pages/booking-lookup.html" class="dropdown-link">
-                                <i class="fas fa-search"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Booking Lookup</span>
-                                    <span class="link-desc">Find existing booking</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <div class="quick-book-widget">
-                                <h4 class="dropdown-header">Quick Book</h4>
-                                <form class="mini-booking-form" id="nav-quick-book">
-                                    <div class="mini-form-row">
-                                        <select name="service" required>
-                                            <option value="">Service</option>
-                                            <option value="helicopter">Helicopter</option>
-                                            <option value="jet">Private Jet</option>
-                                        </select>
-                                        <select name="passengers" required>
-                                            <option value="">Pax</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6+</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="mini-book-btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                        Quick Book
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Enhanced CTA Section -->
-        <div class="nav-cta">
-            <div class="nav-secondary-actions">
-                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="nav-phone">
-                    <a href="tel:+254700000000" class="phone-link">
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number">+254 700 000 000</span>
-                    </a>
-                </div>
-            </div>
-            <a href="pages/booking.html" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book Flight
+            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-helicopter"></i>
+                <span>Marshall Airline Aviation</span>
             </a>
         </div>
-        
+
+        <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="nav-menu">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+
+            <!-- About Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
+                        <i class="fas fa-helicopter"></i>
+                        Helicopter Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
+                        <i class="fas fa-plane"></i>
+                        Private Jet Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
+                        <i class="fas fa-wrench"></i>
+                        Aircraft Maintenance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fleet Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                    <i class="fas fa-plane-departure"></i>
+                    Our Fleet
+                </a>
+            </div>
+
+            <!-- Gallery Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-check"></i>
+                    Booking
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
+                        <i class="fas fa-plus-circle"></i>
+                        Book Flight
+                    </a>
+                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
+                        <i class="fas fa-search"></i>
+                        Find Booking
+                    </a>
+                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
+                        <i class="fas fa-list"></i>
+                        My Bookings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Flight
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-background"
+            style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');">
+        </div>
         <div class="page-header-overlay"></div>
-        
+
         <div class="container">
             <div class="page-header-content">
                 <h1 data-animate="fadeUp">About marshallairline Aviation</h1>
                 <p data-animate="fadeUp" style="animation-delay: 0.2s;">
-                    Pioneering excellence in aviation services since 2010, serving Kenya and East Africa with unmatched professionalism.
+                    Pioneering excellence in aviation services since 2010, serving Kenya and East Africa with unmatched
+                    professionalism.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Breadcrumb -->
-    <section class="breadcrumb-section">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-item">Home</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-item">About Us</span>
-            </nav>
-        </div>
-    </section>
+   <div class="breadcrumb-container">
+    <nav class="breadcrumb">
+        <a href="#" onclick="goHome(); return false;" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current" id="current-page-name">Current Page</span>
+    </nav>
+</div>
 
     <!-- About Introduction -->
     <section class="about-intro">
@@ -218,15 +184,21 @@
                 <div class="about-text" data-animate="fadeRight">
                     <h2>Our Story</h2>
                     <p class="about-text">
-                        Founded in 2010, <span class="about-highlight">marshallairline Aviation</span> emerged from a vision to revolutionize aviation services in Kenya and East Africa. What began as a small helicopter charter operation has grown into the region's most trusted aviation service provider.
+                        Founded in 2010, <span class="about-highlight">marshallairline Aviation</span> emerged from a
+                        vision to revolutionize aviation services in Kenya and East Africa. What began as a small
+                        helicopter charter operation has grown into the region's most trusted aviation service provider.
                     </p>
                     <p class="about-text">
-                        Our journey started with a single helicopter and an unwavering commitment to safety and excellence. Today, we operate a modern fleet of aircraft, serving diverse clients from safari tourists to business executives, emergency services to cargo operations.
+                        Our journey started with a single helicopter and an unwavering commitment to safety and
+                        excellence. Today, we operate a modern fleet of aircraft, serving diverse clients from safari
+                        tourists to business executives, emergency services to cargo operations.
                     </p>
                     <p class="about-text">
-                        With over <strong>500 safe flights</strong> and counting, we've built our reputation on reliability, professionalism, and exceptional customer service. Every flight we operate reflects our core values of safety, excellence, and innovation.
+                        With over <strong>500 safe flights</strong> and counting, we've built our reputation on
+                        reliability, professionalism, and exceptional customer service. Every flight we operate reflects
+                        our core values of safety, excellence, and innovation.
                     </p>
-                    
+
                     <div class="about-stats">
                         <div class="stat-item">
                             <div class="stat-number" data-counter="500">500+</div>
@@ -246,10 +218,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-image" data-animate="fadeLeft">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop" alt="marshallairline Aviation aircraft" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&h=400&fit=crop"
+                            alt="marshallairline Aviation aircraft" loading="lazy">
                         <div class="image-overlay">
                             <div class="play-button" data-modal="company-video">
                                 <i class="fas fa-play"></i>
@@ -270,7 +243,7 @@
                     Guided by our commitment to excellence and innovation in aviation
                 </p>
             </div>
-            
+
             <div class="mission-vision-grid">
                 <div class="mission-card" data-animate="fadeUp" data-animate-delay="100">
                     <div class="card-icon">
@@ -279,11 +252,13 @@
                     <div class="card-content">
                         <h3>Our Mission</h3>
                         <p>
-                            To provide safe, reliable, and exceptional aviation services that exceed our clients' expectations while maintaining the highest standards of professionalism and safety in every operation.
+                            To provide safe, reliable, and exceptional aviation services that exceed our clients'
+                            expectations while maintaining the highest standards of professionalism and safety in every
+                            operation.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="vision-card" data-animate="fadeUp" data-animate-delay="200">
                     <div class="card-icon">
                         <i class="fas fa-eye"></i>
@@ -291,7 +266,9 @@
                     <div class="card-content">
                         <h3>Our Vision</h3>
                         <p>
-                            To be East Africa's leading aviation service provider, recognized for innovation, safety excellence, and customer satisfaction while contributing to the region's economic growth and development.
+                            To be East Africa's leading aviation service provider, recognized for innovation, safety
+                            excellence, and customer satisfaction while contributing to the region's economic growth and
+                            development.
                         </p>
                     </div>
                 </div>
@@ -308,48 +285,53 @@
                     The principles that guide everything we do
                 </p>
             </div>
-            
+
             <div class="values-grid">
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="100">
                     <div class="value-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h4>Safety First</h4>
-                    <p>Safety is never compromised. We maintain rigorous safety standards and continuous training to ensure every flight is secure.</p>
+                    <p>Safety is never compromised. We maintain rigorous safety standards and continuous training to
+                        ensure every flight is secure.</p>
                 </div>
-                
+
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="200">
                     <div class="value-icon">
                         <i class="fas fa-star"></i>
                     </div>
                     <h4>Excellence</h4>
-                    <p>We strive for excellence in every aspect of our service, from aircraft maintenance to customer experience.</p>
+                    <p>We strive for excellence in every aspect of our service, from aircraft maintenance to customer
+                        experience.</p>
                 </div>
-                
+
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="300">
                     <div class="value-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h4>Integrity</h4>
-                    <p>We conduct business with honesty, transparency, and ethical practices in all our interactions.</p>
+                    <p>We conduct business with honesty, transparency, and ethical practices in all our interactions.
+                    </p>
                 </div>
-                
+
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="400">
                     <div class="value-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h4>Innovation</h4>
-                    <p>We embrace new technologies and methodologies to improve our services and operational efficiency.</p>
+                    <p>We embrace new technologies and methodologies to improve our services and operational efficiency.
+                    </p>
                 </div>
-                
+
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="500">
                     <div class="value-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h4>Customer Focus</h4>
-                    <p>Our clients are at the center of everything we do. We tailor our services to meet their unique needs.</p>
+                    <p>Our clients are at the center of everything we do. We tailor our services to meet their unique
+                        needs.</p>
                 </div>
-                
+
                 <div class="value-item" data-animate="fadeUp" data-animate-delay="600">
                     <div class="value-icon">
                         <i class="fas fa-leaf"></i>
@@ -370,17 +352,20 @@
                     Experienced aviation professionals leading our company to new heights
                 </p>
             </div>
-            
+
             <div class="team-grid">
                 <div class="team-member" data-animate="fadeUp" data-animate-delay="100">
                     <div class="team-member-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Captain James Mwangi" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                            alt="Captain James Mwangi" loading="lazy">
                     </div>
                     <div class="team-member-info">
                         <h4 class="team-member-name">Captain James Mwangi</h4>
                         <p class="team-member-role">Chief Executive Officer & Chief Pilot</p>
                         <p class="team-member-bio">
-                            With over 20 years of aviation experience, Captain Mwangi founded marshallairline Aviation with a vision to provide world-class aviation services in Kenya. Licensed commercial pilot with expertise in helicopter and fixed-wing operations.
+                            With over 20 years of aviation experience, Captain Mwangi founded marshallairline Aviation
+                            with a vision to provide world-class aviation services in Kenya. Licensed commercial pilot
+                            with expertise in helicopter and fixed-wing operations.
                         </p>
                         <div class="team-member-social">
                             <a href="#" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -388,16 +373,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member" data-animate="fadeUp" data-animate-delay="200">
                     <div class="team-member-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616c669-index.html?w=300&h=300&fit=crop&crop=face" alt="Sarah Kamau" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c669-index.html?w=300&h=300&fit=crop&crop=face"
+                            alt="Sarah Kamau" loading="lazy">
                     </div>
                     <div class="team-member-info">
                         <h4 class="team-member-name">Sarah Kamau</h4>
                         <p class="team-member-role">Chief Operations Officer</p>
                         <p class="team-member-bio">
-                            Sarah brings 15 years of aviation operations management experience. She oversees daily operations, ensuring safety compliance and operational excellence across all our services.
+                            Sarah brings 15 years of aviation operations management experience. She oversees daily
+                            operations, ensuring safety compliance and operational excellence across all our services.
                         </p>
                         <div class="team-member-social">
                             <a href="#" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -405,16 +392,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member" data-animate="fadeUp" data-animate-delay="300">
                     <div class="team-member-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Captain David Ochieng" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+                            alt="Captain David Ochieng" loading="lazy">
                     </div>
                     <div class="team-member-info">
                         <h4 class="team-member-name">Captain David Ochieng</h4>
                         <p class="team-member-role">Head of Maintenance</p>
                         <p class="team-member-bio">
-                            Captain Ochieng is a certified aircraft maintenance engineer with 18 years of experience. He ensures our entire fleet meets the highest safety and performance standards.
+                            Captain Ochieng is a certified aircraft maintenance engineer with 18 years of experience. He
+                            ensures our entire fleet meets the highest safety and performance standards.
                         </p>
                         <div class="team-member-social">
                             <a href="#" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -422,16 +411,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="team-member" data-animate="fadeUp" data-animate-delay="400">
                     <div class="team-member-image">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Grace Wanjiku" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face"
+                            alt="Grace Wanjiku" loading="lazy">
                     </div>
                     <div class="team-member-info">
                         <h4 class="team-member-name">Grace Wanjiku</h4>
                         <p class="team-member-role">Head of Customer Relations</p>
                         <p class="team-member-bio">
-                            Grace leads our customer service team with 12 years of experience in luxury hospitality and aviation services. She ensures every client receives exceptional service.
+                            Grace leads our customer service team with 12 years of experience in luxury hospitality and
+                            aviation services. She ensures every client receives exceptional service.
                         </p>
                         <div class="team-member-social">
                             <a href="#" class="team-social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -452,7 +443,7 @@
                     Recognized for excellence and safety in aviation services
                 </p>
             </div>
-            
+
             <div class="certification-grid">
                 <div class="certification-item" data-animate="zoomIn" data-animate-delay="100">
                     <div class="certification-logo">
@@ -461,7 +452,7 @@
                     <h4>KCAA Certified</h4>
                     <p>Kenya Civil Aviation Authority Air Operator Certificate</p>
                 </div>
-                
+
                 <div class="certification-item" data-animate="zoomIn" data-animate-delay="200">
                     <div class="certification-logo">
                         <i class="fas fa-shield-alt"></i>
@@ -469,7 +460,7 @@
                     <h4>IS-BAO Registered</h4>
                     <p>International Standard for Business Aircraft Operations</p>
                 </div>
-                
+
                 <div class="certification-item" data-animate="zoomIn" data-animate-delay="300">
                     <div class="certification-logo">
                         <i class="fas fa-star"></i>
@@ -477,7 +468,7 @@
                     <h4>Safety Excellence Award</h4>
                     <p>Kenya Aviation Safety Award 2023</p>
                 </div>
-                
+
                 <div class="certification-item" data-animate="zoomIn" data-animate-delay="400">
                     <div class="certification-logo">
                         <i class="fas fa-trophy"></i>
@@ -491,9 +482,11 @@
 
     <!-- Call to Action -->
     <section class="cta">
-        <div class="cta-background" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');"></div>
+        <div class="cta-background"
+            style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=600&fit=crop');">
+        </div>
         <div class="cta-overlay"></div>
-        
+
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Experience Excellence?</h2>
@@ -524,7 +517,8 @@
                         <span>marshallairline Aviation</span>
                     </div>
                     <p class="footer-description">
-                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet
+                        charter services since 2010.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -533,7 +527,7 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
@@ -543,7 +537,7 @@
                         <li><a href="quote.html">Request Quote</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
@@ -553,7 +547,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
@@ -572,7 +566,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
@@ -613,5 +607,8 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/forms.js"></script>
+    <script src="../js/fixes.js"></script>
+    <script src="../js/navigation-fix.js"></script>
 </body>
+
 </html>

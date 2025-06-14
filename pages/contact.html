@@ -1,195 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Rotorjet Aviation for helicopter and private jet charter services. Get in touch for quotes, bookings, and inquiries. Located at Wilson Airport, Nairobi.">
-    <meta name="keywords" content="contact rotorjet aviation, aviation services nairobi, helicopter charter contact, wilson airport">
+    <meta name="description"
+        content="Contact Rotorjet Aviation for helicopter and private jet charter services. Get in touch for quotes, bookings, and inquiries. Located at Wilson Airport, Nairobi.">
+    <meta name="keywords"
+        content="contact rotorjet aviation, aviation services nairobi, helicopter charter contact, wilson airport">
     <title>Contact Us - marshallairline Aviation</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
+    <link rel="stylesheet" href="../css/navbar-footer-fixes.css">
 </head>
+
 <body>
     <!-- Navigation -->
-   <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
     <div class="nav-container">
+        <!-- Brand/Logo -->
         <div class="nav-brand">
-            <i class="fas fa-helicopter"></i>
-            <span>marshallairline Aviation</span>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                
-                <!-- Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Charter Services</h4>
-                            <a href="pages/helicopter-charter.html" class="dropdown-link">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Helicopter Charter</span>
-                                    <span class="link-desc">Scenic flights & transfers</span>
-                                </div>
-                            </a>
-                            <a href="pages/jet-charter.html" class="dropdown-link">
-                                <i class="fas fa-plane"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Private Jet Charter</span>
-                                    <span class="link-desc">Executive & business travel</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Support Services</h4>
-                            <a href="pages/maintenance.html" class="dropdown-link">
-                                <i class="fas fa-wrench"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Aircraft Maintenance</span>
-                                    <span class="link-desc">Professional MRO services</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Booking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Booking <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Make a Booking</h4>
-                            <a href="pages/booking.html" class="dropdown-link featured">
-                                <i class="fas fa-calendar-plus"></i>
-                                <div class="link-content">
-                                    <span class="link-title">New Booking</span>
-                                    <span class="link-desc">Book your flight online</span>
-                                </div>
-                                <span class="link-badge">Popular</span>
-                            </a>
-                            <a href="pages/quote.html" class="dropdown-link">
-                                <i class="fas fa-calculator"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Request Quote</span>
-                                    <span class="link-desc">Get custom pricing</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Manage Bookings</h4>
-                            <a href="pages/my-bookings.html" class="dropdown-link">
-                                <i class="fas fa-list"></i>
-                                <div class="link-content">
-                                    <span class="link-title">My Bookings</span>
-                                    <span class="link-desc">View & manage reservations</span>
-                                </div>
-                            </a>
-                            <a href="pages/booking-lookup.html" class="dropdown-link">
-                                <i class="fas fa-search"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Booking Lookup</span>
-                                    <span class="link-desc">Find existing booking</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <div class="quick-book-widget">
-                                <h4 class="dropdown-header">Quick Book</h4>
-                                <form class="mini-booking-form" id="nav-quick-book">
-                                    <div class="mini-form-row">
-                                        <select name="service" required>
-                                            <option value="">Service</option>
-                                            <option value="helicopter">Helicopter</option>
-                                            <option value="jet">Private Jet</option>
-                                        </select>
-                                        <select name="passengers" required>
-                                            <option value="">Pax</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6+</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="mini-book-btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                        Quick Book
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Enhanced CTA Section -->
-        <div class="nav-cta">
-            <div class="nav-secondary-actions">
-                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="nav-phone">
-                    <a href="tel:+254700000000" class="phone-link">
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number">+254 700 000 000</span>
-                    </a>
-                </div>
-            </div>
-            <a href="pages/booking.html" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book Flight
+            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-helicopter"></i>
+                <span>Marshall Airline Aviation</span>
             </a>
         </div>
-        
+
+        <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="nav-menu">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+
+            <!-- About Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
+                        <i class="fas fa-helicopter"></i>
+                        Helicopter Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
+                        <i class="fas fa-plane"></i>
+                        Private Jet Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
+                        <i class="fas fa-wrench"></i>
+                        Aircraft Maintenance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fleet Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                    <i class="fas fa-plane-departure"></i>
+                    Our Fleet
+                </a>
+            </div>
+
+            <!-- Gallery Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-check"></i>
+                    Booking
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
+                        <i class="fas fa-plus-circle"></i>
+                        Book Flight
+                    </a>
+                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
+                        <i class="fas fa-search"></i>
+                        Find Booking
+                    </a>
+                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
+                        <i class="fas fa-list"></i>
+                        My Bookings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Flight
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-background"
+            style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=600&fit=crop');">
+        </div>
         <div class="page-header-overlay"></div>
-        
+
         <div class="container">
             <div class="page-header-content">
                 <h1 data-animate="fadeUp">Contact Us</h1>
@@ -222,13 +187,14 @@
                     <div class="contact-details">
                         <h3>Our Location</h3>
                         <p>Wilson Airport<br>Langata Road<br>Nairobi, Kenya</p>
-                        <a href="https://maps.google.com/?q=Wilson+Airport+Nairobi" target="_blank" class="contact-link">
+                        <a href="https://maps.google.com/?q=Wilson+Airport+Nairobi" target="_blank"
+                            class="contact-link">
                             <i class="fas fa-directions"></i>
                             Get Directions
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-info-card" data-animate="fadeUp" data-animate-delay="200">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
@@ -242,21 +208,23 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-info-card" data-animate="fadeUp" data-animate-delay="300">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="contact-details">
                         <h3>Email Addresses</h3>
-                        <p>General: info@marshallairline-aviation.com<br>Bookings: bookings@marshallairline-aviation.com<br>Emergency: emergency@marshallairline-aviation.com</p>
+                        <p>General: info@marshallairline-aviation.com<br>Bookings:
+                            bookings@marshallairline-aviation.com<br>Emergency: emergency@marshallairline-aviation.com
+                        </p>
                         <a href="mailto:info@marshallairline-aviation.com" class="contact-link">
                             <i class="fas fa-envelope"></i>
                             Send Email
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-info-card" data-animate="fadeUp" data-animate-delay="400">
                     <div class="contact-icon">
                         <i class="fas fa-clock"></i>
@@ -284,7 +252,7 @@
                         <h2>Send Us a Message</h2>
                         <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                     </div>
-                    
+
                     <form class="contact-form" id="contact-form" novalidate>
                         <div class="form-row">
                             <div class="form-group">
@@ -298,7 +266,7 @@
                                 <span class="form-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email" class="form-label">Email Address *</label>
@@ -311,13 +279,13 @@
                                 <span class="form-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="company" class="form-label">Company/Organization</label>
                             <input type="text" id="company" name="company" class="form-input">
                             <span class="form-error"></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="service" class="form-label">Service Interest *</label>
                             <select id="service" name="service" class="form-select" required>
@@ -333,7 +301,7 @@
                             </select>
                             <span class="form-error"></span>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="departureDate" class="form-label">Preferred Date</label>
@@ -354,30 +322,34 @@
                                 <span class="form-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Please provide details about your requirements, destination, special requests, or any questions you may have..." required></textarea>
+                            <textarea id="message" name="message" class="form-textarea" rows="5"
+                                placeholder="Please provide details about your requirements, destination, special requests, or any questions you may have..."
+                                required></textarea>
                             <span class="form-error"></span>
                         </div>
-                        
+
                         <div class="form-group form-checkbox-group">
                             <label class="form-checkbox">
                                 <input type="checkbox" id="newsletter" name="newsletter">
                                 <span class="checkmark"></span>
-                                <span class="checkbox-text">Subscribe to our newsletter for aviation updates and special offers</span>
+                                <span class="checkbox-text">Subscribe to our newsletter for aviation updates and special
+                                    offers</span>
                             </label>
                         </div>
-                        
+
                         <div class="form-group form-checkbox-group">
                             <label class="form-checkbox">
                                 <input type="checkbox" id="privacy" name="privacy" required>
                                 <span class="checkmark"></span>
-                                <span class="checkbox-text">I agree to the <a href="#" target="_blank">Privacy Policy</a> and <a href="#" target="_blank">Terms of Service</a> *</span>
+                                <span class="checkbox-text">I agree to the <a href="#" target="_blank">Privacy
+                                        Policy</a> and <a href="#" target="_blank">Terms of Service</a> *</span>
                             </label>
                             <span class="form-error"></span>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary btn-large" id="submit-btn">
                             <i class="fas fa-paper-plane"></i>
                             <span>Send Message</span>
@@ -385,32 +357,29 @@
                                 <i class="fas fa-spinner fa-spin"></i>
                             </div>
                         </button>
-                        
+
                         <div class="form-success" id="form-success" style="display: none;">
                             <i class="fas fa-check-circle"></i>
                             <p>Thank you for your message! We'll get back to you within 24 hours.</p>
                         </div>
                     </form>
                 </div>
-                
+
                 <!-- Map & Additional Info -->
                 <div class="map-container" data-animate="fadeLeft">
                     <div class="map-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8158697793636!2d36.8146!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d22c49e6f3%3A0x9bb5e0c6daa7d6e5!2sWilson%20Airport!5e0!3m2!1sen!2ske!4v1635123456789!5m2!1sen!2ske" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8158697793636!2d36.8146!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d22c49e6f3%3A0x9bb5e0c6daa7d6e5!2sWilson%20Airport!5e0!3m2!1sen!2ske!4v1635123456789!5m2!1sen!2ske"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
-                    
+
                     <div class="additional-info">
                         <h3>Visit Our Office</h3>
-                        <p>Located at Wilson Airport, Kenya's premier general aviation airport. Our facility features a modern operations center, comfortable client lounge, and direct aircraft access.</p>
-                        
+                        <p>Located at Wilson Airport, Kenya's premier general aviation airport. Our facility features a
+                            modern operations center, comfortable client lounge, and direct aircraft access.</p>
+
                         <div class="info-highlights">
                             <div class="info-item">
                                 <i class="fas fa-car"></i>
@@ -445,8 +414,9 @@
                     </div>
                     <div class="emergency-details">
                         <h2>Emergency Services</h2>
-                        <p>For medical emergencies, search and rescue operations, or urgent aviation needs, our emergency response team is available 24/7.</p>
-                        
+                        <p>For medical emergencies, search and rescue operations, or urgent aviation needs, our
+                            emergency response team is available 24/7.</p>
+
                         <div class="emergency-actions">
                             <a href="tel:+254700000001" class="btn btn-danger btn-large">
                                 <i class="fas fa-phone"></i>
@@ -457,9 +427,10 @@
                                 WhatsApp Emergency
                             </a>
                         </div>
-                        
+
                         <div class="emergency-note">
-                            <p><strong>Note:</strong> For life-threatening emergencies, please contact local emergency services (999) first, then call our emergency hotline for aviation support.</p>
+                            <p><strong>Note:</strong> For life-threatening emergencies, please contact local emergency
+                                services (999) first, then call our emergency hotline for aviation support.</p>
                         </div>
                     </div>
                 </div>
@@ -476,7 +447,7 @@
                     Quick answers to common questions about our services
                 </p>
             </div>
-            
+
             <div class="faq-grid">
                 <div class="faq-item" data-animate="fadeUp" data-animate-delay="100">
                     <div class="faq-question">
@@ -484,37 +455,45 @@
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We recommend booking at least 24-48 hours in advance for regular charter flights. However, we can accommodate same-day bookings subject to aircraft availability. For emergency services, we respond immediately.</p>
+                        <p>We recommend booking at least 24-48 hours in advance for regular charter flights. However, we
+                            can accommodate same-day bookings subject to aircraft availability. For emergency services,
+                            we respond immediately.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item" data-animate="fadeUp" data-animate-delay="200">
                     <div class="faq-question">
                         <h3>What's included in the charter price?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Our charter prices include the aircraft, pilot, fuel, insurance, and basic refreshments. Airport fees, overnight crew expenses (if applicable), and catering upgrades are quoted separately.</p>
+                        <p>Our charter prices include the aircraft, pilot, fuel, insurance, and basic refreshments.
+                            Airport fees, overnight crew expenses (if applicable), and catering upgrades are quoted
+                            separately.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item" data-animate="fadeUp" data-animate-delay="300">
                     <div class="faq-question">
                         <h3>What are the weight and baggage limitations?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Baggage limits vary by aircraft type. Generally, helicopters allow 15-20kg per passenger, while private jets have more generous allowances. We'll specify exact limits when you receive your quote.</p>
+                        <p>Baggage limits vary by aircraft type. Generally, helicopters allow 15-20kg per passenger,
+                            while private jets have more generous allowances. We'll specify exact limits when you
+                            receive your quote.</p>
                     </div>
                 </div>
-                
+
                 <div class="faq-item" data-animate="fadeUp" data-animate-delay="400">
                     <div class="faq-question">
                         <h3>Can flights be cancelled due to weather?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, safety is our priority. Flights may be cancelled or delayed due to adverse weather conditions. We monitor weather continuously and will notify you of any changes as early as possible.</p>
+                        <p>Yes, safety is our priority. Flights may be cancelled or delayed due to adverse weather
+                            conditions. We monitor weather continuously and will notify you of any changes as early as
+                            possible.</p>
                     </div>
                 </div>
             </div>
@@ -531,7 +510,8 @@
                         <span>marshallairline Aviation</span>
                     </div>
                     <p class="footer-description">
-                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet
+                        charter services since 2010.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -540,7 +520,7 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
@@ -550,7 +530,7 @@
                         <li><a href="quote.html">Request Quote</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
@@ -560,7 +540,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
@@ -579,7 +559,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
@@ -604,5 +584,7 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/forms.js"></script>
+    <script src="../js/fixes.js"></script>
 </body>
+
 </html>

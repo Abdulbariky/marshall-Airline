@@ -1,0 +1,603 @@
+/* ===============================================
+   CONTACT PAGE AND BOOKING FORM FIXES
+   =============================================== */
+
+/* 11. Remove Visit Office Card from Contact Page */
+.office-card,
+.visit-office,
+.office-visit-card,
+.contact-office,
+.office-location-card {
+    display: none !important;
+}
+
+/* Hide any office-related sections */
+.contact-section:has(.office-card),
+.contact-grid .contact-item:contains("office"),
+.contact-grid .contact-item:contains("visit") {
+    display: none !important;
+}
+
+/* 12. Enhanced Booking Forms - Bigger, More Comfortable Fields */
+.booking-form,
+.passenger-form,
+.payment-form,
+.lookup-form,
+.quote-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.booking-form .form-group,
+.passenger-form .form-group,
+.payment-form .form-group,
+.lookup-form .form-group,
+.quote-form .form-group {
+    margin-bottom: 24px;
+}
+
+.booking-form label,
+.passenger-form label,
+.payment-form label,
+.lookup-form label,
+.quote-form label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+}
+
+/* Enhanced Form Inputs */
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.passenger-form input,
+.passenger-form select,
+.passenger-form textarea,
+.payment-form input,
+.payment-form select,
+.lookup-form input,
+.lookup-form select,
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #ffffff;
+    color: #374151;
+    transition: all 0.3s ease;
+    appearance: none;
+    min-height: 56px;
+    box-sizing: border-box;
+}
+
+/* Enhanced focus states */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus,
+.passenger-form input:focus,
+.passenger-form select:focus,
+.passenger-form textarea:focus,
+.payment-form input:focus,
+.payment-form select:focus,
+.lookup-form input:focus,
+.lookup-form select:focus,
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+    background: #fefefe;
+}
+
+/* Select dropdown styling */
+.booking-form select,
+.passenger-form select,
+.payment-form select,
+.lookup-form select,
+.quote-form select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+    cursor: pointer;
+    padding-right: 50px;
+}
+
+/* Textarea specific styling */
+.booking-form textarea,
+.passenger-form textarea,
+.quote-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+/* Form grid improvements */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+/* Form section styling */
+.form-section {
+    background: #f9fafb;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 32px;
+}
+
+.form-section h3 {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* Enhanced buttons */
+.booking-form .btn,
+.passenger-form .btn,
+.payment-form .btn,
+.lookup-form .btn,
+.quote-form .btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.booking-form .btn-primary,
+.passenger-form .btn-primary,
+.payment-form .btn-primary,
+.lookup-form .btn-primary,
+.quote-form .btn-primary {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    border-color: #dc2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.booking-form .btn-primary:hover,
+.passenger-form .btn-primary:hover,
+.payment-form .btn-primary:hover,
+.lookup-form .btn-primary:hover,
+.quote-form .btn-primary:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
+}
+
+.booking-form .btn-outline,
+.passenger-form .btn-outline,
+.payment-form .btn-outline,
+.lookup-form .btn-outline,
+.quote-form .btn-outline {
+    background: white;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.booking-form .btn-outline:hover,
+.passenger-form .btn-outline:hover,
+.payment-form .btn-outline:hover,
+.lookup-form .btn-outline:hover,
+.quote-form .btn-outline:hover {
+    background: #f9fafb;
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+/* Form actions styling */
+.form-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    padding-top: 32px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 32px;
+}
+
+/* Error states */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.field-error {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Success states */
+.form-group input.success,
+.form-group select.success {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+/* Placeholder styling */
+.booking-form input::placeholder,
+.passenger-form input::placeholder,
+.payment-form input::placeholder,
+.lookup-form input::placeholder,
+.quote-form input::placeholder,
+.booking-form textarea::placeholder,
+.passenger-form textarea::placeholder,
+.quote-form textarea::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* Specific enhancements for booking lookup forms */
+.lookup-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.lookup-form {
+    margin-bottom: 40px;
+}
+
+.search-tab {
+    display: none;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.search-tab.active {
+    display: block;
+}
+
+.option-tabs {
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 16px 24px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #dc2626;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form help text */
+.form-help {
+    color: #6b7280;
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Responsive form improvements */
+@media (max-width: 768px) {
+    .booking-form,
+    .passenger-form,
+    .payment-form,
+    .lookup-form,
+    .quote-form {
+        padding: 24px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-section {
+        padding: 24px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .booking-form .btn,
+    .passenger-form .btn,
+    .payment-form .btn,
+    .lookup-form .btn,
+    .quote-form .btn {
+        width: 100%;
+    }
+}
+
+/* 13. Hide Booking Confirmation Until Actual Booking */
+.booking-confirmation-preview,
+.confirmation-placeholder,
+.fake-confirmation {
+    display: none !important;
+}
+
+/* Only show confirmation on actual confirmation pages */
+body.confirmation-page .booking-confirmation,
+.page-confirmation .booking-confirmation {
+    display: block;
+}
+
+/* 14. Remove Spinning Element from Booking Lookup */
+.lookup-spinner,
+.booking-lookup .spinner,
+.booking-lookup .loading-spinner,
+.booking-lookup-page .spinner {
+    display: none !important;
+}
+
+/* Hide any background spinning elements */
+.booking-lookup::after,
+.booking-lookup-page::after {
+    display: none !important;
+}
+
+/* Remove any persistent loading states */
+.booking-lookup .loading,
+.booking-lookup-page .loading {
+    display: none !important;
+}
+
+/* Specific fix for bottom page spinners */
+.page-bottom .spinner,
+.footer-loading,
+.bottom-spinner {
+    display: none !important;
+}
+
+/* Enhanced contact form styling */
+.contact-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.contact-form .form-group {
+    margin-bottom: 24px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #ffffff;
+    color: #374151;
+    transition: all 0.3s ease;
+    min-height: 56px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+}
+
+/* Enhanced payment form sections */
+.payment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.payment-form,
+.booking-summary {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.payment-options {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.payment-option:hover {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+
+.payment-option input[type="radio"] {
+    margin: 0;
+    accent-color: #dc2626;
+}
+
+.payment-option label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+    font-size: 16px;
+}
+
+.payment-option i {
+    font-size: 24px;
+    color: #dc2626;
+}
+
+/* Mobile responsiveness for payment */
+@media (max-width: 768px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .payment-form,
+    .booking-summary {
+        padding: 24px;
+    }
+    
+    .payment-option {
+        padding: 16px;
+    }
+}
+
+/* Loading states - only show when actually needed */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-spinner {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.spinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #dc2626;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced accessibility */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid #dc2626;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea,
+    .passenger-form input,
+    .passenger-form select,
+    .payment-form input,
+    .payment-form select,
+    .lookup-form input,
+    .lookup-form select {
+        border-width: 3px;
+        border-color: #000;
+    }
+    
+    .btn-primary {
+        background: #000 !important;
+        border-color: #000 !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .loading-overlay,
+    .spinner,
+    .form-actions {
+        display: none !important;
+    }
+    
+    .booking-form,
+    .passenger-form,
+    .payment-form {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}

@@ -1,200 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Luxury private jet charter services in Kenya and East Africa. Business jets, executive travel, and premium aviation services by Rotorjet Aviation.">
-    <meta name="keywords" content="private jet charter, business jet, executive travel, luxury aviation, Kenya private jets">
+    <meta name="description"
+        content="Luxury private jet charter services in Kenya and East Africa. Business jets, executive travel, and premium aviation services by Rotorjet Aviation.">
+    <meta name="keywords"
+        content="private jet charter, business jet, executive travel, luxury aviation, Kenya private jets">
     <title>Private Jet Charter - marshal Aviation</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
+    <link rel="stylesheet" href="../css/navbar-footer-fixes.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
     <div class="nav-container">
+        <!-- Brand/Logo -->
         <div class="nav-brand">
-            <i class="fas fa-helicopter"></i>
-            <span>marshal Aviation</span>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                
-                <!-- Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Charter Services</h4>
-                            <a href="pages/helicopter-charter.html" class="dropdown-link">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Helicopter Charter</span>
-                                    <span class="link-desc">Scenic flights & transfers</span>
-                                </div>
-                            </a>
-                            <a href="pages/jet-charter.html" class="dropdown-link">
-                                <i class="fas fa-plane"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Private Jet Charter</span>
-                                    <span class="link-desc">Executive & business travel</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Support Services</h4>
-                            <a href="pages/maintenance.html" class="dropdown-link">
-                                <i class="fas fa-wrench"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Aircraft Maintenance</span>
-                                    <span class="link-desc">Professional MRO services</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Booking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Booking <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Make a Booking</h4>
-                            <a href="pages/booking.html" class="dropdown-link featured">
-                                <i class="fas fa-calendar-plus"></i>
-                                <div class="link-content">
-                                    <span class="link-title">New Booking</span>
-                                    <span class="link-desc">Book your flight online</span>
-                                </div>
-                                <span class="link-badge">Popular</span>
-                            </a>
-                            <a href="pages/quote.html" class="dropdown-link">
-                                <i class="fas fa-calculator"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Request Quote</span>
-                                    <span class="link-desc">Get custom pricing</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Manage Bookings</h4>
-                            <a href="pages/my-bookings.html" class="dropdown-link">
-                                <i class="fas fa-list"></i>
-                                <div class="link-content">
-                                    <span class="link-title">My Bookings</span>
-                                    <span class="link-desc">View & manage reservations</span>
-                                </div>
-                            </a>
-                            <a href="pages/booking-lookup.html" class="dropdown-link">
-                                <i class="fas fa-search"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Booking Lookup</span>
-                                    <span class="link-desc">Find existing booking</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <div class="quick-book-widget">
-                                <h4 class="dropdown-header">Quick Book</h4>
-                                <form class="mini-booking-form" id="nav-quick-book">
-                                    <div class="mini-form-row">
-                                        <select name="service" required>
-                                            <option value="">Service</option>
-                                            <option value="helicopter">Helicopter</option>
-                                            <option value="jet">Private Jet</option>
-                                        </select>
-                                        <select name="passengers" required>
-                                            <option value="">Pax</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6+</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="mini-book-btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                        Quick Book
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Enhanced CTA Section -->
-        <div class="nav-cta">
-            <div class="nav-secondary-actions">
-                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="nav-phone">
-                    <a href="tel:+254700000000" class="phone-link">
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number">+254 700 000 000</span>
-                    </a>
-                </div>
-            </div>
-            <a href="pages/booking.html" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book Flight
+            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-helicopter"></i>
+                <span>Marshall Airline Aviation</span>
             </a>
         </div>
-        
+
+        <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="nav-menu">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+
+            <!-- About Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
+                        <i class="fas fa-helicopter"></i>
+                        Helicopter Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
+                        <i class="fas fa-plane"></i>
+                        Private Jet Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
+                        <i class="fas fa-wrench"></i>
+                        Aircraft Maintenance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fleet Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                    <i class="fas fa-plane-departure"></i>
+                    Our Fleet
+                </a>
+            </div>
+
+            <!-- Gallery Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-check"></i>
+                    Booking
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
+                        <i class="fas fa-plus-circle"></i>
+                        Book Flight
+                    </a>
+                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
+                        <i class="fas fa-search"></i>
+                        Find Booking
+                    </a>
+                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
+                        <i class="fas fa-list"></i>
+                        My Bookings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Flight
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-background"
+            style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');">
+        </div>
         <div class="page-header-overlay"></div>
-        
+
         <div class="container">
             <div class="page-header-content">
                 <h1 data-animate="fadeUp">Private Jet Charter</h1>
                 <p data-animate="fadeUp" style="animation-delay: 0.2s;">
-                    Experience luxury aviation with our premium private jet charter services across Kenya and East Africa.
+                    Experience luxury aviation with our premium private jet charter services across Kenya and East
+                    Africa.
                 </p>
             </div>
         </div>
@@ -220,12 +186,15 @@
                 <div class="service-text" data-animate="fadeRight">
                     <h2>Luxury Private Jet Charter Services</h2>
                     <p class="service-lead">
-                        Experience the ultimate in business aviation with our fleet of premium private jets. Perfect for executive travel, business meetings, and luxury leisure flights across Kenya and East Africa.
+                        Experience the ultimate in business aviation with our fleet of premium private jets. Perfect for
+                        executive travel, business meetings, and luxury leisure flights across Kenya and East Africa.
                     </p>
                     <p>
-                        Our private jet charter services offer unmatched convenience, privacy, and luxury. Skip the airport queues, enjoy flexible scheduling, and arrive at your destination refreshed and ready for business.
+                        Our private jet charter services offer unmatched convenience, privacy, and luxury. Skip the
+                        airport queues, enjoy flexible scheduling, and arrive at your destination refreshed and ready
+                        for business.
                     </p>
-                    
+
                     <div class="service-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-clock"></i>
@@ -245,9 +214,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-image" data-animate="fadeLeft">
-                    <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=600&h=400&fit=crop" alt="Luxury private jet interior" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=600&h=400&fit=crop"
+                        alt="Luxury private jet interior" loading="lazy">
                 </div>
             </div>
         </div>
@@ -262,7 +232,7 @@
                     Premium aviation services designed for the discerning traveler
                 </p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card" data-animate="fadeUp" data-animate-delay="100">
                     <div class="feature-icon">
@@ -270,37 +240,41 @@
                     </div>
                     <h3>Modern Fleet</h3>
                     <p>
-                        Our fleet includes the latest business jets equipped with cutting-edge avionics, luxurious interiors, and advanced safety systems for your comfort and security.
+                        Our fleet includes the latest business jets equipped with cutting-edge avionics, luxurious
+                        interiors, and advanced safety systems for your comfort and security.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-animate="fadeUp" data-animate-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-user-astronaut"></i>
                     </div>
                     <h3>Expert Pilots</h3>
                     <p>
-                        Our certified commercial pilots have thousands of flight hours and extensive training in business aviation, ensuring smooth and professional flight operations.
+                        Our certified commercial pilots have thousands of flight hours and extensive training in
+                        business aviation, ensuring smooth and professional flight operations.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-animate="fadeUp" data-animate-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
                     <h3>Concierge Service</h3>
                     <p>
-                        From ground transportation to catering preferences, our dedicated team handles every detail to ensure your journey is seamless and enjoyable.
+                        From ground transportation to catering preferences, our dedicated team handles every detail to
+                        ensure your journey is seamless and enjoyable.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-animate="fadeUp" data-animate-delay="400">
                     <div class="feature-icon">
                         <i class="fas fa-route"></i>
                     </div>
                     <h3>Flexible Routes</h3>
                     <p>
-                        Access remote destinations and smaller airports that commercial airlines can't reach, with custom flight plans tailored to your specific needs.
+                        Access remote destinations and smaller airports that commercial airlines can't reach, with
+                        custom flight plans tailored to your specific needs.
                     </p>
                 </div>
             </div>
@@ -316,16 +290,18 @@
                     Choose from our range of premium aircraft to suit your travel needs
                 </p>
             </div>
-            
+
             <div class="aircraft-grid">
                 <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="100">
                     <div class="aircraft-image">
-                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop" alt="Light Business Jet" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop"
+                            alt="Light Business Jet" loading="lazy">
                     </div>
                     <div class="aircraft-info">
                         <h3>Light Business Jets</h3>
                         <p class="aircraft-description">
-                            Perfect for short to medium-range flights with 4-6 passengers. Ideal for business trips within East Africa.
+                            Perfect for short to medium-range flights with 4-6 passengers. Ideal for business trips
+                            within East Africa.
                         </p>
                         <ul class="aircraft-specs">
                             <li><i class="fas fa-users"></i> 4-6 Passengers</li>
@@ -339,15 +315,17 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="200">
                     <div class="aircraft-image">
-                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop" alt="Mid-Size Business Jet" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop"
+                            alt="Mid-Size Business Jet" loading="lazy">
                     </div>
                     <div class="aircraft-info">
                         <h3>Mid-Size Business Jets</h3>
                         <p class="aircraft-description">
-                            Spacious cabin for 6-8 passengers with extended range capabilities. Perfect for regional and international travel.
+                            Spacious cabin for 6-8 passengers with extended range capabilities. Perfect for regional and
+                            international travel.
                         </p>
                         <ul class="aircraft-specs">
                             <li><i class="fas fa-users"></i> 6-8 Passengers</li>
@@ -361,15 +339,17 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="aircraft-card" data-animate="fadeUp" data-animate-delay="300">
                     <div class="aircraft-image">
-                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop" alt="Heavy Business Jet" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1583500178690-d2071269d43d?w=400&h=250&fit=crop"
+                            alt="Heavy Business Jet" loading="lazy">
                     </div>
                     <div class="aircraft-info">
                         <h3>Heavy Business Jets</h3>
                         <p class="aircraft-description">
-                            Ultimate luxury for 8-12 passengers with transcontinental range. Features full amenities and sleeping areas.
+                            Ultimate luxury for 8-12 passengers with transcontinental range. Features full amenities and
+                            sleeping areas.
                         </p>
                         <ul class="aircraft-specs">
                             <li><i class="fas fa-users"></i> 8-12 Passengers</li>
@@ -396,41 +376,45 @@
                     Fly to your favorite destinations across East Africa and beyond
                 </p>
             </div>
-            
+
             <div class="destinations-grid">
                 <div class="destination-card" data-animate="zoomIn" data-animate-delay="100">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=300&h=200&fit=crop" alt="Zanzibar" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=300&h=200&fit=crop"
+                            alt="Zanzibar" loading="lazy">
                     </div>
                     <div class="destination-info">
                         <h4>Zanzibar, Tanzania</h4>
                         <p>1.5 hours flight time</p>
                     </div>
                 </div>
-                
+
                 <div class="destination-card" data-animate="zoomIn" data-animate-delay="200">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?w=300&h=200&fit=crop" alt="Serengeti" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?w=300&h=200&fit=crop"
+                            alt="Serengeti" loading="lazy">
                     </div>
                     <div class="destination-info">
                         <h4>Serengeti, Tanzania</h4>
                         <p>2 hours flight time</p>
                     </div>
                 </div>
-                
+
                 <div class="destination-card" data-animate="zoomIn" data-animate-delay="300">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1565820002899-0cbb34ffdb12?w=300&h=200&fit=crop" alt="Kigali" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1565820002899-0cbb34ffdb12?w=300&h=200&fit=crop"
+                            alt="Kigali" loading="lazy">
                     </div>
                     <div class="destination-info">
                         <h4>Kigali, Rwanda</h4>
                         <p>1.5 hours flight time</p>
                     </div>
                 </div>
-                
+
                 <div class="destination-card" data-animate="zoomIn" data-animate-delay="400">
                     <div class="destination-image">
-                        <img src="https://images.unsplash.com/photo-1621414050345-53db43f7e7ab?w=300&h=200&fit=crop" alt="Kampala" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1621414050345-53db43f7e7ab?w=300&h=200&fit=crop"
+                            alt="Kampala" loading="lazy">
                     </div>
                     <div class="destination-info">
                         <h4>Kampala, Uganda</h4>
@@ -450,7 +434,7 @@
                     Simple steps to your luxury flight experience
                 </p>
             </div>
-            
+
             <div class="process-steps">
                 <div class="process-step" data-animate="slideUp" data-animate-delay="100">
                     <div class="step-number">1</div>
@@ -459,7 +443,7 @@
                         <p>Contact us with your travel details including destination, dates, and passenger count.</p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="slideUp" data-animate-delay="200">
                     <div class="step-number">2</div>
                     <div class="step-content">
@@ -467,7 +451,7 @@
                         <p>We'll recommend the perfect aircraft for your needs and provide detailed pricing.</p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="slideUp" data-animate-delay="300">
                     <div class="step-number">3</div>
                     <div class="step-content">
@@ -475,7 +459,7 @@
                         <p>Once confirmed, we handle all flight planning, permits, and ground arrangements.</p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="slideUp" data-animate-delay="400">
                     <div class="step-number">4</div>
                     <div class="step-content">
@@ -489,9 +473,11 @@
 
     <!-- Call to Action -->
     <section class="cta">
-        <div class="cta-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="cta-background"
+            style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');">
+        </div>
         <div class="cta-overlay"></div>
-        
+
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready for Your Private Jet Experience?</h2>
@@ -522,7 +508,8 @@
                         <span>marshal Aviation</span>
                     </div>
                     <p class="footer-description">
-                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet
+                        charter services since 2010.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -531,7 +518,7 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
@@ -541,7 +528,7 @@
                         <li><a href="quote.html">Request Quote</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
@@ -551,7 +538,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
@@ -570,7 +557,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
@@ -595,5 +582,7 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/forms.js"></script>
+    <script src="../js/fixes.js"></script>
 </body>
+
 </html>

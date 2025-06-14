@@ -663,3 +663,515 @@ class EnhancedNavigation {
 document.addEventListener('DOMContentLoaded', function() {
     new EnhancedNavigation();
 });
+
+/* ============================================
+   INTEGRATED NAVIGATION FIX 
+   Add this to the END of your main.js file
+   ============================================ */
+
+// Navigation functions - Add these to your main.js
+window.navigateToPage = function(pageName) {
+    try {
+        const currentPath = window.location.pathname;
+        const isInPagesDirectory = currentPath.includes('/pages/');
+        
+        let targetPath;
+        
+        if (pageName === 'home') {
+            targetPath = isInPagesDirectory ? '../index.html' : 'index.html';
+        } else {
+            targetPath = isInPagesDirectory ? `${pageName}.html` : `pages/${pageName}.html`;
+        }
+        
+        console.log(`Navigating from ${currentPath} to ${targetPath}`);
+        window.location.href = targetPath;
+    } catch (error) {
+        console.error('Navigation error:', error);
+        // Fallback navigation
+        window.location.href = 'index.html';
+    }
+};
+
+window.goHome = function() {
+    try {
+        const currentPath = window.location.pathname;
+        const isInPagesDirectory = currentPath.includes('/pages/');
+        
+        if (isInPagesDirectory) {
+            window.location.href = '../index.html';
+        } else {
+            window.location.href = 'index.html';
+        }
+    } catch (error) {
+        console.error('Home navigation error:', error);
+        window.location.href = 'index.html';
+    }
+};
+
+// Fix the querySelector error in smooth scroll
+function fixSmoothScrollError() {
+    const links = document.querySelectorAll('a[href]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if href is just '#' or empty
+            if (href === '#' || href === '' || href === null) {
+                e.preventDefault();
+                return false;
+            }
+            
+            // Skip if it's a navigation function call
+            if (this.getAttribute('onclick')) {
+                return; // Let the onclick handler manage it
+            }
+            
+            // Fix problematic paths
+            if (href.includes('pages/pages/')) {
+                e.preventDefault();
+                const fixedHref = href.replace('pages/pages/', 'pages/');
+                this.setAttribute('href', fixedHref);
+                window.location.href = fixedHref;
+                return false;
+            }
+        });
+    });
+}
+
+// Auto-fix navigation on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Fix smooth scroll errors
+    fixSmoothScrollError();
+    
+    // Fix any existing problematic links
+    const problematicLinks = document.querySelectorAll('a[href*="pages/pages/"]');
+    problematicLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        link.setAttribute('href', href.replace('pages/pages/', 'pages/'));
+    });
+    
+    // Set active navigation states
+    setActiveNavigation();
+    
+    console.log('Navigation system initialized successfully');
+});
+
+// Set active navigation item
+function setActiveNavigation() {
+    try {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link[data-page], .nav-link');
+        
+        navLinks.forEach(link => {
+            const onclick = link.getAttribute('onclick');
+            const href = link.getAttribute('href');
+            
+            link.classList.remove('active');
+            
+            if (onclick) {
+                // Check onclick for page names
+                if (onclick.includes("'home'") && (currentPath.includes('index') || currentPath === '/')) {
+                    link.classList.add('active');
+                } else if (onclick.includes("'about'") && currentPath.includes('about')) {
+                    link.classList.add('active');
+                } else if (onclick.includes("'fleet'") && currentPath.includes('fleet')) {
+                    link.classList.add('active');
+                } else if (onclick.includes("'contact'") && currentPath.includes('contact')) {
+                    link.classList.add('active');
+                } else if (onclick.includes("'gallery'") && currentPath.includes('gallery')) {
+                    link.classList.add('active');
+                } else if (onclick.includes("'booking'") && currentPath.includes('booking')) {
+                    link.classList.add('active');
+                }
+            }
+        });
+    } catch (error) {
+        console.log('Active navigation setting skipped:', error);
+    }
+}
+
+// Override any existing handleSmoothScroll to prevent querySelector errors
+window.handleSmoothScroll = function(element) {
+    try {
+        const href = element.getAttribute('href');
+        
+        // Skip if href is problematic
+        if (!href || href === '#' || href === '') {
+            return false;
+        }
+        
+        // Check if it's an anchor link
+        if (href.startsWith('#') && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                return true;
+            }
+        }
+        
+        return false;
+    } catch (error) {
+        console.log('Smooth scroll skipped for problematic selector');
+        return false;
+    }
+};
+
+// Emergency fix function - call if navigation breaks
+window.emergencyNavigationFix = function() {
+    try {
+        // Fix all problematic links
+        const allLinks = document.querySelectorAll('a[href]');
+        const currentPath = window.location.pathname;
+        const isInPagesDirectory = currentPath.includes('/pages/');
+        
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                // Fix double pages/ in URL
+                if (href.includes('pages/pages/')) {
+                    link.setAttribute('href', href.replace('pages/pages/', 'pages/'));
+                }
+                
+                // Fix relative paths based on current location
+                if (isInPagesDirectory && href.startsWith('pages/') && !href.includes('../')) {
+                    link.setAttribute('href', href.replace('pages/', ''));
+                } else if (!isInPagesDirectory && !href.includes('pages/') && href.includes('.html')) {
+                    if (!href.includes('index.html') && !href.startsWith('../')) {
+                        link.setAttribute('href', 'pages/' + href);
+                    }
+                }
+            }
+        });
+        
+        console.log('Emergency navigation fix applied successfully!');
+        return true;
+    } catch (error) {
+        console.error('Emergency fix failed:', error);
+        return false;
+    }
+};
+
+// Auto-run emergency fix every 3 seconds if needed
+setInterval(function() {
+    const problematicLinks = document.querySelectorAll('a[href*="pages/pages/"]');
+    if (problematicLinks.length > 0) {
+        emergencyNavigationFix();
+    }
+}, 3000);
+
+// Add global error handler for navigation
+window.addEventListener('error', function(e) {
+    if (e.message && e.message.includes('querySelector') && e.message.includes('#')) {
+        console.log('Prevented querySelector error with invalid selector');
+        e.preventDefault();
+        return true;
+    }
+});
+
+console.log('✅ Navigation fix integrated successfully!');
+
+/* ============================================
+   MOBILE MENU FUNCTIONALITY
+   ============================================ */
+
+// Mobile menu toggle
+function initializeMobileMenu() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+}
+
+// Dropdown functionality
+function initializeDropdowns() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        if (toggle && menu) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                dropdowns.forEach(other => {
+                    if (other !== dropdown) {
+                        other.classList.remove('active');
+                    }
+                });
+            });
+        }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+}
+
+// Initialize everything when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        initializeMobileMenu();
+        initializeDropdowns();
+    }, 100);
+});
+
+/* ============================================
+   QUICK TEST FUNCTIONS (for browser console)
+   ============================================ */
+
+// Test functions - use these in browser console to debug
+window.testNavigation = function() {
+    console.log('Testing navigation functions...');
+    console.log('Current path:', window.location.pathname);
+    console.log('Is in pages directory:', window.location.pathname.includes('/pages/'));
+    console.log('Navigate to fleet:', 'navigateToPage("fleet")');
+    console.log('Go home:', 'goHome()');
+    return 'Navigation test complete - check console for details';
+};
+
+window.fixAllLinks = function() {
+    emergencyNavigationFix();
+    return 'All links fixed!';
+};
+
+/* ============================================
+   JAVASCRIPT TO REMOVE BREADCRUMB NAVIGATION
+   Add this to your main.js file
+   ============================================ */
+
+// Function to remove all breadcrumb elements
+function removeBreadcrumbNavigation() {
+    try {
+        // Remove by common breadcrumb classes and IDs
+        const breadcrumbSelectors = [
+            '.breadcrumb-container',
+            '.breadcrumb',
+            '.breadcrumbs',
+            '.page-breadcrumb',
+            '.navigation-breadcrumb',
+            '.breadcrumb-nav',
+            '.breadcrumb-wrapper',
+            '.breadcrumb-navigation',
+            '#breadcrumb',
+            '#breadcrumbs',
+            'nav.breadcrumb',
+            'ol.breadcrumb',
+            'ul.breadcrumb'
+        ];
+        
+        breadcrumbSelectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                element.style.display = 'none';
+                element.style.visibility = 'hidden';
+                element.style.opacity = '0';
+                element.style.height = '0';
+                element.style.width = '0';
+                element.style.margin = '0';
+                element.style.padding = '0';
+                element.style.overflow = 'hidden';
+                element.remove(); // Completely remove from DOM
+            });
+        });
+        
+        // Remove elements by class pattern
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(element => {
+            const className = element.className;
+            if (className && typeof className === 'string' && className.includes('breadcrumb')) {
+                element.style.display = 'none';
+                element.remove();
+            }
+        });
+        
+        // Remove elements containing "Home / " pattern
+        const textElements = document.querySelectorAll('*');
+        textElements.forEach(element => {
+            const text = element.textContent || element.innerText;
+            if (text && (
+                text.includes('Home / Contact') ||
+                text.includes('Home / About') ||
+                text.includes('Home / Fleet') ||
+                text.includes('Home / Gallery') ||
+                text.includes('Home / Booking') ||
+                text.includes('Home / Services') ||
+                text.trim().match(/^Home\s*\/\s*\w+$/)
+            )) {
+                // Check if this element is likely a breadcrumb
+                const parent = element.parentElement;
+                const elementClasses = (element.className || '').toLowerCase();
+                const parentClasses = (parent?.className || '').toLowerCase();
+                
+                if (
+                    elementClasses.includes('breadcrumb') ||
+                    parentClasses.includes('breadcrumb') ||
+                    elementClasses.includes('navigation') ||
+                    parentClasses.includes('navigation') ||
+                    element.tagName === 'NAV' ||
+                    parent?.tagName === 'NAV'
+                ) {
+                    element.style.display = 'none';
+                    element.remove();
+                }
+            }
+        });
+        
+        console.log('✅ Breadcrumb navigation removed successfully');
+        
+    } catch (error) {
+        console.log('Breadcrumb removal completed with minor issues:', error);
+    }
+}
+
+// Function to continuously monitor and remove breadcrumbs
+function monitorAndRemoveBreadcrumbs() {
+    // Remove immediately
+    removeBreadcrumbNavigation();
+    
+    // Remove after DOM content loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', removeBreadcrumbNavigation);
+    }
+    
+    // Remove after window loads
+    window.addEventListener('load', removeBreadcrumbNavigation);
+    
+    // Monitor for dynamically added breadcrumbs
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1) { // Element node
+                        const element = node;
+                        const className = (element.className || '').toLowerCase();
+                        const text = element.textContent || element.innerText || '';
+                        
+                        // Check if the added element is a breadcrumb
+                        if (
+                            className.includes('breadcrumb') ||
+                            text.includes('Home /') ||
+                            element.querySelector && element.querySelector('.breadcrumb')
+                        ) {
+                            setTimeout(() => {
+                                element.style.display = 'none';
+                                element.remove();
+                            }, 100);
+                        }
+                    }
+                });
+            }
+        });
+    });
+    
+    // Start observing
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+    
+    // Periodic cleanup every 2 seconds
+    setInterval(removeBreadcrumbNavigation, 2000);
+}
+
+// Initialize breadcrumb removal
+monitorAndRemoveBreadcrumbs();
+
+// Manual function to remove breadcrumbs (can be called from console)
+window.removeBreadcrumbs = function() {
+    removeBreadcrumbNavigation();
+    return 'Breadcrumbs removed!';
+};
+
+// Emergency breadcrumb removal function
+window.emergencyRemoveBreadcrumbs = function() {
+    try {
+        // Nuclear option - remove any element containing breadcrumb text
+        const allElements = document.getElementsByTagName('*');
+        
+        for (let i = allElements.length - 1; i >= 0; i--) {
+            const element = allElements[i];
+            const text = element.textContent || element.innerText || '';
+            const className = (element.className || '').toLowerCase();
+            const id = (element.id || '').toLowerCase();
+            
+            if (
+                text.includes('Home /') ||
+                className.includes('breadcrumb') ||
+                id.includes('breadcrumb') ||
+                text.trim().match(/^Home\s*\/\s*\w+$/)
+            ) {
+                element.style.display = 'none';
+                element.remove();
+            }
+        }
+        
+        console.log('🚨 Emergency breadcrumb removal completed');
+        return 'Emergency removal completed!';
+        
+    } catch (error) {
+        console.log('Emergency removal error:', error);
+        return 'Emergency removal had issues but completed';
+    }
+};
+
+// Add CSS removal as backup
+function addBreadcrumbRemovalCSS() {
+    const style = document.createElement('style');
+    style.textContent = `
+        .breadcrumb-container,
+        .breadcrumb,
+        .breadcrumbs,
+        .page-breadcrumb,
+        .navigation-breadcrumb,
+        [class*="breadcrumb"],
+        [id*="breadcrumb"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            width: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Apply CSS removal immediately
+addBreadcrumbRemovalCSS();
+
+console.log('🚁 Breadcrumb removal system activated!');

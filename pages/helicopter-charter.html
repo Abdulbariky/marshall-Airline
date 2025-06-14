@@ -1,200 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium helicopter charter services in Kenya. Scenic flights, business transport, emergency medical services, and more with Rotorjet Aviation.">
-    <meta name="keywords" content="helicopter charter, helicopter rental, scenic flights Kenya, business helicopter, emergency medical transport">
+    <meta name="description"
+        content="Premium helicopter charter services in Kenya. Scenic flights, business transport, emergency medical services, and more with Rotorjet Aviation.">
+    <meta name="keywords"
+        content="helicopter charter, helicopter rental, scenic flights Kenya, business helicopter, emergency medical transport">
     <title>Helicopter Charter Services - marshallairline Aviation</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/homepage-fixes.css">
+    <link rel="stylesheet" href="../css/form-fixes.css">
+    <link rel="stylesheet" href="../css/navbar-footer-fixes.css">
 </head>
+
 <body>
     <!-- Navigation -->
-   <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
     <div class="nav-container">
+        <!-- Brand/Logo -->
         <div class="nav-brand">
-            <i class="fas fa-helicopter"></i>
-            <span>marshallairline Aviation</span>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                
-                <!-- Services Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Charter Services</h4>
-                            <a href="pages/helicopter-charter.html" class="dropdown-link">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Helicopter Charter</span>
-                                    <span class="link-desc">Scenic flights & transfers</span>
-                                </div>
-                            </a>
-                            <a href="pages/jet-charter.html" class="dropdown-link">
-                                <i class="fas fa-plane"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Private Jet Charter</span>
-                                    <span class="link-desc">Executive & business travel</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Support Services</h4>
-                            <a href="pages/maintenance.html" class="dropdown-link">
-                                <i class="fas fa-wrench"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Aircraft Maintenance</span>
-                                    <span class="link-desc">Professional MRO services</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                
-                <!-- Booking Dropdown -->
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Booking <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Make a Booking</h4>
-                            <a href="pages/booking.html" class="dropdown-link featured">
-                                <i class="fas fa-calendar-plus"></i>
-                                <div class="link-content">
-                                    <span class="link-title">New Booking</span>
-                                    <span class="link-desc">Book your flight online</span>
-                                </div>
-                                <span class="link-badge">Popular</span>
-                            </a>
-                            <a href="pages/quote.html" class="dropdown-link">
-                                <i class="fas fa-calculator"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Request Quote</span>
-                                    <span class="link-desc">Get custom pricing</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4 class="dropdown-header">Manage Bookings</h4>
-                            <a href="pages/my-bookings.html" class="dropdown-link">
-                                <i class="fas fa-list"></i>
-                                <div class="link-content">
-                                    <span class="link-title">My Bookings</span>
-                                    <span class="link-desc">View & manage reservations</span>
-                                </div>
-                            </a>
-                            <a href="pages/booking-lookup.html" class="dropdown-link">
-                                <i class="fas fa-search"></i>
-                                <div class="link-content">
-                                    <span class="link-title">Booking Lookup</span>
-                                    <span class="link-desc">Find existing booking</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="dropdown-section">
-                            <div class="quick-book-widget">
-                                <h4 class="dropdown-header">Quick Book</h4>
-                                <form class="mini-booking-form" id="nav-quick-book">
-                                    <div class="mini-form-row">
-                                        <select name="service" required>
-                                            <option value="">Service</option>
-                                            <option value="helicopter">Helicopter</option>
-                                            <option value="jet">Private Jet</option>
-                                        </select>
-                                        <select name="passengers" required>
-                                            <option value="">Pax</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="4">4</option>
-                                            <option value="6">6+</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="mini-book-btn">
-                                        <i class="fas fa-arrow-right"></i>
-                                        Quick Book
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="pages/fleet.html" class="nav-link">Our Fleet</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-        
-        <!-- Enhanced CTA Section -->
-        <div class="nav-cta">
-            <div class="nav-secondary-actions">
-                <a href="pages/booking-lookup.html" class="nav-icon-btn" title="Find Booking">
-                    <i class="fas fa-search"></i>
-                </a>
-                <div class="nav-phone">
-                    <a href="tel:+254700000000" class="phone-link">
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number">+254 700 000 000</span>
-                    </a>
-                </div>
-            </div>
-            <a href="pages/booking.html" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i>
-                Book Flight
+            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-helicopter"></i>
+                <span>Marshall Airline Aviation</span>
             </a>
         </div>
-        
+
+        <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu" id="nav-menu">
+            <!-- Home Link -->
+            <div class="nav-item">
+                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+
+            <!-- About Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i>
+                    Services
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
+                        <i class="fas fa-helicopter"></i>
+                        Helicopter Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
+                        <i class="fas fa-plane"></i>
+                        Private Jet Charter
+                    </a>
+                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
+                        <i class="fas fa-wrench"></i>
+                        Aircraft Maintenance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fleet Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                    <i class="fas fa-plane-departure"></i>
+                    Our Fleet
+                </a>
+            </div>
+
+            <!-- Gallery Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+            </div>
+
+            <!-- Contact Link -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-check"></i>
+                    Booking
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
+                        <i class="fas fa-plus-circle"></i>
+                        Book Flight
+                    </a>
+                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
+                        <i class="fas fa-search"></i>
+                        Find Booking
+                    </a>
+                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
+                        <i class="fas fa-list"></i>
+                        My Bookings
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="nav-item">
+                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    Book Flight
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="page-header-background"
+            style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');">
+        </div>
         <div class="page-header-overlay"></div>
-        
+
         <div class="container">
             <div class="page-header-content">
                 <h1 data-animate="fadeUp">Helicopter Charter Services</h1>
                 <p data-animate="fadeUp" style="animation-delay: 0.2s;">
-                    Experience Kenya from above with our premium helicopter charter services. Safe, reliable, and unforgettable flights.
+                    Experience Kenya from above with our premium helicopter charter services. Safe, reliable, and
+                    unforgettable flights.
                 </p>
             </div>
         </div>
@@ -220,12 +186,17 @@
                 <div class="service-text" data-animate="fadeRight">
                     <h2>Premium Helicopter Charter</h2>
                     <p class="service-description">
-                        Discover the ultimate in aerial transportation with marshallairline Aviation's helicopter charter services. Whether you're planning a scenic flight over Kenya's breathtaking landscapes, need efficient business transport, or require emergency medical services, our modern fleet and experienced pilots ensure safety, comfort, and reliability.
+                        Discover the ultimate in aerial transportation with marshallairline Aviation's helicopter
+                        charter services. Whether you're planning a scenic flight over Kenya's breathtaking landscapes,
+                        need efficient business transport, or require emergency medical services, our modern fleet and
+                        experienced pilots ensure safety, comfort, and reliability.
                     </p>
                     <p class="service-description">
-                        Our helicopters are maintained to the highest international standards and operated by certified pilots with extensive local knowledge. From the bustling city of Nairobi to remote safari destinations, we provide seamless aerial solutions tailored to your specific needs.
+                        Our helicopters are maintained to the highest international standards and operated by certified
+                        pilots with extensive local knowledge. From the bustling city of Nairobi to remote safari
+                        destinations, we provide seamless aerial solutions tailored to your specific needs.
                     </p>
-                    
+
                     <div class="service-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -245,10 +216,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-image" data-animate="fadeLeft">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1544827567-22a37fd0ea3a?w=600&h=400&fit=crop" alt="Helicopter charter service" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1544827567-22a37fd0ea3a?w=600&h=400&fit=crop"
+                            alt="Helicopter charter service" loading="lazy">
                         <div class="service-stats">
                             <div class="stat-box">
                                 <div class="stat-number">300+</div>
@@ -274,7 +246,7 @@
                     Comprehensive helicopter solutions for every need
                 </p>
             </div>
-            
+
             <div class="service-types-grid">
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="100">
                     <div class="service-icon">
@@ -282,7 +254,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Scenic Flights</h3>
-                        <p>Experience Kenya's stunning landscapes from a unique aerial perspective. Perfect for tourists and photography enthusiasts.</p>
+                        <p>Experience Kenya's stunning landscapes from a unique aerial perspective. Perfect for tourists
+                            and photography enthusiasts.</p>
                         <ul class="service-benefits">
                             <li>Mount Kenya aerial tours</li>
                             <li>Rift Valley scenic flights</li>
@@ -295,14 +268,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="200">
                     <div class="service-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="service-content">
                         <h3>Business Transport</h3>
-                        <p>Efficient and professional helicopter transport for business executives and corporate events.</p>
+                        <p>Efficient and professional helicopter transport for business executives and corporate events.
+                        </p>
                         <ul class="service-benefits">
                             <li>Executive transport</li>
                             <li>Corporate events</li>
@@ -315,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="300">
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
@@ -335,14 +309,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="400">
                     <div class="service-icon">
                         <i class="fas fa-camera"></i>
                     </div>
                     <div class="service-content">
                         <h3>Aerial Photography</h3>
-                        <p>Professional aerial photography and videography services for films, commercials, and special projects.</p>
+                        <p>Professional aerial photography and videography services for films, commercials, and special
+                            projects.</p>
                         <ul class="service-benefits">
                             <li>Film and TV production</li>
                             <li>Commercial photography</li>
@@ -355,14 +330,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="500">
                     <div class="service-icon">
                         <i class="fas fa-ring"></i>
                     </div>
                     <div class="service-content">
                         <h3>Special Events</h3>
-                        <p>Make your special occasions unforgettable with our helicopter services for weddings and celebrations.</p>
+                        <p>Make your special occasions unforgettable with our helicopter services for weddings and
+                            celebrations.</p>
                         <ul class="service-benefits">
                             <li>Wedding transportation</li>
                             <li>Proposal flights</li>
@@ -375,7 +351,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="service-type-card" data-animate="fadeUp" data-animate-delay="600">
                     <div class="service-icon">
                         <i class="fas fa-box"></i>
@@ -408,15 +384,17 @@
                     Our most requested helicopter charter destinations
                 </p>
             </div>
-            
+
             <div class="routes-grid">
                 <div class="route-card" data-animate="slideUp" data-animate-delay="100">
                     <div class="route-image">
-                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&h=250&fit=crop" alt="Nairobi to Maasai Mara" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&h=250&fit=crop"
+                            alt="Nairobi to Maasai Mara" loading="lazy">
                     </div>
                     <div class="route-content">
                         <h3 class="route-title">Nairobi to Maasai Mara</h3>
-                        <p class="route-description">Skip the long drive and fly directly to Kenya's premier safari destination.</p>
+                        <p class="route-description">Skip the long drive and fly directly to Kenya's premier safari
+                            destination.</p>
                         <div class="route-details">
                             <div class="route-detail">
                                 <i class="fas fa-clock"></i>
@@ -434,14 +412,16 @@
                         <a href="quote.html" class="btn btn-outline btn-small">Book Flight</a>
                     </div>
                 </div>
-                
+
                 <div class="route-card" data-animate="slideUp" data-animate-delay="200">
                     <div class="route-image">
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Nairobi to Coast" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop"
+                            alt="Nairobi to Coast" loading="lazy">
                     </div>
                     <div class="route-content">
                         <h3 class="route-title">Nairobi to Coast</h3>
-                        <p class="route-description">Quick and comfortable transport to Kenya's beautiful coastal regions.</p>
+                        <p class="route-description">Quick and comfortable transport to Kenya's beautiful coastal
+                            regions.</p>
                         <div class="route-details">
                             <div class="route-detail">
                                 <i class="fas fa-clock"></i>
@@ -459,14 +439,16 @@
                         <a href="quote.html" class="btn btn-outline btn-small">Book Flight</a>
                     </div>
                 </div>
-                
+
                 <div class="route-card" data-animate="slideUp" data-animate-delay="300">
                     <div class="route-image">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="Mount Kenya Scenic" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop"
+                            alt="Mount Kenya Scenic" loading="lazy">
                     </div>
                     <div class="route-content">
                         <h3 class="route-title">Mount Kenya Scenic</h3>
-                        <p class="route-description">Breathtaking aerial views of Kenya's highest mountain and surrounding landscapes.</p>
+                        <p class="route-description">Breathtaking aerial views of Kenya's highest mountain and
+                            surrounding landscapes.</p>
                         <div class="route-details">
                             <div class="route-detail">
                                 <i class="fas fa-clock"></i>
@@ -495,9 +477,11 @@
                 <div class="safety-text" data-animate="fadeRight">
                     <h2>Uncompromising Safety Standards</h2>
                     <p>
-                        Safety is our top priority. Our helicopters undergo rigorous maintenance schedules and safety inspections, exceeding international aviation standards. Every pilot in our team is highly trained and regularly evaluated to ensure the highest level of safety and professionalism.
+                        Safety is our top priority. Our helicopters undergo rigorous maintenance schedules and safety
+                        inspections, exceeding international aviation standards. Every pilot in our team is highly
+                        trained and regularly evaluated to ensure the highest level of safety and professionalism.
                     </p>
-                    
+
                     <div class="safety-certifications">
                         <div class="certification-badge">
                             <i class="fas fa-certificate"></i>
@@ -522,9 +506,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="safety-image" data-animate="fadeLeft">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop" alt="Safety standards" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop"
+                        alt="Safety standards" loading="lazy">
                 </div>
             </div>
         </div>
@@ -539,24 +524,26 @@
                     Book your helicopter charter in just a few easy steps
                 </p>
             </div>
-            
+
             <div class="process-steps">
                 <div class="process-step" data-animate="fadeUp" data-animate-delay="100">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Request Quote</h3>
-                        <p>Contact us with your requirements including date, time, destination, and number of passengers.</p>
+                        <p>Contact us with your requirements including date, time, destination, and number of
+                            passengers.</p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="fadeUp" data-animate-delay="200">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Receive Proposal</h3>
-                        <p>We'll provide a detailed quote with aircraft options, timing, and pricing within 24 hours.</p>
+                        <p>We'll provide a detailed quote with aircraft options, timing, and pricing within 24 hours.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="fadeUp" data-animate-delay="300">
                     <div class="step-number">3</div>
                     <div class="step-content">
@@ -564,12 +551,13 @@
                         <p>Review and approve the proposal, then secure your booking with a deposit payment.</p>
                     </div>
                 </div>
-                
+
                 <div class="process-step" data-animate="fadeUp" data-animate-delay="400">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Enjoy Your Flight</h3>
-                        <p>Arrive at the departure point and enjoy your safe, comfortable helicopter flight experience.</p>
+                        <p>Arrive at the departure point and enjoy your safe, comfortable helicopter flight experience.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -578,9 +566,11 @@
 
     <!-- Call to Action -->
     <section class="cta">
-        <div class="cta-background" style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');"></div>
+        <div class="cta-background"
+            style="background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=600&fit=crop');">
+        </div>
         <div class="cta-overlay"></div>
-        
+
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Take Flight?</h2>
@@ -611,7 +601,8 @@
                         <span>marshallairline Aviation</span>
                     </div>
                     <p class="footer-description">
-                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet charter services since 2010.
+                        Kenya's premier aviation services provider, delivering excellence in helicopter and private jet
+                        charter services since 2010.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -620,7 +611,7 @@
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
@@ -630,7 +621,7 @@
                         <li><a href="quote.html">Request Quote</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
@@ -640,7 +631,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-title">Contact Info</h4>
                     <div class="contact-info">
@@ -659,7 +650,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-content">
@@ -684,5 +675,7 @@
     <script src="../js/navigation.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/forms.js"></script>
+    <script src="../js/fixes.js"></script>
 </body>
+
 </html>

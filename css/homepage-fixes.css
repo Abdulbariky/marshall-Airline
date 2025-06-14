@@ -1,0 +1,411 @@
+/* ===============================================
+   HOMEPAGE FIXES
+   =============================================== */
+
+/* 2. View Fleet Button - Black Color */
+.fleet-link,
+.view-fleet-btn,
+.btn-fleet {
+    background-color: #1f2937 !important;
+    color: white !important;
+    border: 2px solid #1f2937 !important;
+}
+
+.fleet-link:hover,
+.view-fleet-btn:hover,
+.btn-fleet:hover {
+    background-color: #111827 !important;
+    border-color: #111827 !important;
+    color: white !important;
+}
+
+/* Specific targeting for homepage fleet button */
+.hero .btn[href*="fleet"],
+.cta .btn[href*="fleet"],
+.availability .btn[href*="fleet"] {
+    background-color: #1f2937 !important;
+    color: white !important;
+    border: 2px solid #1f2937 !important;
+}
+
+/* 5. Support Text Fix - 24/7 instead of 247/ */
+.support-text::after {
+    content: "24/7" !important;
+}
+
+.support-text {
+    position: relative;
+}
+
+/* Hide the original text and replace */
+.support-text:contains("247/") {
+    color: transparent;
+}
+
+.support-text:contains("247/")::after {
+    content: "24/7";
+    color: #374151;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 6. Breadcrumb/Home-About positioning - Top Left */
+.breadcrumb-section {
+    text-align: left !important;
+    padding: 15px 0 !important;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumb {
+    justify-content: flex-start !important;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.breadcrumb-item:hover {
+    color: #dc2626;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #d1d5db;
+}
+
+/* 7. Call Now Button - Link to Footer Phone */
+.call-now-btn,
+.btn-call,
+a[href*="tel:"] {
+    background-color: #10b981;
+    color: white;
+    border: 2px solid #10b981;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.call-now-btn:hover,
+.btn-call:hover,
+a[href*="tel:"]:hover {
+    background-color: #059669;
+    border-color: #059669;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 8. Page Headers - Better Visibility */
+.page-header h1,
+.page-header-content h1,
+.hero h1 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+}
+
+.page-header p,
+.page-header-content p,
+.hero p {
+    color: #f3f4f6 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+}
+
+/* Enhanced page header overlay for better text visibility */
+.page-header-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    ) !important;
+}
+
+/* 9. Fleet Availability Section Improvements */
+.availability-section,
+.fleet-availability {
+    background: #ffffff;
+    padding: 40px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.availability-form {
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.availability-form .form-group {
+    margin-bottom: 20px;
+}
+
+.availability-form label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.availability-form select,
+.availability-form input[type="date"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    color: #374151;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.availability-form input[type="date"] {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3e%3c/rect%3e%3cline x1='16' y1='2' x2='16' y2='6'%3e%3c/line%3e%3cline x1='8' y1='2' x2='8' y2='6'%3e%3c/line%3e%3cline x1='3' y1='10' x2='21' y2='10'%3e%3c/line%3e%3c/svg%3e");
+    color: #dc2626 !important;
+    font-weight: 600;
+}
+
+.availability-form select:focus,
+.availability-form input[type="date"]:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Make dropdown options visible */
+.availability-form select option {
+    padding: 12px;
+    background: white;
+    color: #374151;
+    font-size: 16px;
+}
+
+/* Enhanced dropdown styling */
+.form-group {
+    position: relative;
+}
+
+.form-group::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #6b7280;
+    pointer-events: none;
+}
+
+/* Check Availability Button */
+.check-availability-btn,
+.btn-check-availability {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.check-availability-btn:hover,
+.btn-check-availability:hover {
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
+}
+
+/* 10. About Us Image Alignment Fix */
+.about-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    order: 1;
+}
+
+.about-image {
+    order: 2;
+    margin-top: 0 !important;
+    align-self: start;
+}
+
+.about-stats {
+    margin-top: 30px;
+    grid-column: 1 / -1;
+    order: 3;
+}
+
+/* Ensure horizontal alignment */
+@media (min-width: 768px) {
+    .about-intro-content {
+        align-items: center;
+    }
+    
+    .about-text {
+        padding-right: 20px;
+    }
+    
+    .about-image {
+        padding-left: 20px;
+    }
+}
+
+/* Mobile responsiveness for about section */
+@media (max-width: 767px) {
+    .about-intro-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-text {
+        order: 1;
+    }
+    
+    .about-image {
+        order: 2;
+    }
+    
+    .about-stats {
+        order: 3;
+        grid-column: 1;
+    }
+}
+
+/* Stats section improvements */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #dc2626;
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+/* Calendar dropdown enhancement */
+.date-picker-container {
+    position: relative;
+    display: inline-block;
+}
+
+.date-picker-container input[type="date"] {
+    cursor: pointer;
+    position: relative;
+}
+
+.date-picker-container input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* Aircraft dropdown visibility improvement */
+.aircraft-select {
+    background: white;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M21 16V8a2 2 0 0 0-1-1.73L12 2 4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73L12 22l8-4.27A2 2 0 0 0 21 16z'%3e%3c/path%3e%3cpolyline points='7.5,10.5 16.5,10.5'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+}
+
+.aircraft-select option {
+    padding: 12px;
+    background: white;
+    color: #374151;
+    font-weight: 500;
+}
+
+.aircraft-select option:checked {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .page-header h1,
+    .page-header-content h1,
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    
+    .page-header p,
+    .page-header-content p,
+    .hero p {
+        font-size: 1rem !important;
+    }
+    
+    .availability-form {
+        padding: 20px;
+    }
+    
+    .availability-form select,
+    .availability-form input[type="date"] {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+}
