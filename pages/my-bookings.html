@@ -27,125 +27,334 @@
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/homepage-fixes.css">
     <link rel="stylesheet" href="../css/form-fixes.css">
+
+    <style>
+        /* ============================================
+   EMERGENCY CSS FIX - HIGH SPECIFICITY
+   This should work regardless of existing styles
+   ============================================ */
+
+        /* NUCLEAR OPTION - Target ALL inputs and selects on the page */
+        * input[type="text"] {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 20px !important;
+        }
+
+        * input[type="email"] {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 20px !important;
+        }
+
+        * select {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 20px !important;
+            appearance: none !important;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z' fill='%23a0aec0'/></svg>") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 20px center !important;
+            background-size: 20px !important;
+        }
+
+        /* Target ALL buttons */
+        * button[type="submit"] {
+            height: 65px !important;
+            padding: 20px 28px !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            background: #e53e3e !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            cursor: pointer !important;
+            margin-top: 20px !important;
+        }
+
+        * button:hover {
+            background: #c53030 !important;
+            transform: translateY(-1px) !important;
+        }
+
+        /* Focus states */
+        * input:focus,
+        * select:focus {
+            outline: none !important;
+            border-color: #e53e3e !important;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2) !important;
+        }
+
+        /* ============================================
+   SPECIFIC PAGE TARGETING (IF ABOVE DOESN'T WORK)
+   ============================================ */
+
+        /* Target by page URL */
+        body input[type="text"],
+        body input[type="email"],
+        body select {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 20px !important;
+        }
+
+        body button[type="submit"],
+        body .btn,
+        body .button {
+            height: 65px !important;
+            padding: 20px 28px !important;
+            font-size: 18px !important;
+            background: #e53e3e !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+        }
+
+        /* ============================================
+   INLINE STYLE OVERRIDES
+   ============================================ */
+
+        /* Override any inline styles that might exist */
+        input[style] {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+        }
+
+        select[style] {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+        }
+
+        button[style] {
+            height: 65px !important;
+            font-size: 18px !important;
+            background: #e53e3e !important;
+        }
+
+        /* ============================================
+   FRAMEWORK OVERRIDES
+   ============================================ */
+
+        /* Override Bootstrap if being used */
+        .form-control {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+        }
+
+        .btn {
+            height: 65px !important;
+            padding: 20px 28px !important;
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            background: #e53e3e !important;
+            border-color: #e53e3e !important;
+        }
+
+        /* Override Tailwind if being used */
+        .input {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+        }
+
+        /* ============================================
+   ID-BASED TARGETING (MOST SPECIFIC)
+   ============================================ */
+
+        /* If the form has an ID, target it directly */
+        #booking-form input,
+        #booking-lookup-form input,
+        #access-bookings-form input,
+        #my-bookings-form input {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+        }
+
+        #booking-form select,
+        #booking-lookup-form select,
+        #access-bookings-form select,
+        #my-bookings-form select {
+            height: 65px !important;
+            padding: 20px 24px !important;
+            font-size: 17px !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+        }
+
+        #booking-form button,
+        #booking-lookup-form button,
+        #access-bookings-form button,
+        #my-bookings-form button {
+            height: 65px !important;
+            padding: 20px 28px !important;
+            font-size: 18px !important;
+            background: #e53e3e !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 10px !important;
+            width: 100% !important;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
-    <div class="nav-container">
-        <!-- Brand/Logo -->
-        <div class="nav-brand">
-            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-helicopter"></i>
-                <span>Marshall Airline Aviation</span>
-            </a>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <div class="nav-toggle" id="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="nav-menu" id="nav-menu">
-            <!-- Home Link -->
-            <div class="nav-item">
-                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
-                    <i class="fas fa-home"></i>
-                    Home
+        <div class="nav-container">
+            <!-- Brand/Logo -->
+            <div class="nav-brand">
+                <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-helicopter"></i>
+                    <span>Marshall Airline Aviation</span>
                 </a>
             </div>
 
-            <!-- About Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
-                    <i class="fas fa-info-circle"></i>
-                    About
-                </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-            <!-- Services Dropdown -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">
-                    <i class="fas fa-cogs"></i>
-                    Services
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
-                        <i class="fas fa-helicopter"></i>
-                        Helicopter Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
-                        <i class="fas fa-plane"></i>
-                        Private Jet Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
-                        <i class="fas fa-wrench"></i>
-                        Aircraft Maintenance
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <!-- Home Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                        <i class="fas fa-home"></i>
+                        Home
                     </a>
                 </div>
-            </div>
 
-            <!-- Fleet Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
-                    <i class="fas fa-plane-departure"></i>
-                    Our Fleet
-                </a>
-            </div>
+                <!-- About Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                        <i class="fas fa-info-circle"></i>
+                        About
+                    </a>
+                </div>
 
-            <!-- Gallery Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
-                    <i class="fas fa-images"></i>
-                    Gallery
-                </a>
-            </div>
+                <!-- Services Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-cogs"></i>
+                        Services
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link"
+                            data-page="helicopter-charter">
+                            <i class="fas fa-helicopter"></i>
+                            Helicopter Charter
+                        </a>
+                        <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link"
+                            data-page="jet-charter">
+                            <i class="fas fa-plane"></i>
+                            Private Jet Charter
+                        </a>
+                        <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link"
+                            data-page="maintenance">
+                            <i class="fas fa-wrench"></i>
+                            Aircraft Maintenance
+                        </a>
+                    </div>
+                </div>
 
-            <!-- Contact Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
-                    <i class="fas fa-envelope"></i>
-                    Contact
-                </a>
-            </div>
+                <!-- Fleet Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                        <i class="fas fa-plane-departure"></i>
+                        Our Fleet
+                    </a>
+                </div>
 
-            <!-- Booking Dropdown -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">
-                    <i class="fas fa-calendar-check"></i>
-                    Booking
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
-                        <i class="fas fa-plus-circle"></i>
+                <!-- Gallery Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                        <i class="fas fa-images"></i>
+                        Gallery
+                    </a>
+                </div>
+
+                <!-- Contact Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Booking Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-check"></i>
+                        Booking
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link"
+                            data-page="booking">
+                            <i class="fas fa-plus-circle"></i>
+                            Book Flight
+                        </a>
+                        <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link"
+                            data-page="booking-lookup">
+                            <i class="fas fa-search"></i>
+                            Find Booking
+                        </a>
+                        <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link"
+                            data-page="my-bookings">
+                            <i class="fas fa-list"></i>
+                            My Bookings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Primary CTA Button -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('booking'); return false;"
+                        class="btn btn-primary book-flight-btn">
+                        <i class="fas fa-calendar-plus"></i>
                         Book Flight
                     </a>
-                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
-                        <i class="fas fa-search"></i>
-                        Find Booking
-                    </a>
-                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
-                        <i class="fas fa-list"></i>
-                        My Bookings
-                    </a>
                 </div>
             </div>
-
-            <!-- Primary CTA Button -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
-                    <i class="fas fa-calendar-plus"></i>
-                    Book Flight
-                </a>
-            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Page Header -->
     <section class="page-header">

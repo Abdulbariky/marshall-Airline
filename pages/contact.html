@@ -33,120 +33,127 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="main-navbar">
-    <div class="nav-container">
-        <!-- Brand/Logo -->
-        <div class="nav-brand">
-            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-helicopter"></i>
-                <span>Marshall Airline Aviation</span>
-            </a>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <div class="nav-toggle" id="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Navigation Menu -->
-        <div class="nav-menu" id="nav-menu">
-            <!-- Home Link -->
-            <div class="nav-item">
-                <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
-                    <i class="fas fa-home"></i>
-                    Home
+        <div class="nav-container">
+            <!-- Brand/Logo -->
+            <div class="nav-brand">
+                <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-helicopter"></i>
+                    <span>Marshall Airline Aviation</span>
                 </a>
             </div>
 
-            <!-- About Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
-                    <i class="fas fa-info-circle"></i>
-                    About
-                </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-            <!-- Services Dropdown -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">
-                    <i class="fas fa-cogs"></i>
-                    Services
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
-                        <i class="fas fa-helicopter"></i>
-                        Helicopter Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
-                        <i class="fas fa-plane"></i>
-                        Private Jet Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
-                        <i class="fas fa-wrench"></i>
-                        Aircraft Maintenance
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <!-- Home Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
+                        <i class="fas fa-home"></i>
+                        Home
                     </a>
                 </div>
-            </div>
 
-            <!-- Fleet Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
-                    <i class="fas fa-plane-departure"></i>
-                    Our Fleet
-                </a>
-            </div>
+                <!-- About Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
+                        <i class="fas fa-info-circle"></i>
+                        About
+                    </a>
+                </div>
 
-            <!-- Gallery Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
-                    <i class="fas fa-images"></i>
-                    Gallery
-                </a>
-            </div>
+                <!-- Services Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-cogs"></i>
+                        Services
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link"
+                            data-page="helicopter-charter">
+                            <i class="fas fa-helicopter"></i>
+                            Helicopter Charter
+                        </a>
+                        <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link"
+                            data-page="jet-charter">
+                            <i class="fas fa-plane"></i>
+                            Private Jet Charter
+                        </a>
+                        <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link"
+                            data-page="maintenance">
+                            <i class="fas fa-wrench"></i>
+                            Aircraft Maintenance
+                        </a>
+                    </div>
+                </div>
 
-            <!-- Contact Link -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
-                    <i class="fas fa-envelope"></i>
-                    Contact
-                </a>
-            </div>
+                <!-- Fleet Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
+                        <i class="fas fa-plane-departure"></i>
+                        Our Fleet
+                    </a>
+                </div>
 
-            <!-- Booking Dropdown -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">
-                    <i class="fas fa-calendar-check"></i>
-                    Booking
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link" data-page="booking">
-                        <i class="fas fa-plus-circle"></i>
+                <!-- Gallery Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
+                        <i class="fas fa-images"></i>
+                        Gallery
+                    </a>
+                </div>
+
+                <!-- Contact Link -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Booking Dropdown -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-check"></i>
+                        Booking
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link"
+                            data-page="booking">
+                            <i class="fas fa-plus-circle"></i>
+                            Book Flight
+                        </a>
+                        <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link"
+                            data-page="booking-lookup">
+                            <i class="fas fa-search"></i>
+                            Find Booking
+                        </a>
+                        <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link"
+                            data-page="my-bookings">
+                            <i class="fas fa-list"></i>
+                            My Bookings
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Primary CTA Button -->
+                <div class="nav-item">
+                    <a href="#" onclick="navigateToPage('booking'); return false;"
+                        class="btn btn-primary book-flight-btn">
+                        <i class="fas fa-calendar-plus"></i>
                         Book Flight
                     </a>
-                    <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link" data-page="booking-lookup">
-                        <i class="fas fa-search"></i>
-                        Find Booking
-                    </a>
-                    <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link" data-page="my-bookings">
-                        <i class="fas fa-list"></i>
-                        My Bookings
-                    </a>
                 </div>
             </div>
-
-            <!-- Primary CTA Button -->
-            <div class="nav-item">
-                <a href="#" onclick="navigateToPage('booking'); return false;" class="btn btn-primary book-flight-btn">
-                    <i class="fas fa-calendar-plus"></i>
-                    Book Flight
-                </a>
-            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -186,9 +193,9 @@
                     </div>
                     <div class="contact-details">
                         <h3>Our Location</h3>
-                        <p>Wilson Airport<br>Langata Road<br>Nairobi, World</p>
-                        <a href="https://maps.google.com/?q=Wilson+Airport+Nairobi" target="_blank"
-                            class="contact-link">
+                        <p>P.O. Box 12894-00802<br>Charlotte Amalie, St. Thomas<br>U.S. Virgin Islands</p>
+                        <a href="https://maps.google.com/?q=Charlotte+Amalie+St+Thomas+U.S.+Virgin+Islands"
+                            target="_blank" class="contact-link">
                             <i class="fas fa-directions"></i>
                             Get Directions
                         </a>
@@ -201,8 +208,8 @@
                     </div>
                     <div class="contact-details">
                         <h3>Phone Numbers</h3>
-                        <p>Main Line: +254 700 000 000<br>Emergency: +254 700 000 001<br>WhatsApp: +254 700 000 002</p>
-                        <a href="tel:+254700000000" class="contact-link">
+                        <p>Main Line: +19292245107<br>Emergency: +19292245107<br>WhatsApp: +19292245107</p>
+                        <a href="tel:+19292245107" class="contact-link">
                             <i class="fas fa-phone"></i>
                             Call Now
                         </a>
@@ -377,7 +384,7 @@
 
                     <div class="additional-info">
                         <h3>Visit Our Office</h3>
-                        <p>Located at Wilson Airport, World's premier general aviation airport. Our facility features a
+                        <p>Located at St. Thomas, World's premier general aviation airport. Our facility features a
                             modern operations center, comfortable client lounge, and direct aircraft access.</p>
 
                         <div class="info-highlights">
@@ -420,9 +427,9 @@
                         <div class="emergency-actions">
                             <a href="tel:+254700000001" class="btn btn-danger btn-large">
                                 <i class="fas fa-phone"></i>
-                                Emergency Hotline: +254 700 000 001
+                                Emergency Hotline: +447853773996
                             </a>
-                            <a href="https://wa.me/254700000002" class="btn btn-outline btn-large" target="_blank">
+                            <a href="https://wa.me/+447853773996" class="btn btn-outline btn-large" target="_blank">
                                 <i class="fab fa-whatsapp"></i>
                                 WhatsApp Emergency
                             </a>
