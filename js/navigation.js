@@ -1,5 +1,5 @@
 /* ===============================================
-   Rotorjet Aviation - Navigation System
+   marshallairline Aviation - Navigation System
    =============================================== */
 
 (function() {
@@ -203,47 +203,47 @@
     function getPageConfig(page) {
         const configs = {
             'index': {
-                title: 'Rotorjet Aviation - Premier Aviation Services',
+                title: 'marshallairline Aviation - Premier Aviation Services',
                 description: 'Kenya\'s leading helicopter and private jet charter services. Professional aviation solutions for business and leisure.',
                 keywords: 'helicopter charter, private jet, aviation, Kenya, aircraft maintenance'
             },
             'about': {
-                title: 'About Us - Rotorjet Aviation',
-                description: 'Learn about Rotorjet Aviation\'s history, mission, and commitment to excellence in aviation services.',
-                keywords: 'about rotorjet, aviation company, helicopter services, aviation history'
+                title: 'About Us - marshallairline Aviation',
+                description: 'Learn about marshallairline Aviation\'s history, mission, and commitment to excellence in aviation services.',
+                keywords: 'about marshallairline, aviation company, helicopter services, aviation history'
             },
             'fleet': {
-                title: 'Our Fleet - Rotorjet Aviation',
+                title: 'Our Fleet - marshallairline Aviation',
                 description: 'Explore our modern fleet of helicopters and private jets available for charter services.',
                 keywords: 'aircraft fleet, helicopters, private jets, charter aircraft'
             },
             'contact': {
-                title: 'Contact Us - Rotorjet Aviation',
-                description: 'Get in touch with Rotorjet Aviation for aviation services, bookings, and inquiries.',
-                keywords: 'contact rotorjet, aviation services contact, helicopter booking'
+                title: 'Contact Us - marshallairline Aviation',
+                description: 'Get in touch with marshallairline Aviation for aviation services, bookings, and inquiries.',
+                keywords: 'contact marshallairline, aviation services contact, helicopter booking'
             },
             'gallery': {
-                title: 'Photo Gallery - Rotorjet Aviation',
+                title: 'Photo Gallery - marshallairline Aviation',
                 description: 'View our gallery of aircraft, destinations, and aviation services.',
                 keywords: 'aviation photos, aircraft gallery, helicopter images'
             },
             'helicopter-charter': {
-                title: 'Helicopter Charter Services - Rotorjet Aviation',
+                title: 'Helicopter Charter Services - marshallairline Aviation',
                 description: 'Premium helicopter charter services for tourism, business travel, and special occasions.',
                 keywords: 'helicopter charter, helicopter rental, safari tours, helicopter services'
             },
             'jet-charter': {
-                title: 'Private Jet Charter - Rotorjet Aviation',
+                title: 'Private Jet Charter - marshallairline Aviation',
                 description: 'Luxury private jet charter services for domestic and international travel.',
                 keywords: 'private jet charter, jet rental, business jet, luxury travel'
             },
             'maintenance': {
-                title: 'Aircraft Maintenance - Rotorjet Aviation',
+                title: 'Aircraft Maintenance - marshallairline Aviation',
                 description: 'Professional aircraft maintenance and inspection services by certified technicians.',
                 keywords: 'aircraft maintenance, helicopter maintenance, aviation repair, aircraft inspection'
             },
             'quote': {
-                title: 'Request Quote - Rotorjet Aviation',
+                title: 'Request Quote - marshallairline Aviation',
                 description: 'Get a personalized quote for helicopter or private jet charter services.',
                 keywords: 'aviation quote, charter quote, helicopter booking, jet rental quote'
             }
@@ -613,7 +613,7 @@
     initializeSearch();
 
     // Public API
-    window.RotorjetNavigation = {
+    window.marshallairlineNavigation = {
         navigateToPage,
         highlightActiveNavigation,
         smoothScrollToElement,

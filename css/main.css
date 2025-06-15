@@ -1703,3 +1703,551 @@ h3:contains("Confirmed") {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+/* ============================================
+   COMPLETE MOBILE RESPONSIVE FIXES
+   Add this CSS to make your website mobile-friendly
+   ============================================ */
+
+/* ============================================
+   MOBILE NAVIGATION FIXES
+   ============================================ */
+
+/* Responsive navigation container */
+.navbar {
+    padding: 12px 16px !important;
+    position: relative !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+/* Brand name responsive sizing */
+.nav-brand {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #e53e3e !important;
+    text-decoration: none !important;
+    z-index: 1001 !important;
+}
+
+.nav-brand i {
+    margin-right: 8px !important;
+    font-size: 20px !important;
+}
+
+.nav-brand span {
+    white-space: nowrap !important;
+}
+
+/* Mobile menu toggle button */
+.nav-toggle {
+    display: none !important;
+    flex-direction: column !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+    width: 30px !important;
+    height: 25px !important;
+    justify-content: space-between !important;
+}
+
+.nav-toggle span {
+    width: 100% !important;
+    height: 3px !important;
+    background: #e53e3e !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-item {
+    position: relative !important;
+}
+
+.nav-link {
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    color: #e53e3e !important;
+    text-decoration: none !important;
+    background: white !important;
+    border: 1px solid rgba(229, 62, 62, 0.2) !important;
+    transition: all 0.3s ease !important;
+    display: block !important;
+}
+
+.nav-link:hover {
+    background: #e53e3e !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Show mobile menu toggle */
+    .nav-toggle {
+        display: flex !important;
+    }
+    
+    /* Hide desktop menu on mobile */
+    .nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: white !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        padding: 80px 20px 20px 20px !important;
+        transition: right 0.3s ease !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
+        z-index: 1000 !important;
+        gap: 8px !important;
+        overflow-y: auto !important;
+    }
+    
+    /* Show mobile menu when active */
+    .nav-menu.active {
+        right: 0 !important;
+    }
+    
+    /* Mobile navigation links */
+    .nav-link {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 16px 20px !important;
+        margin: 4px 0 !important;
+        font-size: 16px !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Mobile brand name - make smaller */
+    .nav-brand {
+        font-size: 16px !important;
+    }
+    
+    .nav-brand span {
+        max-width: 200px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* Animated mobile menu toggle */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px) !important;
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px) !important;
+    }
+    
+    /* Mobile overlay */
+    .nav-overlay {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        z-index: 999 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .nav-overlay.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* ============================================
+   MOBILE HERO SECTION
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px 40px 20px !important;
+        text-align: center !important;
+        min-height: 70vh !important;
+    }
+    
+    .hero h1 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .hero h2 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .hero p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 32px !important;
+        padding: 0 10px !important;
+    }
+    
+    /* Mobile hero buttons */
+    .hero .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 16px 24px !important;
+        font-size: 16px !important;
+        margin: 8px auto !important;
+        display: block !important;
+    }
+    
+    .hero .btn + .btn {
+        margin-top: 12px !important;
+    }
+}
+
+/* ============================================
+   MOBILE CONTENT SECTIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px !important;
+        max-width: 100% !important;
+    }
+    
+    .section {
+        padding: 40px 0 !important;
+    }
+    
+    .row {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Mobile cards */
+    .card {
+        margin-bottom: 20px !important;
+        padding: 20px !important;
+    }
+    
+    .card h3 {
+        font-size: 20px !important;
+    }
+    
+    .card p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* ============================================
+   MOBILE FORMS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .booking-form,
+    .contact-form,
+    .quote-form {
+        padding: 20px !important;
+        margin: 16px !important;
+    }
+    
+    .form-group {
+        margin-bottom: 20px !important;
+    }
+    
+    .form-control,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+        width: 100% !important;
+        padding: 16px !important;
+        font-size: 16px !important;
+        height: 56px !important;
+        border-radius: 8px !important;
+        border: 2px solid #e2e8f0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    textarea {
+        height: 120px !important;
+        resize: vertical !important;
+    }
+    
+    .btn,
+    button {
+        width: 100% !important;
+        padding: 16px 20px !important;
+        font-size: 16px !important;
+        height: 56px !important;
+        border-radius: 8px !important;
+        margin-top: 16px !important;
+    }
+    
+    .form-row {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+    
+    .form-col {
+        width: 100% !important;
+    }
+}
+
+/* ============================================
+   MOBILE FOOTER
+   ============================================ */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px 0 !important;
+    }
+    
+    .footer-content {
+        flex-direction: column !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+    
+    .footer-section {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .footer-section h4 {
+        font-size: 18px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .footer-links {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px !important;
+    }
+    
+    .footer-links a {
+        font-size: 14px !important;
+        color: #666 !important;
+        text-decoration: none !important;
+    }
+    
+    .contact-info p {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .footer-bottom {
+        text-align: center !important;
+        padding: 20px 16px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* ============================================
+   MOBILE STATISTICS SECTION
+   ============================================ */
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 40px 16px !important;
+    }
+    
+    .stat-item {
+        text-align: center !important;
+        padding: 20px !important;
+    }
+    
+    .stat-number {
+        font-size: 36px !important;
+        font-weight: bold !important;
+        color: white !important;
+    }
+    
+    .stat-label {
+        font-size: 14px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+}
+
+/* ============================================
+   MOBILE UTILITY CLASSES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+    
+    .mobile-center {
+        text-align: center !important;
+    }
+    
+    .mobile-full-width {
+        width: 100% !important;
+    }
+    
+    .mobile-padding {
+        padding: 16px !important;
+    }
+    
+    .mobile-margin {
+        margin: 16px 0 !important;
+    }
+    
+    /* Text sizing for mobile */
+    .mobile-text-sm {
+        font-size: 14px !important;
+    }
+    
+    .mobile-text-base {
+        font-size: 16px !important;
+    }
+    
+    .mobile-text-lg {
+        font-size: 18px !important;
+    }
+    
+    .mobile-text-xl {
+        font-size: 24px !important;
+    }
+}
+
+/* ============================================
+   TABLET RESPONSIVE (768px - 1024px)
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-brand {
+        font-size: 18px !important;
+    }
+    
+    .nav-link {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+    }
+    
+    .hero h1 {
+        font-size: 48px !important;
+    }
+    
+    .hero p {
+        font-size: 18px !important;
+    }
+    
+    .container {
+        padding: 0 32px !important;
+    }
+}
+
+/* ============================================
+   MOBILE NAVIGATION JAVASCRIPT INTEGRATION
+   ============================================ */
+
+/* Ensure mobile menu works with JavaScript */
+.nav-menu-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-menu-backdrop.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Smooth scrolling for mobile */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+    overflow-x: hidden !important;
+}
+
+/* ============================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Optimize images for mobile */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Optimize videos for mobile */
+    video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Reduce animations on mobile for performance */
+    * {
+        animation-duration: 0.5s !important;
+        transition-duration: 0.3s !important;
+    }
+    
+    /* Optimize fonts for mobile */
+    body {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+    }
+}

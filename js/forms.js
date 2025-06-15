@@ -1,5 +1,5 @@
 /* ===============================================
-   Rotorjet Aviation - Form Handling System
+   marshallairline Aviation - Form Handling System
    =============================================== */
 
 (function() {
@@ -752,7 +752,7 @@
     }
 
     // Public API
-    window.RotorjetForms = {
+    window.marshallairlineForms = {
         validateForm,
         validateField,
         submitForm,

@@ -1,5 +1,5 @@
 /* ===============================================
-   Rotorjet Aviation - Animation System
+   marshalairline Aviation - Animation System
    =============================================== */
 
 (function() {
@@ -587,7 +587,7 @@
     }
 
     // Public API
-    window.RotorjetAnimations = {
+    window.marshalairlineAnimations = {
         fadeIn,
         slideUp,
         slideDown,

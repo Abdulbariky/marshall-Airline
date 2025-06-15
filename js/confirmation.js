@@ -125,7 +125,7 @@ class BookingConfirmation {
         
         const link = document.createElement('a');
         link.href = url;
-        link.download = `RotorjetAviation_Ticket_${this.bookingData.reference}.txt`;
+        link.download = `marshallairlineAviation_Ticket_${this.bookingData.reference}.txt`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -139,7 +139,7 @@ class BookingConfirmation {
     generateTicketContent() {
         const data = this.bookingData;
         return `
-ROTORJET AVIATION - E-TICKET
+marshallairline AVIATION - E-TICKET
 ===============================
 
 Booking Reference: ${data.reference}
@@ -197,10 +197,10 @@ IMPORTANT INFORMATION
 
 Contact Information:
 Phone: +254 700 000 000
-Email: info@rotorjet-aviation.com
-Website: www.rotorjet-aviation.com
+Email: info@marshallairline-aviation.com
+Website: www.marshallairline-aviation.com
 
-Thank you for choosing Rotorjet Aviation!
+Thank you for choosing marshallairline Aviation!
         `;
     }
 
@@ -222,7 +222,7 @@ Thank you for choosing Rotorjet Aviation!
             title: `Flight to ${data.flight.arrival.location} - ${data.bookingData.reference}`,
             startDate: this.createCalendarDate(data.flight.departure.date, data.flight.departure.time),
             endDate: this.createCalendarDate(data.flight.arrival.date, data.flight.arrival.time),
-            description: `Rotorjet Aviation Flight\nBooking Reference: ${data.reference}\nAircraft: ${data.flight.aircraft}\nPassengers: ${data.flight.passengers}`,
+            description: `marshallairline Aviation Flight\nBooking Reference: ${data.reference}\nAircraft: ${data.flight.aircraft}\nPassengers: ${data.flight.passengers}`,
             location: data.flight.departure.location
         };
 
@@ -281,9 +281,9 @@ Thank you for choosing Rotorjet Aviation!
     generateICalUrl(event) {
         const icalContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Rotorjet Aviation//EN
+PRODID:-//marshallairline Aviation//EN
 BEGIN:VEVENT
-UID:${this.bookingData.reference}@rotorjet-aviation.com
+UID:${this.bookingData.reference}@marshallairline-aviation.com
 DTSTAMP:${this.formatCalendarDate(new Date())}
 DTSTART:${this.formatCalendarDate(event.startDate)}
 DTEND:${this.formatCalendarDate(event.endDate)}
@@ -349,8 +349,8 @@ END:VCALENDAR`;
 
     shareBooking() {
         const shareData = {
-            title: 'My Flight Booking - Rotorjet Aviation',
-            text: `I just booked a flight with Rotorjet Aviation! Booking reference: ${this.bookingData.reference}`,
+            title: 'My Flight Booking - marshallairline Aviation',
+            text: `I just booked a flight with marshallairline Aviation! Booking reference: ${this.bookingData.reference}`,
             url: window.location.href
         };
 

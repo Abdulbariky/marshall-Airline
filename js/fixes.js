@@ -1,4 +1,4 @@
-// JavaScript Fixes for Rotorjet Aviation Website
+// JavaScript Fixes for marshallairline Aviation Website
 class WebsiteFixes {
     constructor() {
         this.init();
