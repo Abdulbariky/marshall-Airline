@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../css/homepage-fixes.css">
     <link rel="stylesheet" href="../css/form-fixes.css">
     <link rel="stylesheet" href="../css/navbar-footer-fixes.css">
+    <link rel="stylesheet" href="../css/mobile.css">
 </head>
 
 <body>
@@ -646,6 +647,35 @@
     <script src="../js/forms.js"></script>
     <script src="../js/fixes.js"></script>
     <script src="../js/navigation-fix.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    
+    function toggleMenu() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+    
+    navToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+});
+</script>
+
 </body>
 
 </html>

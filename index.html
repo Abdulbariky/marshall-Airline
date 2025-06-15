@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/navbar-footer-fixes.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
 
     <style>
         /* Enhanced Logo Styling */
@@ -115,188 +117,150 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="main-navbar">
-        <div class="nav-container">
-            <!-- Brand/Logo -->
-            <div class="nav-brand">
-                <!-- Creative Aviation Logo - BIGGER SIZE -->
-                <svg width="48" height="48" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
-                        </linearGradient>
-                        <filter id="logoGlow">
-                            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-                            <feMerge>
-                                <feMergeNode in="coloredBlur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-
-                    <!-- Wings with enhanced visibility -->
-                    <path d="M4 16 L12 12 L16 16 L12 20 Z" fill="url(#logoGradient)" opacity="0.9"
-                        filter="url(#logoGlow)" />
-                    <path d="M16 16 L20 12 L28 16 L20 20 Z" fill="url(#logoGradient)" opacity="0.9"
-                        filter="url(#logoGlow)" />
-
-                    <!-- Fuselage - enhanced -->
-                    <rect x="12" y="14" width="8" height="4" rx="2" fill="url(#logoGradient)" filter="url(#logoGlow)" />
-
-                    <!-- Tail - more prominent -->
-                    <path d="M20 16 L24 14 L26 16 L24 18 Z" fill="url(#logoGradient)" opacity="1"
-                        filter="url(#logoGlow)" />
-
-                    <!-- Propeller/Engine - bigger and more visible -->
-                    <circle cx="10" cy="16" r="2.5" fill="#F59E0B" opacity="0.9" />
-                    <circle cx="22" cy="16" r="2" fill="#F59E0B" opacity="0.9" />
-
-                    <!-- Motion Lines - more visible -->
-                    <path d="M1 15 L7 15 M1 17 L7 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8" />
-                    <path d="M25 15 L31 15 M25 17 L31 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8" />
-
-                    <!-- Additional details for prominence -->
-                    <circle cx="16" cy="16" r="1" fill="#F59E0B" opacity="0.8" />
-                </svg>
-                <span>Marshall Airline Aviation</span>
+    <nav class="navbar">
+    <div class="nav-container">
+        <!-- Brand Logo -->
+        <div class="nav-brand">
+            <!-- Your existing logo SVG here -->
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M4 16 L12 12 L16 16 L12 20 Z" fill="url(#logoGradient)" opacity="0.9"/>
+                <path d="M16 16 L20 12 L28 16 L20 20 Z" fill="url(#logoGradient)" opacity="0.9"/>
+                <rect x="12" y="14" width="8" height="4" rx="2" fill="url(#logoGradient)"/>
+                <path d="M20 16 L24 14 L26 16 L24 18 Z" fill="url(#logoGradient)" opacity="1"/>
+                <circle cx="10" cy="16" r="2.5" fill="#F59E0B" opacity="0.9"/>
+                <circle cx="22" cy="16" r="2" fill="#F59E0B" opacity="0.9"/>
+                <path d="M1 15 L7 15 M1 17 L7 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
+                <path d="M25 15 L31 15 M25 17 L31 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8"/>
+                <circle cx="16" cy="16" r="1" fill="#F59E0B" opacity="0.8"/>
+            </svg>
+            <span>Marshall Airline Aviation</span>
+        </div>
+        
+        <!-- Desktop Navigation Menu -->
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="goHome()">
+                    <i class="fas fa-home"></i> Home
+                </a>
             </div>
-
-            <!-- Mobile Menu Toggle -->
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="navigateToPage('about')">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
             </div>
-
-            <!-- Navigation Menu -->
-            <div class="nav-menu" id="nav-menu">
-                <!-- Home Link -->
-                <div class="nav-item">
-                    <a href="#" onclick="goHome(); return false;" class="nav-link" data-page="home">
-                        <i class="fas fa-home"></i>
-                        Home
-                    </a>
-                </div>
-
-                <!-- About Link -->
-                <div class="nav-item">
-                    <a href="#" onclick="navigateToPage('about'); return false;" class="nav-link" data-page="about">
-                        <i class="fas fa-info-circle"></i>
-                        About
-                    </a>
-                </div>
-
-                <!-- Services Dropdown -->
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        <i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-section">
-                            <div class="dropdown-header">Aviation Services</div>
-
-                            <!-- Helicopter Charter -->
-                            <a href="#" class="dropdown-link" onclick="navigateToPage('helicopter-charter')">
-                                <i class="fas fa-helicopter"></i>
-                                <div class="link-content">
-                                    <div class="link-title">Helicopter Charter</div>
-                                    <div class="link-desc">Executive & VIP helicopter services</div>
-                                </div>
-                            </a>
-
-                            <!-- Private Jet Charter -->
-                            <a href="#" class="dropdown-link" onclick="navigateToPage('jet-charter')">
-                                <i class="fas fa-private-jet"></i>
-                                <div class="link-content">
-                                    <div class="link-title">Private Jet Charter</div>
-                                    <div class="link-desc">International luxury flights</div>
-                                </div>
-                            </a>
-
-                            <!-- NEW: Cargo Airway Plan -->
-                            <a href="#" class="dropdown-link" onclick="navigateToPage('cargo-airway')">
-                                <i class="fas fa-shipping-fast"></i>
-                                <div class="link-content">
-                                    <div class="link-title">Cargo Airway Plan</div>
-                                    <div class="link-desc">Global freight solutions</div>
-                                    <span class="link-badge">NEW</span>
-                                </div>
-                            </a>
-
-                            <!-- Aircraft Maintenance -->
-                            <a href="#" class="dropdown-link" onclick="navigateToPage('maintenance')">
-                                <i class="fas fa-tools"></i>
-                                <div class="link-content">
-                                    <div class="link-title">Aircraft Maintenance</div>
-                                    <div class="link-desc">Professional technical services</div>
-                                </div>
-                            </a>
+            
+            <!-- Services Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('helicopter-charter')">
+                        <i class="fas fa-helicopter"></i>
+                        <div class="link-content">
+                            <div class="link-title">Helicopter Charter</div>
+                            <div class="link-desc">Executive & VIP helicopter services</div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Fleet Link -->
-                <div class="nav-item">
-                    <a href="#" onclick="navigateToPage('fleet'); return false;" class="nav-link" data-page="fleet">
-                        <i class="fas fa-plane-departure"></i>
-                        Our Fleet
+                    </a>
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('jet-charter')">
+                        <i class="fas fa-private-jet"></i>
+                        <div class="link-content">
+                            <div class="link-title">Private Jet Charter</div>
+                            <div class="link-desc">International luxury flights</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('cargo-airway')">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div class="link-content">
+                            <div class="link-title">Cargo Airway Plan</div>
+                            <div class="link-desc">Global freight solutions</div>
+                            <span class="link-badge">NEW</span>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('maintenance')">
+                        <i class="fas fa-tools"></i>
+                        <div class="link-content">
+                            <div class="link-title">Aircraft Maintenance</div>
+                            <div class="link-desc">Professional technical services</div>
+                        </div>
                     </a>
                 </div>
-
-                <!-- Gallery Link -->
-                <div class="nav-item">
-                    <a href="#" onclick="navigateToPage('gallery'); return false;" class="nav-link" data-page="gallery">
-                        <i class="fas fa-images"></i>
-                        Gallery
+            </div>
+            
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="navigateToPage('fleet')">
+                    <i class="fas fa-plane"></i> Our Fleet
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="navigateToPage('gallery')">
+                    <i class="fas fa-images"></i> Gallery
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#" class="nav-link" onclick="navigateToPage('contact')">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+            
+            <!-- Booking Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">
+                    <i class="fas fa-calendar-alt"></i> Booking <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('booking')">
+                        <i class="fas fa-plus"></i>
+                        <div class="link-content">
+                            <div class="link-title">Book Flight</div>
+                            <div class="link-desc">Charter your flight now</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('find-booking')">
+                        <i class="fas fa-search"></i>
+                        <div class="link-content">
+                            <div class="link-title">Find Booking</div>
+                            <div class="link-desc">Search existing reservations</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-link" onclick="navigateToPage('my-bookings')">
+                        <i class="fas fa-list"></i>
+                        <div class="link-content">
+                            <div class="link-title">My Bookings</div>
+                            <div class="link-desc">Manage your reservations</div>
+                        </div>
                     </a>
                 </div>
-
-                <!-- Contact Link -->
-                <div class="nav-item">
-                    <a href="#" onclick="navigateToPage('contact'); return false;" class="nav-link" data-page="contact">
-                        <i class="fas fa-envelope"></i>
-                        Contact
-                    </a>
-                </div>
-
-                <!-- Booking Dropdown -->
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        <i class="fas fa-calendar-check"></i>
-                        Booking
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="#" onclick="navigateToPage('booking'); return false;" class="dropdown-link"
-                            data-page="booking">
-                            <i class="fas fa-plus-circle"></i>
-                            Book Flight
-                        </a>
-                        <a href="#" onclick="navigateToPage('booking-lookup'); return false;" class="dropdown-link"
-                            data-page="booking-lookup">
-                            <i class="fas fa-search"></i>
-                            Find Booking
-                        </a>
-                        <a href="#" onclick="navigateToPage('my-bookings'); return false;" class="dropdown-link"
-                            data-page="my-bookings">
-                            <i class="fas fa-list"></i>
-                            My Bookings
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Primary CTA Button -->
-                <div class="nav-item">
-                    <a href="#" onclick="navigateToPage('booking'); return false;"
-                        class="btn btn-primary book-flight-btn">
-                        <i class="fas fa-calendar-plus"></i>
-                        Book Flight
-                    </a>
-                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="nav-item nav-cta">
+                <a href="#" class="btn btn-primary" onclick="navigateToPage('booking')">
+                    <i class="fas fa-calendar-plus"></i> Book Flight
+                </a>
             </div>
         </div>
-    </nav>
+        
+        <!-- Mobile Hamburger Toggle -->
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -661,6 +625,153 @@
                     <script src="js/navigation.js"></script>
                     <script src="js/animations.js"></script>
                     <script src="js/fixes.js"></script>
+
+                    <script>
+// ROBUST MOBILE NAVIGATION JAVASCRIPT
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Mobile navigation initializing...');
+    
+    // Get navigation elements with error checking
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
+    
+    // Debug: Check if elements exist
+    console.log('Nav Toggle:', navToggle);
+    console.log('Nav Menu:', navMenu);
+    console.log('Nav Overlay:', navOverlay);
+    
+    // Only proceed if all elements exist
+    if (!navToggle) {
+        console.error('Nav toggle element not found! Make sure you have: <div class="nav-toggle" id="navToggle">');
+        return;
+    }
+    
+    if (!navMenu) {
+        console.error('Nav menu element not found! Make sure you have: <div class="nav-menu" id="navMenu">');
+        return;
+    }
+    
+    if (!navOverlay) {
+        console.error('Nav overlay element not found! Make sure you have: <div class="nav-overlay" id="navOverlay">');
+        return;
+    }
+    
+    // Toggle menu function
+    function toggleMenu() {
+        console.log('Toggle menu clicked');
+        
+        try {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            
+            console.log('Menu toggled successfully');
+        } catch (error) {
+            console.error('Error toggling menu:', error);
+        }
+    }
+    
+    // Close menu function
+    function closeMenu() {
+        console.log('Closing menu');
+        
+        try {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            
+            console.log('Menu closed successfully');
+        } catch (error) {
+            console.error('Error closing menu:', error);
+        }
+    }
+    
+    // Add event listeners
+    navToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
+    
+    navOverlay.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeMenu();
+    });
+    
+    // Close menu when clicking navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Add small delay to allow navigation to process
+            setTimeout(closeMenu, 100);
+        });
+    });
+    
+    // Handle dropdown toggles on mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            // Only handle on mobile
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const parentItem = this.closest('.nav-item');
+                parentItem.classList.toggle('active');
+            }
+        });
+    });
+    
+    // Close menu on window resize (when switching from mobile to desktop)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
+    
+    console.log('Mobile navigation initialized successfully');
+});
+
+// Navigation functions (if not already defined)
+if (typeof navigateToPage !== 'function') {
+    window.navigateToPage = function(page) {
+        console.log('Navigating to:', page);
+        
+        const currentPath = window.location.pathname;
+        const isInPages = currentPath.includes('/pages/');
+        
+        let targetPath;
+        if (page === 'home') {
+            targetPath = isInPages ? '../index.html' : 'index.html';
+        } else {
+            targetPath = isInPages ? `${page}.html` : `pages/${page}.html`;
+        }
+        
+        console.log('Target path:', targetPath);
+        window.location.href = targetPath;
+    };
+}
+
+if (typeof goHome !== 'function') {
+    window.goHome = function() {
+        console.log('Going home');
+        
+        const currentPath = window.location.pathname;
+        const isInPages = currentPath.includes('/pages/');
+        
+        const homePath = isInPages ? '../index.html' : 'index.html';
+        window.location.href = homePath;
+    };
+}
+</script>
 
 </body>
 
