@@ -35,11 +35,48 @@
     <div class="nav-container">
         <!-- Brand/Logo -->
         <div class="nav-brand">
-            <a href="#" onclick="goHome(); return false;" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-helicopter"></i>
+                <!-- Creative Aviation Logo - BIGGER SIZE -->
+                <svg width="48" height="48" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="logoGlow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Wings with enhanced visibility -->
+                    <path d="M4 16 L12 12 L16 16 L12 20 Z" fill="url(#logoGradient)" opacity="0.9"
+                        filter="url(#logoGlow)" />
+                    <path d="M16 16 L20 12 L28 16 L20 20 Z" fill="url(#logoGradient)" opacity="0.9"
+                        filter="url(#logoGlow)" />
+
+                    <!-- Fuselage - enhanced -->
+                    <rect x="12" y="14" width="8" height="4" rx="2" fill="url(#logoGradient)" filter="url(#logoGlow)" />
+
+                    <!-- Tail - more prominent -->
+                    <path d="M20 16 L24 14 L26 16 L24 18 Z" fill="url(#logoGradient)" opacity="1"
+                        filter="url(#logoGlow)" />
+
+                    <!-- Propeller/Engine - bigger and more visible -->
+                    <circle cx="10" cy="16" r="2.5" fill="#F59E0B" opacity="0.9" />
+                    <circle cx="22" cy="16" r="2" fill="#F59E0B" opacity="0.9" />
+
+                    <!-- Motion Lines - more visible -->
+                    <path d="M1 15 L7 15 M1 17 L7 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8" />
+                    <path d="M25 15 L31 15 M25 17 L31 17" stroke="url(#logoGradient)" stroke-width="2" opacity="0.8" />
+
+                    <!-- Additional details for prominence -->
+                    <circle cx="16" cy="16" r="1" fill="#F59E0B" opacity="0.8" />
+                </svg>
                 <span>Marshall Airline Aviation</span>
-            </a>
-        </div>
+            </div>
 
         <!-- Mobile Menu Toggle -->
         <div class="nav-toggle" id="nav-toggle">
@@ -67,27 +104,53 @@
             </div>
 
             <!-- Services Dropdown -->
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle">
-                    <i class="fas fa-cogs"></i>
-                    Services
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="#" onclick="navigateToPage('helicopter-charter'); return false;" class="dropdown-link" data-page="helicopter-charter">
-                        <i class="fas fa-helicopter"></i>
-                        Helicopter Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('jet-charter'); return false;" class="dropdown-link" data-page="jet-charter">
-                        <i class="fas fa-plane"></i>
-                        Private Jet Charter
-                    </a>
-                    <a href="#" onclick="navigateToPage('maintenance'); return false;" class="dropdown-link" data-page="maintenance">
-                        <i class="fas fa-wrench"></i>
-                        Aircraft Maintenance
-                    </a>
+           <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle">
+        <i class="fas fa-cogs"></i> Services <i class="fas fa-chevron-down"></i>
+    </a>
+    <div class="dropdown-menu">
+        <div class="dropdown-section">
+            <div class="dropdown-header">Aviation Services</div>
+            
+            <!-- Helicopter Charter -->
+            <a href="#" class="dropdown-link" onclick="navigateToPage('helicopter-charter')">
+                <i class="fas fa-helicopter"></i>
+                <div class="link-content">
+                    <div class="link-title">Helicopter Charter</div>
+                    <div class="link-desc">Executive & VIP helicopter services</div>
                 </div>
-            </div>
+            </a>
+            
+            <!-- Private Jet Charter -->
+            <a href="#" class="dropdown-link" onclick="navigateToPage('jet-charter')">
+                <i class="fas fa-private-jet"></i>
+                <div class="link-content">
+                    <div class="link-title">Private Jet Charter</div>
+                    <div class="link-desc">International luxury flights</div>
+                </div>
+            </a>
+            
+            <!-- NEW: Cargo Airway Plan -->
+            <a href="#" class="dropdown-link" onclick="navigateToPage('cargo-airway')">
+                <i class="fas fa-shipping-fast"></i>
+                <div class="link-content">
+                    <div class="link-title">Cargo Airway Plan</div>
+                    <div class="link-desc">Global freight solutions</div>
+                    <span class="link-badge">NEW</span>
+                </div>
+            </a>
+            
+            <!-- Aircraft Maintenance -->
+            <a href="#" class="dropdown-link" onclick="navigateToPage('maintenance')">
+                <i class="fas fa-tools"></i>
+                <div class="link-content">
+                    <div class="link-title">Aircraft Maintenance</div>
+                    <div class="link-desc">Professional technical services</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
             <!-- Fleet Link -->
             <div class="nav-item">
@@ -572,7 +635,7 @@
                         <p class="form-note">
                             <i class="fas fa-info-circle"></i>
                             All quote requests are processed within 24 hours. For urgent requests, please call us
-                            directly at +254 700 000 000.
+                            directly at +19292245107.
                         </p>
                     </div>
                 </form>
@@ -642,7 +705,7 @@
                         <div class="emergency-actions">
                             <a href="tel:+254700000000" class="btn btn-danger btn-large">
                                 <i class="fas fa-phone"></i>
-                                Call +254 700 000 000
+                                Call +19292245107
                             </a>
                             <a href="https://wa.me/254700000002" class="btn btn-outline btn-large" target="_blank">
                                 <i class="fab fa-whatsapp"></i>
@@ -657,83 +720,126 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <i class="fas fa-helicopter"></i>
-                        <span>marshallairline Aviation</span>
-                    </div>
-                    <p class="footer-description">
-                        World's premier aviation services provider, delivering excellence in helicopter and private jet
-                        charter services since 2010.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <!-- UPDATED FOOTER BRAND - Same logo as navigation -->
+                <div class="footer-brand">
+                    <!-- EXACT SAME 48px LOGO AS NAVIGATION -->
+                    <svg width="48" height="48" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="footerLogoGlow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge> 
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Wings with enhanced visibility -->
+                        <path d="M4 16 L12 12 L16 16 L12 20 Z" fill="url(#footerLogoGradient)" opacity="0.9" filter="url(#footerLogoGlow)"/>
+                        <path d="M16 16 L20 12 L28 16 L20 20 Z" fill="url(#footerLogoGradient)" opacity="0.9" filter="url(#footerLogoGlow)"/>
+                        
+                        <!-- Fuselage - enhanced -->
+                        <rect x="12" y="14" width="8" height="4" rx="2" fill="url(#footerLogoGradient)" filter="url(#footerLogoGlow)"/>
+                        
+                        <!-- Tail - more prominent -->
+                        <path d="M20 16 L24 14 L26 16 L24 18 Z" fill="url(#footerLogoGradient)" opacity="1" filter="url(#footerLogoGlow)"/>
+                        
+                        <!-- Propeller/Engine - bigger and more visible -->
+                        <circle cx="10" cy="16" r="2.5" fill="#F59E0B" opacity="0.9"/>
+                        <circle cx="22" cy="16" r="2" fill="#F59E0B" opacity="0.9"/>
+                        
+                        <!-- Motion Lines - more visible -->
+                        <path d="M1 15 L7 15 M1 17 L7 17" stroke="url(#footerLogoGradient)" stroke-width="2" opacity="0.8"/>
+                        <path d="M25 15 L31 15 M25 17 L31 17" stroke="url(#footerLogoGradient)" stroke-width="2" opacity="0.8"/>
+                        
+                        <!-- Additional details for prominence -->
+                        <circle cx="16" cy="16" r="1" fill="#F59E0B" opacity="0.8"/>
+                    </svg>
+                    <span>Marshall Airline Aviation</span>
                 </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="helicopter-charter.html">Helicopter Charter</a></li>
-                        <li><a href="jet-charter.html">Private Jet Charter</a></li>
-                        <li><a href="maintenance.html">Aircraft Maintenance</a></li>
-                        <li><a href="quote.html">Request Quote</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="fleet.html">Our Fleet</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Contact Info</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>P.O. Box 12894-00802
-                                Charlotte Amalie, St. Thomas
-                                U.S. Virgin Islands</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+19292245107</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+447853773996</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@marshallairline-aviation.com</span>
-                        </div>
-                    </div>
+                <!-- UPDATED INTERNATIONAL DESCRIPTION -->
+                <p class="footer-description">
+                    Leading international aviation company providing premium charter services, 
+                    cargo solutions, and aircraft maintenance worldwide. Excellence in every flight.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="footer-divider"></div>
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 marshallairline Aviation. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Safety Standards</a>
+            <div class="footer-section">
+                <h4 class="footer-title">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/helicopter-charter.html">Helicopter Charter</a></li>
+                    <li><a href="pages/jet-charter.html">Private Jet Charter</a></li>
+                    <li><a href="pages/cargo.html">Air Cargo Services</a></li> <!-- ADDED CARGO -->
+                    <li><a href="pages/maintenance.html">Aircraft Maintenance</a></li>
+                    <li><a href="pages/quote.html">Request Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/fleet.html">Our Fleet</a></li>
+                    <li><a href="pages/gallery.html">Gallery</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title">Global Contact</h4> <!-- UPDATED TO GLOBAL -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>P.O. Box 12894-00802<br>
+                              Charlotte Amalie, St. Thomas<br>
+                              U.S. Virgin Islands</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (929) 224-5107</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+44 785 377 3996</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@marshallairline.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>24/7 International Support</span>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Marshall Airline Aviation. All rights reserved.</p> <!-- PROPER CASE -->
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Safety Standards</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Scroll to Top Button -->
     <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">

@@ -2251,3 +2251,2002 @@ body {
         -moz-osx-font-smoothing: grayscale !important;
     }
 }
+
+/* ===============================================
+   COMPLETE PURPLE NAVIGATION THEME
+   Make all navigation elements purple to match logo
+   =============================================== */
+
+/* Purple Navigation Links */
+.navbar .nav-link,
+.navbar .nav-item a,
+.nav-menu .nav-link,
+.nav-menu a {
+    background: white !important;
+    color: #7C3AED !important; /* Purple text */
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 4px !important;
+}
+
+/* Purple Hover Effects */
+.navbar .nav-link:hover,
+.navbar .nav-item a:hover,
+.nav-menu .nav-link:hover,
+.nav-menu a:hover {
+    background: #7C3AED !important; /* Purple background on hover */
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+    border-color: #7C3AED !important;
+}
+
+/* Active/Current Page Purple */
+.navbar .nav-link.active,
+.navbar .nav-item a.active,
+.nav-menu .nav-link.active,
+.nav-menu a.active {
+    background: #7C3AED !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4) !important;
+    border-color: #7C3AED !important;
+}
+
+/* Purple Icons in Navigation */
+.navbar .nav-link i,
+.navbar .nav-item a i,
+.nav-menu .nav-link i,
+.nav-menu a i {
+    color: #7C3AED !important;
+    transition: color 0.3s ease !important;
+}
+
+.navbar .nav-link:hover i,
+.navbar .nav-item a:hover i,
+.nav-menu .nav-link:hover i,
+.nav-menu a:hover i {
+    color: white !important;
+}
+
+/* Purple Book Flight Button */
+.navbar .btn-primary,
+.navbar .book-flight-btn,
+.nav-menu .btn-primary,
+.nav-menu .book-flight-btn {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease !important;
+    margin-left: 8px !important;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3) !important;
+}
+
+.navbar .btn-primary:hover,
+.navbar .book-flight-btn:hover,
+.nav-menu .btn-primary:hover,
+.nav-menu .book-flight-btn:hover {
+    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4) !important;
+}
+
+/* Purple Booking Dropdown */
+.navbar .booking-lookup-btn,
+.navbar .nav-lookup,
+.nav-menu .booking-lookup-btn,
+.nav-menu .nav-lookup {
+    order: 10 !important;
+    margin-left: 8px !important;
+    background: white !important;
+    color: #7C3AED !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .booking-lookup-btn:hover,
+.navbar .nav-lookup:hover,
+.nav-menu .booking-lookup-btn:hover,
+.nav-menu .nav-lookup:hover {
+    background: #7C3AED !important;
+    color: white !important;
+    border-color: #7C3AED !important;
+}
+
+/* Purple Dropdown Menus */
+.dropdown-menu {
+    background: white !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15) !important;
+}
+
+.dropdown-link {
+    color: #374151 !important;
+    transition: all 0.2s ease !important;
+}
+
+.dropdown-link:hover {
+    background: rgba(124, 58, 237, 0.05) !important;
+    color: #7C3AED !important;
+}
+
+.dropdown-link.featured {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%) !important;
+    border-left: 3px solid #7C3AED !important;
+}
+
+.dropdown-link i {
+    color: #7C3AED !important;
+}
+
+/* Purple Services Dropdown Arrow */
+.dropdown-toggle i {
+    color: #7C3AED !important;
+}
+
+.nav-link:hover .dropdown-toggle i {
+    color: white !important;
+}
+
+/* Purple Brand and Logo (ensure consistency) */
+.navbar .nav-brand,
+.nav-menu .nav-brand {
+    color: #7C3AED !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+.navbar .nav-brand i,
+.nav-menu .nav-brand i {
+    color: #7C3AED !important;
+    margin-right: 8px !important;
+}
+
+/* Purple Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-toggle span {
+        background: #7C3AED !important;
+    }
+    
+    .nav-menu {
+        background: white !important;
+        border: 1px solid rgba(124, 58, 237, 0.1) !important;
+        box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1) !important;
+    }
+    
+    .nav-menu .nav-link {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 4px 0 !important;
+        padding: 12px 16px !important;
+        color: #7C3AED !important;
+        background: white !important;
+        border: 1px solid rgba(124, 58, 237, 0.2) !important;
+    }
+    
+    .nav-menu .nav-link:hover {
+        background: #7C3AED !important;
+        color: white !important;
+    }
+    
+    .nav-menu .btn-primary,
+    .nav-menu .book-flight-btn {
+        width: 100% !important;
+        margin: 8px 0 !important;
+        text-align: center !important;
+        background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%) !important;
+    }
+}
+
+/* Purple Focus States for Accessibility */
+.nav-link:focus,
+.btn-primary:focus,
+.book-flight-btn:focus {
+    outline: 2px solid #7C3AED !important;
+    outline-offset: 2px !important;
+}
+
+/* Purple Active States */
+.nav-link:active,
+.btn-primary:active,
+.book-flight-btn:active {
+    transform: scale(0.98) !important;
+    box-shadow: 0 2px 4px rgba(124, 58, 237, 0.2) !important;
+}
+
+/* Ensure navbar background complements purple theme */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.1) !important;
+    padding: 12px 0 !important;
+    box-shadow: 0 2px 20px rgba(124, 58, 237, 0.1) !important;
+}
+
+/* Purple hover effect for entire navigation container */
+.nav-container {
+    transition: all 0.3s ease !important;
+}
+
+/* Specific targeting for different navigation structures */
+.navigation .nav-item a,
+.navigation .nav-link,
+.main-nav .nav-item a,
+.main-nav .nav-link,
+.primary-nav .nav-item a,
+.primary-nav .nav-link {
+    color: #7C3AED !important;
+    background: white !important;
+    border: 1px solid rgba(124, 58, 237, 0.2) !important;
+}
+
+.navigation .nav-item a:hover,
+.navigation .nav-link:hover,
+.main-nav .nav-item a:hover,
+.main-nav .nav-link:hover,
+.primary-nav .nav-item a:hover,
+.primary-nav .nav-link:hover {
+    background: #7C3AED !important;
+    color: white !important;
+}
+
+/* Purple theme for any red elements that might remain */
+[style*="color: red"],
+[style*="color: #dc2626"],
+[style*="color: #e53e3e"],
+[style*="background: red"],
+[style*="background: #dc2626"],
+[style*="background: #e53e3e"] {
+    color: #7C3AED !important;
+    background: #7C3AED !important;
+}
+
+/* Override any remaining red styles */
+.text-red,
+.bg-red,
+.border-red,
+[class*="red"] {
+    color: #7C3AED !important;
+    background-color: #7C3AED !important;
+    border-color: #7C3AED !important;
+}
+
+/* Purple animation for navigation */
+@keyframes purpleGlow {
+    0% { box-shadow: 0 0 5px rgba(124, 58, 237, 0.3); }
+    50% { box-shadow: 0 0 15px rgba(124, 58, 237, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(124, 58, 237, 0.3); }
+}
+
+.nav-link:hover,
+.btn-primary:hover {
+    animation: purpleGlow 2s infinite !important;
+}
+
+/* Ensure consistent purple across all screen sizes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-link {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        color: #7C3AED !important;
+    }
+    
+    .nav-link:hover {
+        background: #7C3AED !important;
+        color: white !important;
+    }
+}
+
+/* High contrast mode support with purple */
+@media (prefers-contrast: high) {
+    .nav-link {
+        border: 2px solid #7C3AED !important;
+        color: #5B21B6 !important;
+    }
+    
+    .nav-link:hover {
+        background: #5B21B6 !important;
+        color: white !important;
+    }
+}
+
+/* ===============================================
+   RED TO PURPLE CONVERSION ONLY
+   Paste at bottom of css/main.css - Only changes red elements
+   =============================================== */
+
+/* ===============================================
+   CONVERT RED CSS VARIABLES TO PURPLE
+   =============================================== */
+:root {
+  /* Convert red variables to purple */
+  --primary-red: #7C3AED !important;      /* Rich Violet */
+  --secondary-red: #5B21B6 !important;    /* Deep Purple */
+  --danger-color: #7C3AED !important;
+  --error-color: #7C3AED !important;
+  --red: #7C3AED !important;
+  --red-500: #7C3AED !important;
+  --red-600: #5B21B6 !important;
+  --red-700: #5B21B6 !important;
+  
+  /* Convert red gradients to purple */
+  --gradient-red: linear-gradient(135deg, #7C3AED, #5B21B6) !important;
+  --red-gradient: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+}
+
+/* ===============================================
+   RED COLORS TO PURPLE - SPECIFIC TARGETING
+   =============================================== */
+
+/* Target elements with red color values */
+[style*="color: red"],
+[style*="color: #dc2626"],
+[style*="color: #e53e3e"],
+[style*="color: #ef4444"],
+[style*="color: #f87171"],
+[style*="color: #fc8181"],
+[style*="color: #ff0000"],
+[style*="color: rgb(220, 38, 38)"],
+[style*="color: rgb(229, 62, 62)"] {
+    color: #7C3AED !important;
+}
+
+/* Target elements with red background values */
+[style*="background: red"],
+[style*="background-color: red"],
+[style*="background: #dc2626"],
+[style*="background-color: #dc2626"],
+[style*="background: #e53e3e"],
+[style*="background-color: #e53e3e"],
+[style*="background: #ef4444"],
+[style*="background-color: #ef4444"],
+[style*="background: linear-gradient"][style*="#dc2626"],
+[style*="background: linear-gradient"][style*="#e53e3e"] {
+    background: #7C3AED !important;
+    background-color: #7C3AED !important;
+}
+
+/* Target elements with red borders */
+[style*="border: red"],
+[style*="border-color: red"],
+[style*="border-color: #dc2626"],
+[style*="border-color: #e53e3e"],
+[style*="border-color: #ef4444"],
+[style*="border-left-color: #dc2626"],
+[style*="border-left-color: #e53e3e"] {
+    border-color: #7C3AED !important;
+    border-left-color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED CSS CLASSES TO PURPLE
+   =============================================== */
+
+/* Text colors */
+.text-red,
+.text-danger,
+.text-error,
+.red-text,
+.color-red,
+[class*="text-red"],
+[class*="color-red"] {
+    color: #7C3AED !important;
+}
+
+/* Background colors */
+.bg-red,
+.bg-danger,
+.bg-error,
+.red-bg,
+.background-red,
+[class*="bg-red"],
+[class*="background-red"] {
+    background-color: #7C3AED !important;
+}
+
+/* Border colors */
+.border-red,
+.border-danger,
+.border-error,
+.red-border,
+[class*="border-red"] {
+    border-color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED BUTTONS TO PURPLE
+   =============================================== */
+
+/* Red buttons specifically */
+.btn-red,
+.btn-danger,
+.button-red,
+.red-button,
+[class*="btn-red"],
+[class*="button-red"] {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%) !important;
+    background-color: #7C3AED !important;
+    border-color: #7C3AED !important;
+    color: white !important;
+}
+
+.btn-red:hover,
+.btn-danger:hover,
+.button-red:hover,
+.red-button:hover,
+[class*="btn-red"]:hover,
+[class*="button-red"]:hover {
+    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%) !important;
+    background-color: #5B21B6 !important;
+    border-color: #5B21B6 !important;
+    color: white !important;
+}
+
+/* ===============================================
+   NAVIGATION RED TO PURPLE
+   =============================================== */
+
+/* Only red navigation elements */
+.navbar .nav-link[style*="color: #dc2626"],
+.navbar .nav-link[style*="color: #e53e3e"],
+.nav-link.text-red,
+.nav-link[class*="red"] {
+    color: #7C3AED !important;
+}
+
+.navbar .nav-link[style*="background: #dc2626"],
+.navbar .nav-link[style*="background: #e53e3e"],
+.nav-link.bg-red,
+.nav-link[class*="bg-red"] {
+    background: #7C3AED !important;
+}
+
+/* Red navigation hover states */
+.navbar .nav-link[style*="color: #dc2626"]:hover,
+.navbar .nav-link[style*="color: #e53e3e"]:hover {
+    background: #7C3AED !important;
+    color: white !important;
+}
+
+/* ===============================================
+   RED ICONS TO PURPLE
+   =============================================== */
+
+/* Red icons specifically */
+i[style*="color: red"],
+i[style*="color: #dc2626"],
+i[style*="color: #e53e3e"],
+i.text-red,
+i.red,
+[class*="icon"].red,
+.fa[style*="color: red"],
+.fas[style*="color: red"] {
+    color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED ALERTS/NOTIFICATIONS TO PURPLE
+   =============================================== */
+
+/* Red alerts only */
+.alert-danger,
+.alert-error,
+.alert.red,
+.notification.red,
+.message.red,
+[class*="alert-red"] {
+    background-color: rgba(124, 58, 237, 0.1) !important;
+    border-color: #7C3AED !important;
+    color: #5B21B6 !important;
+}
+
+.alert-danger .alert-icon,
+.alert-error .alert-icon {
+    color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED GRADIENTS TO PURPLE
+   =============================================== */
+
+/* Convert red gradients specifically */
+[style*="linear-gradient"][style*="#dc2626"],
+[style*="linear-gradient"][style*="#e53e3e"],
+[style*="linear-gradient"][style*="red"],
+.gradient-red,
+[class*="gradient-red"] {
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+}
+
+/* ===============================================
+   RED HERO OVERLAYS TO PURPLE
+   =============================================== */
+
+/* Only red hero overlays */
+.hero-overlay[style*="#dc2626"],
+.hero-overlay[style*="#e53e3e"],
+.banner-overlay[style*="red"],
+.overlay.red {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(91, 33, 182, 0.9)) !important;
+}
+
+/* ===============================================
+   RED LINKS TO PURPLE
+   =============================================== */
+
+/* Only links that are specifically red */
+a[style*="color: red"],
+a[style*="color: #dc2626"],
+a[style*="color: #e53e3e"],
+a.text-red,
+a.red,
+.link-red,
+[class*="link-red"] {
+    color: #7C3AED !important;
+}
+
+a[style*="color: red"]:hover,
+a[style*="color: #dc2626"]:hover,
+a[style*="color: #e53e3e"]:hover,
+a.text-red:hover,
+a.red:hover,
+.link-red:hover {
+    color: #A855F7 !important;
+}
+
+/* ===============================================
+   RED FORM ELEMENTS TO PURPLE
+   =============================================== */
+
+/* Red form focus states */
+input[style*="border-color: red"]:focus,
+input[style*="border-color: #dc2626"]:focus,
+input[style*="border-color: #e53e3e"]:focus,
+.form-control.error:focus,
+.form-control.red:focus {
+    border-color: #7C3AED !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+}
+
+/* Red form validation */
+.form-error,
+.error-message,
+.validation-error,
+[class*="error-text"] {
+    color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED SOCIAL LINKS TO PURPLE
+   =============================================== */
+
+/* Social links that are red */
+.social-link[style*="background: red"],
+.social-link[style*="background: #dc2626"],
+.social-link.red,
+.social-red {
+    background: #7C3AED !important;
+}
+
+.social-link[style*="background: red"]:hover,
+.social-link[style*="background: #dc2626"]:hover {
+    background: #5B21B6 !important;
+}
+
+/* ===============================================
+   RED BADGES/LABELS TO PURPLE
+   =============================================== */
+
+/* Red badges only */
+.badge-danger,
+.badge-error,
+.badge-red,
+.label-red,
+[class*="badge-red"] {
+    background-color: #7C3AED !important;
+    color: white !important;
+}
+
+/* ===============================================
+   RED BORDERS SPECIFICALLY
+   =============================================== */
+
+/* Cards with red borders */
+.card[style*="border-color: red"],
+.card[style*="border-color: #dc2626"],
+.card.border-red {
+    border-color: #7C3AED !important;
+}
+
+/* Service cards with red accents */
+.service-card[style*="border-color: red"],
+.service-card.red-accent {
+    border-color: #7C3AED !important;
+}
+
+/* ===============================================
+   RED HOVER STATES TO PURPLE
+   =============================================== */
+
+/* Elements that turn red on hover - convert to purple */
+[class*="hover-red"]:hover,
+.hover-danger:hover {
+    background-color: #7C3AED !important;
+    color: white !important;
+}
+
+/* ===============================================
+   RED PROGRESS BARS TO PURPLE
+   =============================================== */
+
+/* Red progress bars */
+.progress-bar-danger,
+.progress-bar-red,
+.progress.red .progress-bar,
+[class*="progress-red"] {
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+}
+
+/* ===============================================
+   RED TABLE ELEMENTS TO PURPLE
+   =============================================== */
+
+/* Red table headers */
+.table-danger,
+.table-red,
+th[style*="background: red"],
+th[style*="background: #dc2626"],
+th.bg-red {
+    background-color: rgba(124, 58, 237, 0.1) !important;
+    color: #5B21B6 !important;
+}
+
+/* ===============================================
+   RED MOBILE MENU ELEMENTS
+   =============================================== */
+
+/* Red mobile navigation */
+.mobile-menu[style*="background: red"],
+.nav-toggle span[style*="background: red"],
+.nav-toggle span[style*="background: #dc2626"] {
+    background: #7C3AED !important;
+}
+
+/* ===============================================
+   CATCH REMAINING RED ELEMENTS
+   =============================================== */
+
+/* Any remaining elements with red in their styling */
+[style*="rgb(220, 38, 38)"],
+[style*="rgb(239, 68, 68)"],
+[style*="rgb(248, 113, 113)"] {
+    color: #7C3AED !important;
+    background-color: #7C3AED !important;
+    border-color: #7C3AED !important;
+}
+
+/* ===============================================
+   SPECIFIC COMPONENT OVERRIDES
+   =============================================== */
+
+/* If your website uses specific red classes for Marshall Airline */
+.marshall-red,
+.airline-red,
+.primary-color-red,
+.brand-red,
+[class*="marshall-red"],
+[class*="airline-red"] {
+    color: #7C3AED !important;
+    background-color: #7C3AED !important;
+    border-color: #7C3AED !important;
+}
+
+/* ===============================================
+   ENSURE HOVER STATES WORK
+   =============================================== */
+
+/* Red hover states converted to purple hover states */
+.btn-red:hover,
+.button-red:hover,
+.text-red:hover,
+.bg-red:hover,
+[class*="red"]:hover {
+    background-color: #5B21B6 !important;
+    color: white !important;
+    border-color: #5B21B6 !important;
+}
+
+/* ===============================================
+   BEAUTIFUL CARGO PAGE STYLING
+   Add this CSS to fix colors and make forms comfortable
+   =============================================== */
+
+/* ===============================================
+   CARGO PAGE - HERO SECTION
+   =============================================== */
+.service-hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(91, 33, 182, 0.9));
+}
+
+.service-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.service-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero .hero-content {
+    max-width: 700px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.service-hero .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===============================================
+   CARGO PAGE - SECTIONS
+   =============================================== */
+.service-overview,
+.service-features,
+.cargo-fleet,
+.quote-section,
+.why-choose-us {
+    padding: 4rem 0;
+}
+
+.service-overview {
+    background: #f8fafc;
+}
+
+.service-features {
+    background: white;
+}
+
+.cargo-fleet {
+    background: #f8fafc;
+}
+
+.why-choose-us {
+    background: white;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2,
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===============================================
+   CARGO PAGE - OVERVIEW SECTION
+   =============================================== */
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.overview-text h3 {
+    font-size: 2rem;
+    color: #7C3AED;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.overview-text p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.service-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.1);
+    border-left: 4px solid #7C3AED;
+}
+
+.benefit-item i {
+    font-size: 1.5rem;
+    color: #7C3AED;
+    margin-top: 0.25rem;
+}
+
+.benefit-item h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.overview-image {
+    position: relative;
+}
+
+.overview-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px rgba(124, 58, 237, 0.15);
+}
+
+/* ===============================================
+   CARGO PAGE - FEATURES GRID
+   =============================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(124, 58, 237, 0.15);
+    border-color: #7C3AED;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-list li:before {
+    content: "✓";
+    color: #7C3AED;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ===============================================
+   CARGO PAGE - QUOTE SECTION (MAIN FIX)
+   =============================================== */
+.quote-section {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.quote-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+.quote-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.quote-info p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.quote-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quote-benefit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.quote-benefit i {
+    font-size: 1.5rem;
+    color: #fbbf24;
+}
+
+.quote-benefit span {
+    font-weight: 500;
+    color: white;
+}
+
+/* ===============================================
+   BEAUTIFUL CARGO QUOTE FORM
+   =============================================== */
+.quote-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.cargo-quote-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cargo-quote-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cargo-quote-form label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cargo-quote-form input,
+.cargo-quote-form select,
+.cargo-quote-form textarea {
+    padding: 1rem 1.5rem !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    background: white !important;
+    min-height: 56px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.cargo-quote-form input:focus,
+.cargo-quote-form select:focus,
+.cargo-quote-form textarea:focus {
+    outline: none !important;
+    border-color: #7C3AED !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+    transform: translateY(-1px) !important;
+}
+
+.cargo-quote-form textarea {
+    min-height: 120px !important;
+    resize: vertical !important;
+    font-family: inherit !important;
+}
+
+.cargo-quote-form select {
+    cursor: pointer !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+    background-position: right 12px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 16px !important;
+    padding-right: 3rem !important;
+}
+
+.cargo-quote-form .btn {
+    width: 100% !important;
+    padding: 1.25rem 2rem !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+    border: none !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+    min-height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+}
+
+.cargo-quote-form .btn:hover {
+    background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* ===============================================
+   CARGO PAGE - FLEET SECTION
+   =============================================== */
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 3rem;
+}
+
+.fleet-item {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.fleet-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(124, 58, 237, 0.15);
+}
+
+.fleet-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.fleet-info {
+    padding: 2rem;
+}
+
+.fleet-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7C3AED;
+    margin-bottom: 1rem;
+}
+
+.fleet-info p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.fleet-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fleet-info ul li {
+    padding: 0.5rem 0;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fleet-info ul li:before {
+    content: "✈";
+    color: #7C3AED;
+    font-weight: bold;
+}
+
+/* ===============================================
+   CARGO PAGE - REASONS SECTION
+   =============================================== */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.reason-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px rgba(124, 58, 237, 0.15);
+}
+
+.reason-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+}
+
+.reason-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.reason-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.reason-item p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ===============================================
+   MOBILE RESPONSIVE
+   =============================================== */
+@media (max-width: 768px) {
+    .service-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .service-hero .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .quote-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .quote-form {
+        padding: 2rem;
+    }
+    
+    .cargo-quote-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .fleet-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fleet-item {
+        min-width: auto;
+    }
+    
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===============================================
+   ENHANCED BUTTONS
+   =============================================== */
+.btn-large {
+    padding: 1rem 2rem !important;
+    font-size: 1.125rem !important;
+    min-height: 56px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.25) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 15px rgba(124, 58, 237, 0.35) !important;
+}
+
+.btn-outline {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.btn-outline:hover {
+    background: white !important;
+    color: #7C3AED !important;
+}
+
+/* ===============================================
+   FORM FIELD ENHANCEMENTS
+   =============================================== */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af !important;
+    font-style: italic !important;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: #c4b5fd !important;
+}
+
+/* Success state for completed fields */
+.form-group input:valid {
+    border-color: #10b981 !important;
+}
+
+/* Loading state */
+.cargo-quote-form.loading .btn {
+    opacity: 0.7 !important;
+    cursor: not-allowed !important;
+}
+
+.cargo-quote-form.loading .btn:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.services-grid,
+.service-cards,
+.services-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    padding: 2rem 0 !important;
+}
+
+.service-card {
+    background: white !important;
+    border-radius: 16px !important;
+    padding: 2.5rem !important;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1) !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2) !important;
+    border-color: #7C3AED !important;
+}
+
+/* Service card text - ensure visibility */
+.service-card h3,
+.service-title {
+    color: #1e293b !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.3 !important;
+}
+
+.service-card p,
+.service-description {
+    color: #64748b !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Service card features list */
+.service-features,
+.service-card ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.service-features li,
+.service-card ul li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.5rem 0 !important;
+    color: #475569 !important;
+    font-size: 0.95rem !important;
+}
+
+.service-features li::before,
+.service-card ul li::before {
+    content: "✓" !important;
+    color: #7C3AED !important;
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    width: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Service icons */
+.service-icon {
+    width: 80px !important;
+    height: 80px !important;
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 1.5rem auto !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+}
+
+.service-icon i {
+    font-size: 2rem !important;
+    color: white !important;
+}
+
+/* Service links */
+.service-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    color: #7C3AED !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+}
+
+.service-link:hover {
+    color: #5B21B6 !important;
+    transform: translateX(4px) !important;
+}
+.fleet-section,
+.our-fleet {
+    padding: 4rem 0 !important;
+    background: #f8fafc !important;
+}
+
+.fleet-header {
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+}
+
+.fleet-header h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin-bottom: 1rem !important;
+}
+
+.fleet-header p {
+    font-size: 1.125rem !important;
+    color: #64748b !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.fleet-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 2.5rem !important;
+    margin-top: 3rem !important;
+}
+
+.fleet-item {
+    background: white !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+.fleet-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15) !important;
+    border-color: #7C3AED !important;
+}
+
+.fleet-image {
+    position: relative !important;
+    height: 280px !important;
+    overflow: hidden !important;
+}
+
+.fleet-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+.fleet-item:hover .fleet-image img {
+    transform: scale(1.05) !important;
+}
+
+.fleet-info {
+    padding: 2rem !important;
+}
+
+.fleet-info h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #7C3AED !important;
+    margin-bottom: 1rem !important;
+}
+
+.fleet-info p {
+    color: #64748b !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fleet-specs {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fleet-spec {
+    background: #f8fafc !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #7C3AED !important;
+}
+
+.fleet-spec label {
+    display: block !important;
+    font-size: 0.75rem !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.fleet-spec span {
+    font-size: 1rem !important;
+    color: #1e293b !important;
+    font-weight: 600 !important;
+}
+.gallery-section {
+    padding: 4rem 0 !important;
+    background: white !important;
+}
+
+.gallery-header {
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+}
+
+.gallery-header h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin-bottom: 1rem !important;
+}
+
+.gallery-header p {
+    font-size: 1.125rem !important;
+    color: #64748b !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+/* Gallery filter tabs */
+.gallery-filters {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    margin-bottom: 3rem !important;
+    flex-wrap: wrap !important;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem !important;
+    background: transparent !important;
+    color: #64748b !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #7C3AED !important;
+    color: white !important;
+    border-color: #7C3AED !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Gallery grid - Masonry style */
+.gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    grid-auto-rows: 250px !important;
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
+}
+
+.gallery-item {
+    position: relative !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Special sizing for some items */
+.gallery-item:nth-child(1) { grid-row: span 2; }
+.gallery-item:nth-child(4) { grid-row: span 2; }
+.gallery-item:nth-child(7) { grid-row: span 2; }
+
+.gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1) !important;
+}
+
+/* Gallery overlay */
+.gallery-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(91, 33, 182, 0.8)) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1 !important;
+}
+
+.gallery-info {
+    text-align: center !important;
+    color: white !important;
+    padding: 1rem !important;
+}
+
+.gallery-info h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.gallery-info p {
+    font-size: 0.875rem !important;
+    opacity: 0.9 !important;
+}
+.booking-access-section,
+.my-bookings-section {
+    padding: 4rem 0 !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(168, 85, 247, 0.05)) !important;
+}
+
+.booking-access-header {
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+}
+
+.booking-access-header h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    margin-bottom: 1rem !important;
+}
+
+.booking-access-header p {
+    font-size: 1.125rem !important;
+    color: #64748b !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+}
+
+/* Fix booking form visibility */
+.booking-lookup-form,
+.access-booking-form {
+    background: white !important;
+    padding: 3rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15) !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    border: 1px solid rgba(124, 58, 237, 0.1) !important;
+}
+
+.booking-lookup-form h3,
+.access-booking-form h3 {
+    color: #1e293b !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Form fields in my-bookings */
+.booking-lookup-form .form-group,
+.access-booking-form .form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+.booking-lookup-form label,
+.access-booking-form label {
+    display: block !important;
+    color: #374151 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.875rem !important;
+}
+
+.booking-lookup-form input,
+.booking-lookup-form select,
+.access-booking-form input,
+.access-booking-form select {
+    width: 100% !important;
+    padding: 1rem 1.5rem !important;
+    border: 2px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    background: white !important;
+    min-height: 56px !important;
+}
+
+.booking-lookup-form input:focus,
+.booking-lookup-form select:focus,
+.access-booking-form input:focus,
+.access-booking-form select:focus {
+    outline: none !important;
+    border-color: #7C3AED !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+}
+
+.booking-lookup-form button,
+.access-booking-form button {
+    width: 100% !important;
+    padding: 1rem 2rem !important;
+    background: linear-gradient(135deg, #7C3AED, #A855F7) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+}
+
+.booking-lookup-form button:hover,
+.access-booking-form button:hover {
+    background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3) !important;
+}
+.hero {
+    position: relative !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+}
+
+.hero-background {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1920&h=1080&fit=crop') center/cover !important;
+    z-index: -2 !important;
+}
+
+/* Transparent purple overlay */
+.hero-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(91, 33, 182, 0.4)) !important;
+    z-index: -1 !important;
+}
+
+.hero-content {
+    width: 100% !important;
+    padding-top: 80px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.hero-text {
+    max-width: 700px !important;
+    margin-bottom: 4rem !important;
+}
+
+/* Hero title - change from purple to white for visibility */
+.hero-title {
+    color: white !important;
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    line-height: 1.1 !important;
+}
+
+/* "Above the Clouds" text - make it golden/yellow for contrast */
+.hero-title .text-gradient,
+.text-gradient {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 2rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    line-height: 1.6 !important;
+}
+
+/* Hero stats */
+.hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-top: 4rem !important;
+}
+
+.stat-item {
+    text-align: center !important;
+    color: white !important;
+}
+
+.stat-number {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: #fbbf24 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.stat-label {
+    font-size: 0.875rem !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 500 !important;
+}
+
+/* ===============================================
+   ADDITIONAL IMPROVEMENTS
+   =============================================== */
+
+/* Ensure proper spacing and alignment */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem !important;
+    }
+}
+
+/* Improve overall text readability */
+.section-header h2,
+.section-title {
+    color: #1e293b !important;
+    font-weight: 700 !important;
+}
+
+.section-header p,
+.section-subtitle {
+    color: #64748b !important;
+    line-height: 1.6 !important;
+}
+
+/* ===============================================
+   MOBILE RESPONSIVE FIXES
+   =============================================== */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem !important;
+    }
+    
+    .services-grid,
+    .fleet-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .gallery-item {
+        grid-row: span 1 !important;
+    }
+    
+    .booking-lookup-form,
+    .access-booking-form {
+        padding: 2rem !important;
+        margin: 1rem !important;
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+}
+
+
